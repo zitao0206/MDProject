@@ -1,5 +1,5 @@
 //
-//  MDModuleViewController.h
+//  MDRACViewController.h
 //  MDProject
 //
 //  Created by lizitao on 17/3/12.
@@ -8,6 +8,6 @@
 
 #import "MDBaseViewController.h"
 
-@interface MDModuleViewController : MDBaseViewController
+@interface MDRACViewController : MDBaseViewController
 
 @end

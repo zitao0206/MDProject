@@ -11,6 +11,13 @@
 		D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687F1E8A4BC200C1489F /* MDURLElement.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
 		D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */; };
+		D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D838F1531EA6FFD900252502 /* UIView+ResizeFrame.m */; };
+		D850235E1EC6922E0054060E /* MDRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D850235D1EC6922E0054060E /* MDRACViewController.m */; };
+		D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023641EC692FF0054060E /* MDDrawImageViewController.m */; };
+		D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023661EC692FF0054060E /* MDQuartzView.m */; };
+		D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023681EC692FF0054060E /* UGCDrawLayer.m */; };
+		D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D850236A1EC692FF0054060E /* UGCDrawTextLayer.m */; };
+		D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023711EC693410054060E /* MDBaseModuleViewController.m */; };
 		D858C8961E756B150042D9F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8951E756B150042D9F3 /* main.m */; };
 		D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8981E756B150042D9F3 /* AppDelegate.m */; };
 		D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A01E756B150042D9F3 /* Assets.xcassets */; };
@@ -18,7 +25,6 @@
 		D858C8AF1E756B160042D9F3 /* MDProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8AE1E756B160042D9F3 /* MDProjectTests.m */; };
 		D858C8BA1E756B160042D9F3 /* MDProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8B91E756B160042D9F3 /* MDProjectUITests.m */; };
 		D858C8C91E756B6B0042D9F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8C81E756B6B0042D9F3 /* MainViewController.m */; };
-		D858C8CD1E7571B70042D9F3 /* MDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8CC1E7571B70042D9F3 /* MDModuleViewController.m */; };
 		D858C8DA1E75826F0042D9F3 /* NVObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8D71E75826F0042D9F3 /* NVObject.m */; };
 		D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8D91E75826F0042D9F3 /* NVSimpleMsg.m */; };
 		D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C96F1E7587110042D9F3 /* MDBaseViewController.m */; };
@@ -59,6 +65,20 @@
 		D81D68831E8A64D400C1489F /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		D81D68861E8A66EC00C1489F /* MDDataCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDataCacheManager.h; sourceTree = "<group>"; };
 		D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDataCacheManager.m; sourceTree = "<group>"; };
+		D838F1521EA6FFD900252502 /* UIView+ResizeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ResizeFrame.h"; sourceTree = "<group>"; };
+		D838F1531EA6FFD900252502 /* UIView+ResizeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ResizeFrame.m"; sourceTree = "<group>"; };
+		D850235C1EC6922E0054060E /* MDRACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDRACViewController.h; sourceTree = "<group>"; };
+		D850235D1EC6922E0054060E /* MDRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRACViewController.m; sourceTree = "<group>"; };
+		D85023631EC692FF0054060E /* MDDrawImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDrawImageViewController.h; sourceTree = "<group>"; };
+		D85023641EC692FF0054060E /* MDDrawImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDrawImageViewController.m; sourceTree = "<group>"; };
+		D85023651EC692FF0054060E /* MDQuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDQuartzView.h; sourceTree = "<group>"; };
+		D85023661EC692FF0054060E /* MDQuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDQuartzView.m; sourceTree = "<group>"; };
+		D85023671EC692FF0054060E /* UGCDrawLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGCDrawLayer.h; sourceTree = "<group>"; };
+		D85023681EC692FF0054060E /* UGCDrawLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGCDrawLayer.m; sourceTree = "<group>"; };
+		D85023691EC692FF0054060E /* UGCDrawTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGCDrawTextLayer.h; sourceTree = "<group>"; };
+		D850236A1EC692FF0054060E /* UGCDrawTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGCDrawTextLayer.m; sourceTree = "<group>"; };
+		D85023701EC693410054060E /* MDBaseModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseModuleViewController.h; sourceTree = "<group>"; };
+		D85023711EC693410054060E /* MDBaseModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleViewController.m; sourceTree = "<group>"; };
 		D858C8911E756B150042D9F3 /* MDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858C8951E756B150042D9F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D858C8971E756B150042D9F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,8 +94,6 @@
 		D858C8BB1E756B160042D9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D858C8C71E756B6B0042D9F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D858C8C81E756B6B0042D9F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D858C8CB1E7571B70042D9F3 /* MDModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDModuleViewController.h; sourceTree = "<group>"; };
-		D858C8CC1E7571B70042D9F3 /* MDModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDModuleViewController.m; sourceTree = "<group>"; };
 		D858C8D61E75826F0042D9F3 /* NVObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVObject.h; sourceTree = "<group>"; };
 		D858C8D71E75826F0042D9F3 /* NVObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVObject.m; sourceTree = "<group>"; };
 		D858C8D81E75826F0042D9F3 /* NVSimpleMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSimpleMsg.h; sourceTree = "<group>"; };
@@ -153,6 +171,50 @@
 			path = MDDataCacheManager;
 			sourceTree = "<group>";
 		};
+		D838F1511EA6FFD900252502 /* MDLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D838F1521EA6FFD900252502 /* UIView+ResizeFrame.h */,
+				D838F1531EA6FFD900252502 /* UIView+ResizeFrame.m */,
+			);
+			path = MDLayout;
+			sourceTree = "<group>";
+		};
+		D850235B1EC6922E0054060E /* MDDemos */ = {
+			isa = PBXGroup;
+			children = (
+				D850236F1EC693410054060E /* BaseModules */,
+				D85023621EC692FF0054060E /* DrawImage */,
+				D850235C1EC6922E0054060E /* MDRACViewController.h */,
+				D850235D1EC6922E0054060E /* MDRACViewController.m */,
+			);
+			path = MDDemos;
+			sourceTree = "<group>";
+		};
+		D85023621EC692FF0054060E /* DrawImage */ = {
+			isa = PBXGroup;
+			children = (
+				D85023631EC692FF0054060E /* MDDrawImageViewController.h */,
+				D85023641EC692FF0054060E /* MDDrawImageViewController.m */,
+				D85023651EC692FF0054060E /* MDQuartzView.h */,
+				D85023661EC692FF0054060E /* MDQuartzView.m */,
+				D85023671EC692FF0054060E /* UGCDrawLayer.h */,
+				D85023681EC692FF0054060E /* UGCDrawLayer.m */,
+				D85023691EC692FF0054060E /* UGCDrawTextLayer.h */,
+				D850236A1EC692FF0054060E /* UGCDrawTextLayer.m */,
+			);
+			path = DrawImage;
+			sourceTree = "<group>";
+		};
+		D850236F1EC693410054060E /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				D85023701EC693410054060E /* MDBaseModuleViewController.h */,
+				D85023711EC693410054060E /* MDBaseModuleViewController.m */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
 		D858C8881E756B150042D9F3 = {
 			isa = PBXGroup;
 			children = (
@@ -178,13 +240,14 @@
 		D858C8931E756B150042D9F3 /* MDProject */ = {
 			isa = PBXGroup;
 			children = (
+				D850235B1EC6922E0054060E /* MDDemos */,
+				D838F1511EA6FFD900252502 /* MDLayout */,
 				D858C9841E75A4200042D9F3 /* urlmapping */,
 				D81D68851E8A66EC00C1489F /* MDDataCacheManager */,
 				D81D68821E8A64D400C1489F /* Resource */,
 				D858C9741E7592B90042D9F3 /* MDFoundation */,
 				D858C96D1E7587110042D9F3 /* MDViewController */,
 				D858C8D51E75826F0042D9F3 /* NVObject */,
-				D858C8CA1E7571970042D9F3 /* MDModule */,
 				D858C8971E756B150042D9F3 /* AppDelegate.h */,
 				D858C8981E756B150042D9F3 /* AppDelegate.m */,
 				D858C8C71E756B6B0042D9F3 /* MainViewController.h */,
@@ -221,15 +284,6 @@
 				D858C8BB1E756B160042D9F3 /* Info.plist */,
 			);
 			path = MDProjectUITests;
-			sourceTree = "<group>";
-		};
-		D858C8CA1E7571970042D9F3 /* MDModule */ = {
-			isa = PBXGroup;
-			children = (
-				D858C8CB1E7571B70042D9F3 /* MDModuleViewController.h */,
-				D858C8CC1E7571B70042D9F3 /* MDModuleViewController.m */,
-			);
-			path = MDModule;
 			sourceTree = "<group>";
 		};
 		D858C8D51E75826F0042D9F3 /* NVObject */ = {
@@ -460,14 +514,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
+				D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */,
+				D850235E1EC6922E0054060E /* MDRACViewController.m in Sources */,
 				D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */,
 				D858C97D1E7592B90042D9F3 /* NSURL+Ext.m in Sources */,
-				D858C8CD1E7571B70042D9F3 /* MDModuleViewController.m in Sources */,
 				D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */,
 				D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */,
+				D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */,
+				D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */,
 				D858C9731E758FEA0042D9F3 /* MDURLAction.m in Sources */,
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
+				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
+				D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */,
 				D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */,
 				D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */,
 				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,

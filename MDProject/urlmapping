@@ -1,2 +1,5 @@
-mdmodule      : MDModuleViewController
-main          : MainViewController
+main             : MainViewController
+rac              : MDRACViewController
+mdbasemodule     : MDBaseModuleViewController
+mddrawimage      : MDDrawImageViewController
+

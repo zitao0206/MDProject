@@ -7,14 +7,15 @@
 //
 
 #import "MainViewController.h"
-#import "MDModuleViewController.h"
 #import "MDURLAction.h"
 #import "MDNavigator.h"
+#import "UIView+ResizeFrame.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
-
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) UIView *cView;
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UILabel *label2;
 @end
 
 @implementation MainViewController
@@ -27,12 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView = [[UITableView  alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+
+    self.tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
-    
+ 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -52,15 +54,15 @@
     contentCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.row == 0)
     {
-       contentCell.textLabel.text = @"模块化案例一";
+       contentCell.textLabel.text = @"RAC开发";
     }
     else if (indexPath.row == 1)
     {
-       contentCell.textLabel.text = @"模块化案例二";
+       contentCell.textLabel.text = @"模块化实例";
     }
-    else
+    else if (indexPath.row == 2)
     {
-       contentCell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+       contentCell.textLabel.text =@"DrawImage";
     }
     return contentCell;
 }
@@ -74,17 +76,32 @@
 {
     if (indexPath.row == 0)
     {
-        
-//        MDModuleViewController *mdModule = [[MDModuleViewController alloc] init];
-//        [self.navigationController pushViewController:mdModule animated:YES];
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdmodule"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://rac"]];
         [action setString:@"http://www.baidu.com" forKey:@"url"];
         action.animation = MDNaviAnimationPush;
         [[MDNavigator navigator] openURLAction:action];
     }
-    else
+    if (indexPath.row == 1)
     {
-        
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdbasemodule"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 2)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mddrawimage"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
     }
 }
+
+
+- (void)viewDidLayoutSubviews
+{
+    
+    [self.label sizeToFit];
+    self.label.top = 0;
+    self.label.left = 15;
+}
+
 @end

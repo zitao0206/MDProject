@@ -1,12 +1,12 @@
 //
-//  MDModuleViewController.m
+//  MDRACViewController.m
 //  MDProject
 //
 //  Created by lizitao on 17/3/12.
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDModuleViewController.h"
+#import "MDRACViewController.h"
 #import "MDNavigator.h"
 #import "RACDisposable.h"
 #import "RACSignal.h"
@@ -14,14 +14,14 @@
 #import "RACSubscriber.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface MDModuleViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface MDRACViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) RACDisposable *dataDisposable;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *sourceArray;
 
 @end
 
-@implementation MDModuleViewController
+@implementation MDRACViewController
 
 - (BOOL)handleWithURLAction:(MDURLAction *)urlAction
 {
