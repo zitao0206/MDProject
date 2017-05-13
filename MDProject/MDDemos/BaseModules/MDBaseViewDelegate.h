@@ -1,0 +1,21 @@
+//
+//  MDBaseViewDelegate.h
+//  MDProject
+//
+//  Created by lizitao on 2017/5/13.
+//  Copyright © 2017年 lizitao. All rights reserved.
+//
+
+#ifndef MDBaseViewDelegate_h
+#define MDBaseViewDelegate_h
+
+@protocol MDBaseViewDelegate <NSObject>
+
+@required
+- (void)reloadModelData:(id)model;
+- (void)relayoutSubviews:(CGFloat)viewWidth;
+
+
+@end
+
+#endif /* MDBaseViewDelegate_h */

@@ -18,6 +18,12 @@
 		D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023681EC692FF0054060E /* UGCDrawLayer.m */; };
 		D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D850236A1EC692FF0054060E /* UGCDrawTextLayer.m */; };
 		D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023711EC693410054060E /* MDBaseModuleViewController.m */; };
+		D85023751EC69A010054060E /* MDBaseModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023741EC69A010054060E /* MDBaseModuleView.m */; };
+		D85023791EC69C980054060E /* MDDemoModuleViewcomtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023781EC69C980054060E /* MDDemoModuleViewcomtroller.m */; };
+		D850237C1EC69CB80054060E /* MDDemoHeadModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D850237B1EC69CB80054060E /* MDDemoHeadModuleView.m */; };
+		D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D850237E1EC69E060054060E /* MDDemoMiddleModuleView.m */; };
+		D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023811EC69E210054060E /* MDDemoBottomModuleView.m */; };
+		D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023841EC6AAC20054060E /* MDBaseModuleModel.m */; };
 		D858C8961E756B150042D9F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8951E756B150042D9F3 /* main.m */; };
 		D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8981E756B150042D9F3 /* AppDelegate.m */; };
 		D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A01E756B150042D9F3 /* Assets.xcassets */; };
@@ -79,6 +85,19 @@
 		D850236A1EC692FF0054060E /* UGCDrawTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGCDrawTextLayer.m; sourceTree = "<group>"; };
 		D85023701EC693410054060E /* MDBaseModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseModuleViewController.h; sourceTree = "<group>"; };
 		D85023711EC693410054060E /* MDBaseModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleViewController.m; sourceTree = "<group>"; };
+		D85023731EC69A010054060E /* MDBaseModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseModuleView.h; sourceTree = "<group>"; };
+		D85023741EC69A010054060E /* MDBaseModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleView.m; sourceTree = "<group>"; };
+		D85023761EC69A950054060E /* MDBaseViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBaseViewDelegate.h; sourceTree = "<group>"; };
+		D85023771EC69C980054060E /* MDDemoModuleViewcomtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoModuleViewcomtroller.h; sourceTree = "<group>"; };
+		D85023781EC69C980054060E /* MDDemoModuleViewcomtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoModuleViewcomtroller.m; sourceTree = "<group>"; };
+		D850237A1EC69CB80054060E /* MDDemoHeadModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoHeadModuleView.h; sourceTree = "<group>"; };
+		D850237B1EC69CB80054060E /* MDDemoHeadModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoHeadModuleView.m; sourceTree = "<group>"; };
+		D850237D1EC69E060054060E /* MDDemoMiddleModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoMiddleModuleView.h; sourceTree = "<group>"; };
+		D850237E1EC69E060054060E /* MDDemoMiddleModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoMiddleModuleView.m; sourceTree = "<group>"; };
+		D85023801EC69E210054060E /* MDDemoBottomModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoBottomModuleView.h; sourceTree = "<group>"; };
+		D85023811EC69E210054060E /* MDDemoBottomModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoBottomModuleView.m; sourceTree = "<group>"; };
+		D85023831EC6AAC20054060E /* MDBaseModuleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseModuleModel.h; sourceTree = "<group>"; };
+		D85023841EC6AAC20054060E /* MDBaseModuleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleModel.m; sourceTree = "<group>"; };
 		D858C8911E756B150042D9F3 /* MDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858C8951E756B150042D9F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D858C8971E756B150042D9F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +230,19 @@
 			children = (
 				D85023701EC693410054060E /* MDBaseModuleViewController.h */,
 				D85023711EC693410054060E /* MDBaseModuleViewController.m */,
+				D85023731EC69A010054060E /* MDBaseModuleView.h */,
+				D85023741EC69A010054060E /* MDBaseModuleView.m */,
+				D85023761EC69A950054060E /* MDBaseViewDelegate.h */,
+				D85023771EC69C980054060E /* MDDemoModuleViewcomtroller.h */,
+				D85023781EC69C980054060E /* MDDemoModuleViewcomtroller.m */,
+				D850237A1EC69CB80054060E /* MDDemoHeadModuleView.h */,
+				D850237B1EC69CB80054060E /* MDDemoHeadModuleView.m */,
+				D850237D1EC69E060054060E /* MDDemoMiddleModuleView.h */,
+				D850237E1EC69E060054060E /* MDDemoMiddleModuleView.m */,
+				D85023801EC69E210054060E /* MDDemoBottomModuleView.h */,
+				D85023811EC69E210054060E /* MDDemoBottomModuleView.m */,
+				D85023831EC6AAC20054060E /* MDBaseModuleModel.h */,
+				D85023841EC6AAC20054060E /* MDBaseModuleModel.m */,
 			);
 			path = BaseModules;
 			sourceTree = "<group>";
@@ -516,8 +548,11 @@
 			files = (
 				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
+				D85023751EC69A010054060E /* MDBaseModuleView.m in Sources */,
+				D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */,
 				D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */,
 				D850235E1EC6922E0054060E /* MDRACViewController.m in Sources */,
+				D85023791EC69C980054060E /* MDDemoModuleViewcomtroller.m in Sources */,
 				D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */,
 				D858C97D1E7592B90042D9F3 /* NSURL+Ext.m in Sources */,
 				D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */,
@@ -528,11 +563,14 @@
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
 				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
 				D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */,
+				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */,
+				D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */,
 				D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */,
 				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,
 				D858C97C1E7592B90042D9F3 /* NSString+Ext.m in Sources */,
 				D858C8DA1E75826F0042D9F3 /* NVObject.m in Sources */,
+				D850237C1EC69CB80054060E /* MDDemoHeadModuleView.m in Sources */,
 				D858C8C91E756B6B0042D9F3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

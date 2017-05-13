@@ -10,6 +10,8 @@
 #import "MDURLAction.h"
 #import "MDNavigator.h"
 #import "UIView+ResizeFrame.h"
+#import "MDDemoModuleViewcomtroller.h"
+#import "MDBaseModuleModel.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -83,9 +85,14 @@
     }
     if (indexPath.row == 1)
     {
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdbasemodule"]];
-        action.animation = MDNaviAnimationPush;
-        [[MDNavigator navigator] openURLAction:action];
+//        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdbasemodule"]];
+//        action.animation = MDNaviAnimationPush;
+//        [[MDNavigator navigator] openURLAction:action];
+        MDDemoModuleViewcomtroller *vc = [MDDemoModuleViewcomtroller new];
+        MDBaseModuleModel *model = [MDBaseModuleModel new];
+        model.title = @"模块化框架";
+        vc.model = model;
+        [self.navigationController pushViewController:vc animated:YES];
     }
     if (indexPath.row == 2)
     {
