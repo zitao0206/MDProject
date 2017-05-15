@@ -11,3 +11,7 @@
 @implementation MDBaseModuleModel
 
 @end
+
+@implementation MDBaseLayoutModel
+
+@end

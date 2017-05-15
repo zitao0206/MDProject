@@ -25,12 +25,6 @@
 {
     return @[@"MDDemoHeadModuleView",
              @"MDDemoMiddleModuleView",
-             @"MDDemoBottomModuleView",
-             @"MDDemoHeadModuleView",
-             @"MDDemoMiddleModuleView",
-             @"MDDemoBottomModuleView",
-             @"MDDemoHeadModuleView",
-             @"MDDemoMiddleModuleView",
              @"MDDemoBottomModuleView"
              ];
 }

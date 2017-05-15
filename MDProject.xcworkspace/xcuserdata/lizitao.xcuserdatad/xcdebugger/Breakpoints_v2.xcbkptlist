@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MDProject/MainViewController.m"
-            timestampString = "516336814.610863"
+            filePath = "MDProject/MDDemos/BaseModules/MDBaseModuleViewController.m"
+            timestampString = "516427666.029323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "-refreshLayoutContentView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -24,6 +24,7 @@
 		D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D850237E1EC69E060054060E /* MDDemoMiddleModuleView.m */; };
 		D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023811EC69E210054060E /* MDDemoBottomModuleView.m */; };
 		D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023841EC6AAC20054060E /* MDBaseModuleModel.m */; };
+		D85023881EC745AB0054060E /* NSArray+functional.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023871EC745AB0054060E /* NSArray+functional.m */; };
 		D858C8961E756B150042D9F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8951E756B150042D9F3 /* main.m */; };
 		D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8981E756B150042D9F3 /* AppDelegate.m */; };
 		D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A01E756B150042D9F3 /* Assets.xcassets */; };
@@ -98,6 +99,8 @@
 		D85023811EC69E210054060E /* MDDemoBottomModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoBottomModuleView.m; sourceTree = "<group>"; };
 		D85023831EC6AAC20054060E /* MDBaseModuleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseModuleModel.h; sourceTree = "<group>"; };
 		D85023841EC6AAC20054060E /* MDBaseModuleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleModel.m; sourceTree = "<group>"; };
+		D85023861EC745AB0054060E /* NSArray+functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+functional.h"; sourceTree = "<group>"; };
+		D85023871EC745AB0054060E /* NSArray+functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+functional.m"; sourceTree = "<group>"; };
 		D858C8911E756B150042D9F3 /* MDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858C8951E756B150042D9F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D858C8971E756B150042D9F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 		D858C9741E7592B90042D9F3 /* MDFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				D85023861EC745AB0054060E /* NSArray+functional.h */,
+				D85023871EC745AB0054060E /* NSArray+functional.m */,
 				D858C9771E7592B90042D9F3 /* NSString+Ext.h */,
 				D858C9781E7592B90042D9F3 /* NSString+Ext.m */,
 				D858C9791E7592B90042D9F3 /* NSURL+Ext.h */,
@@ -547,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
+				D85023881EC745AB0054060E /* NSArray+functional.m in Sources */,
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
 				D85023751EC69A010054060E /* MDBaseModuleView.m in Sources */,
 				D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */,

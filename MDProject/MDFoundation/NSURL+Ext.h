@@ -1,9 +1,9 @@
 //
 //  NSURL+Ext.h
-//  Core
+//  MDProject
 //
-//  Created by ZhouHui on 14-4-22.
-//  Copyright (c) 2014年 dianping.com. All rights reserved.
+//  Created by lizitao on 17/3/12.
+//  Copyright © 2017年 lizitao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

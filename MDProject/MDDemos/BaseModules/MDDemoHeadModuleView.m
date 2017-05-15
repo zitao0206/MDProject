@@ -14,6 +14,7 @@
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor redColor];
+        [self performSelector:@selector(test) withObject:self afterDelay:3.f];
     }
     return self;
 }
@@ -26,6 +27,11 @@
 - (void)relayoutSubviews:(CGFloat)viewWidth
 {
     self.frame = CGRectMake(0, 0, viewWidth, 100.0);
+}
+
+- (void)test
+{
+    self.height = self.height + 30;
 }
 
 @end

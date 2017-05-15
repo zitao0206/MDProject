@@ -6,8 +6,14 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MDBaseModuleModel : NSObject
 @property (nonatomic, strong) NSString *title;
+@end
+
+@interface MDBaseLayoutModel : NSObject
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) NSUInteger index;
+
 @end

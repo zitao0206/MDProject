@@ -1,9 +1,9 @@
 //
 //  NSString+Ext.m
-//  Core
+//  MDProject
 //
-//  Created by Yimin Tu on 12-6-6.
-//  Copyright (c) 2012年 dianping.com. All rights reserved.
+//  Created by lizitao on 17/3/12.
+//  Copyright © 2017年 lizitao. All rights reserved.
 //
 
 #import "NSString+Ext.h"

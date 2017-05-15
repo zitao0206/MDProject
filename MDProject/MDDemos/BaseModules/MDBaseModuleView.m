@@ -7,8 +7,10 @@
 //
 
 #import "MDBaseModuleView.h"
+#import "MDBaseModuleModel.h"
 
 @interface MDBaseModuleView() <MDBaseViewDelegate>
+@property (nonatomic, assign) NSUInteger index;
 
 @end
 
@@ -22,6 +24,11 @@
     return self;
 }
 
+- (void)initViewIndexWith:(NSUInteger)index
+{
+    self.index = index;
+}
+
 - (void)reloadModelData:(id)model
 {
     
@@ -32,9 +39,18 @@
     
 }
 
-- (void)layoutSubviews
+- (RACSignal *)signalOfSize
 {
-    [super layoutSubviews];
-}
+    __block RACSignal* textSignal;
+     [[RACObserve(self, height) distinctUntilChanged] subscribeNext:^(id x) {
+         textSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+             [subscriber sendNext:@(self.index)];
+             [subscriber sendCompleted];
+             return nil;
+         }];
 
+     }];
+    
+    return [RACObserve(self, height) distinctUntilChanged];
+}
 @end

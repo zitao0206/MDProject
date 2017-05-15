@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "MDBaseViewDelegate.h"
+#import "UIView+ResizeFrame.h"
 
 @interface MDBaseModuleView : UIView
-
 @end

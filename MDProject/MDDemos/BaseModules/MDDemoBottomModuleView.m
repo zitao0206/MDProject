@@ -27,4 +27,5 @@
 {
     self.frame = CGRectMake(0, 0, viewWidth, 100.0);
 }
+
 @end

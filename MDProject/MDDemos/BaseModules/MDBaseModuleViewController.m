@@ -10,6 +10,7 @@
 #import "MDBaseModuleView.h"
 #import "UIView+ResizeFrame.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "NSArray+functional.h"
 
 @interface MDBaseModuleViewController ()<UIScrollViewDelegate>
 //views
@@ -18,6 +19,8 @@
 
 //model
 @property (nonatomic, strong) id model;
+//data
+@property (nonatomic, strong) NSMutableArray <NSNumber *> *subviewsHeight;
 
 @end
 
@@ -71,6 +74,7 @@
 {
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[MDBaseModuleView class]]) {
+            [obj initViewIndexWith:idx];
             [obj reloadModelData:self.model];
         }
     }];
@@ -79,16 +83,44 @@
 - (void)relayoutContentSubviews
 {
     __block CGFloat layoutOffestY = 0.0;
+    self.subviewsHeight =  [NSMutableArray new];
+    @weakify(self);
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        @strongify(self);
         if ([obj isKindOfClass:[MDBaseModuleView class]]) {
             [obj relayoutSubviews:[self contentViewWidth]];
             obj.top = layoutOffestY;
             obj.left = 15.f;
             layoutOffestY = obj.bottom + 15;
+            [self.subviewsHeight addObject:@(obj.height)];
         }
     }];
     self.contentView.frame = CGRectMake(0, 0, layoutOffestY, self.view.width);
     self.scrollView.contentSize = CGSizeMake(self.view.width, layoutOffestY);
+    [self refreshLayoutContentView];
+    
+}
+
+- (void)refreshLayoutContentView
+{
+    __block RACSignal *signal = [RACSubject subject];
+    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[MDBaseModuleView class]]) {
+            RACSignal *s = [obj signalOfSize];
+            if (idx == 0) {
+                signal = s;
+            } else {
+                [signal merge:s];
+            }
+        }
+    }];
+    @weakify(self);
+    [[[signal distinctUntilChanged] skip:1] subscribeNext:^(id x) {
+        @strongify(self);
+        NSLog(@"---------->%@",x);
+
+        [self relayoutContentView];
+    }];
 }
 
 - (void)relayoutContentView
