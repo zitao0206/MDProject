@@ -12,4 +12,6 @@
 #import "UIView+ResizeFrame.h"
 
 @interface MDBaseModuleView : UIView
+@property (nonatomic, strong) RACSubject *heightChangeSignal;
+
 @end

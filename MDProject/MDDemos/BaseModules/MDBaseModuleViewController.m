@@ -39,6 +39,11 @@
     _model = model;
 }
 
+- (void)dealloc
+{
+    [self disposeAllSubviewsSignal];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -57,12 +62,9 @@
    
     self.contentView = [UIView new];
     [self.scrollView addSubview:self.contentView];
-    
-    for (NSString *obj in [self loadContentViews]) {
-        [self.contentView addSubview:[NSClassFromString(obj) new]];
-    }
-    [self reloadContentSubviewsData];
-    [self relayoutContentSubviews];
+    [self loadAllSubviews];
+    [self loadAllSubviewsData];
+    [self layoutAllSubviews];
 }
 
 - (NSArray *)loadContentViews
@@ -70,25 +72,62 @@
     return @[];
 }
 
-- (void)reloadContentSubviewsData
+- (void)loadAllSubviews
 {
-    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[MDBaseModuleView class]]) {
-            [obj initViewIndexWith:idx];
-            [obj reloadModelData:self.model];
+    for (NSString *obj in [self loadContentViews]) {
+        [self.contentView addSubview:[NSClassFromString(obj) new]];
+    }
+}
+
+- (void)loadAllSubviewsData
+{
+    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof MDBaseModuleView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj conformsToProtocol:@protocol(MDBaseViewDelegate)]) {
+            [obj configViewWithIndex:idx];
+            [obj loadViewWithData:self.model];
+        }
+    }];
+    [self bindAllSubViewsHeight];
+}
+
+- (void)bindAllSubViewsHeight
+{
+    __block RACSignal *signal = [RACSubject subject];
+    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof MDBaseModuleView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        RACSubject *s = obj.heightChangeSignal;
+        if (idx == 0) {
+            signal = s;
+        } else {
+            signal = [signal merge:s];
+        }
+    }];
+    @weakify(self);
+    [[[signal distinctUntilChanged] skip:0] subscribeNext:^(id x) {
+        @strongify(self);
+        NSLog(@"---------->%@",x);
+        [self relayoutSubViewsWithIndex:[x integerValue]];
+    }];
+}
+
+- (void)disposeAllSubviewsSignal
+{
+    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof MDBaseModuleView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj conformsToProtocol:@protocol(MDBaseViewDelegate)]) {
+            RACSubject *s = obj.heightChangeSignal;
+            [s sendCompleted];
         }
     }];
 }
 
-- (void)relayoutContentSubviews
+- (void)layoutAllSubviews
 {
     __block CGFloat layoutOffestY = 0.0;
     self.subviewsHeight =  [NSMutableArray new];
     @weakify(self);
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         @strongify(self);
-        if ([obj isKindOfClass:[MDBaseModuleView class]]) {
-            [obj relayoutSubviews:[self contentViewWidth]];
+        if ([obj conformsToProtocol:@protocol(MDBaseViewDelegate)]) {
+            [obj layoutViewWithWidth:[self contentViewWidth]];
             obj.top = layoutOffestY;
             obj.left = 15.f;
             layoutOffestY = obj.bottom + 15;
@@ -97,39 +136,15 @@
     }];
     self.contentView.frame = CGRectMake(0, 0, layoutOffestY, self.view.width);
     self.scrollView.contentSize = CGSizeMake(self.view.width, layoutOffestY);
-    [self refreshLayoutContentView];
     
 }
 
-- (void)refreshLayoutContentView
+- (void)relayoutSubViewsWithIndex:(NSUInteger)index
 {
-    __block RACSignal *signal = [RACSubject subject];
+    __block CGFloat layoutOffestY = [self.contentView.subviews objectAtIndex:index].bottom;
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[MDBaseModuleView class]]) {
-            RACSignal *s = [obj signalOfSize];
-            if (idx == 0) {
-                signal = s;
-            } else {
-                [signal merge:s];
-            }
-        }
-    }];
-    @weakify(self);
-    [[[signal distinctUntilChanged] skip:1] subscribeNext:^(id x) {
-        @strongify(self);
-        NSLog(@"---------->%@",x);
-
-        [self relayoutContentView];
-    }];
-}
-
-- (void)relayoutContentView
-{
-    __block CGFloat layoutOffestY = 0.0;
-    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[MDBaseModuleView class]]) {
-            obj.top = layoutOffestY;
-            obj.left = 15.f;
+        if (idx > index) {
+            obj.top = layoutOffestY + 15;
             layoutOffestY = obj.bottom + 15;
         }
     }];

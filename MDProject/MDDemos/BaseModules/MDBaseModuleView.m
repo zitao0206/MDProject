@@ -8,10 +8,9 @@
 
 #import "MDBaseModuleView.h"
 #import "MDBaseModuleModel.h"
-
+@class RACSubject;
 @interface MDBaseModuleView() <MDBaseViewDelegate>
 @property (nonatomic, assign) NSUInteger index;
-
 @end
 
 @implementation MDBaseModuleView
@@ -20,37 +19,28 @@
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor clearColor];
+        _heightChangeSignal = [RACSubject subject];
     }
     return self;
 }
 
-- (void)initViewIndexWith:(NSUInteger)index
+- (void)configViewWithIndex:(NSUInteger)index
 {
     self.index = index;
+    [[[RACObserve(self, height) distinctUntilChanged] skip:1] subscribeNext:^(id x) {
+        [self.heightChangeSignal sendNext:[NSNumber numberWithInteger:index]];
+    }];
 }
 
-- (void)reloadModelData:(id)model
+- (void)loadViewWithData:(id)data
 {
     
 }
 
-- (void)relayoutSubviews:(CGFloat)viewWidth
+- (void)layoutViewWithWidth:(CGFloat)viewWidth
 {
     
 }
 
-- (RACSignal *)signalOfSize
-{
-    __block RACSignal* textSignal;
-     [[RACObserve(self, height) distinctUntilChanged] subscribeNext:^(id x) {
-         textSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-             [subscriber sendNext:@(self.index)];
-             [subscriber sendCompleted];
-             return nil;
-         }];
 
-     }];
-    
-    return [RACObserve(self, height) distinctUntilChanged];
-}
 @end

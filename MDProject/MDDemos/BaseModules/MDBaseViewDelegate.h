@@ -9,14 +9,13 @@
 #ifndef MDBaseViewDelegate_h
 #define MDBaseViewDelegate_h
 
-@class RACSignal;
+@class RACSubject;
 @protocol MDBaseViewDelegate <NSObject>
 
 @required
-- (void)initViewIndexWith:(NSUInteger)index;
-- (void)reloadModelData:(id)model;
-- (void)relayoutSubviews:(CGFloat)viewWidth;
-- (RACSignal *)signalOfSize;
+- (void)configViewWithIndex:(NSUInteger)index;
+- (void)loadViewWithData:(id)data;
+- (void)layoutViewWithWidth:(CGFloat)viewWidth;
 
 @end
 
