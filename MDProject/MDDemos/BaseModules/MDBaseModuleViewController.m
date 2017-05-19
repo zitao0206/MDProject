@@ -19,8 +19,6 @@
 
 //model
 @property (nonatomic, strong) id model;
-//data
-@property (nonatomic, strong) NSMutableArray <NSNumber *> *subviewsHeight;
 
 @end
 
@@ -122,7 +120,6 @@
 - (void)layoutAllSubviews
 {
     __block CGFloat layoutOffestY = 0.0;
-    self.subviewsHeight =  [NSMutableArray new];
     @weakify(self);
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         @strongify(self);
@@ -131,7 +128,6 @@
             obj.top = layoutOffestY;
             obj.left = 15.f;
             layoutOffestY = obj.bottom + 15;
-            [self.subviewsHeight addObject:@(obj.height)];
         }
     }];
     self.contentView.frame = CGRectMake(0, 0, layoutOffestY, self.view.width);

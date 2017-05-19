@@ -27,7 +27,7 @@
 - (void)configViewWithIndex:(NSUInteger)index
 {
     self.index = index;
-    [[[RACObserve(self, height) distinctUntilChanged] skip:1] subscribeNext:^(id x) {
+    [[[[RACObserve(self, height) distinctUntilChanged] skip:1] deliverOnMainThread] subscribeNext:^(id x) {
         [self.heightChangeSignal sendNext:[NSNumber numberWithInteger:index]];
     }];
 }
