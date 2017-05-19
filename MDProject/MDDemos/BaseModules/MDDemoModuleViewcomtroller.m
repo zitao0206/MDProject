@@ -7,6 +7,7 @@
 //
 
 #import "MDDemoModuleViewcomtroller.h"
+#import "UIView+ResizeFrame.h"
 
 @interface MDDemoModuleViewcomtroller ()
 
@@ -18,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+ 
 }
 
 
@@ -26,9 +27,17 @@
 {
     return @[@"MDDemoHeadModuleView",
              @"MDDemoMiddleModuleView",
+             @"MDDemoBottomModuleView",
+             @"MDDemoHeadModuleView",
+             @"MDDemoMiddleModuleView",
+             @"MDDemoBottomModuleView",
+             @"MDDemoHeadModuleView",
+             @"MDDemoMiddleModuleView",
              @"MDDemoBottomModuleView"
              ];
 }
+
+
 
 
 - (void)didReceiveMemoryWarning

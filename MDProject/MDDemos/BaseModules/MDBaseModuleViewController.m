@@ -15,7 +15,6 @@
 @interface MDBaseModuleViewController ()<UIScrollViewDelegate>
 //views
 @property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) UIView *contentView;
 
 //model
 @property (nonatomic, strong) id model;
@@ -144,8 +143,42 @@
             layoutOffestY = obj.bottom + 15;
         }
     }];
-    self.contentView.frame = CGRectMake(0, 0, layoutOffestY, self.view.width);
+    self.contentView.frame = CGRectMake(0, 0, self.view.width, layoutOffestY);
     self.scrollView.contentSize = CGSizeMake(self.view.width, layoutOffestY);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    UIImage *image = [self convertViewToImage:self.contentView];
+    [self loadImageFinished:image];
+}
+
+
+- (void)loadImageFinished:(UIImage *)image
+{
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    
+    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+}
+
+- (UIImage *)convertViewToImage:(UIView *)v
+{
+    @autoreleasepool
+    {
+        CGSize s = CGSizeMake(v.width, v.height);
+        UIGraphicsBeginImageContextWithOptions(s, NO, 2);
+        [v.layer renderInContext:UIGraphicsGetCurrentContext()];
+        v.layer.contents = nil;
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image;
+    }
 }
 
 - (CGFloat)screenWidth

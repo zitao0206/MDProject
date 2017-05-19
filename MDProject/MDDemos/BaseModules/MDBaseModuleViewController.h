@@ -9,5 +9,6 @@
 #import "MDBaseViewController.h"
 
 @interface MDBaseModuleViewController : MDBaseViewController
+@property (nonatomic, strong) UIView *contentView;
 
 @end
