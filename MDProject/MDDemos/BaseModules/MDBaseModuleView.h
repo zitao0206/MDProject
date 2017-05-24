@@ -13,5 +13,6 @@
 
 @interface MDBaseModuleView : UIView
 @property (nonatomic, strong) RACSubject *heightChangeSignal;
-
+@property (nonatomic, assign) NSUInteger index;
+@property (nonatomic, strong) UILabel *indexLabel;
 @end

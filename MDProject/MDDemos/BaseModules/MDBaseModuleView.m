@@ -10,7 +10,7 @@
 #import "MDBaseModuleModel.h"
 @class RACSubject;
 @interface MDBaseModuleView() <MDBaseViewDelegate>
-@property (nonatomic, assign) NSUInteger index;
+
 @end
 
 @implementation MDBaseModuleView
@@ -19,6 +19,12 @@
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor clearColor];
+        self.indexLabel = [UILabel new];
+        self.indexLabel.font = [UIFont systemFontOfSize:14.f];
+        self.indexLabel.textColor = [UIColor blackColor];
+        self.indexLabel.numberOfLines = 1;
+        self.indexLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.indexLabel];
         _heightChangeSignal = [RACSubject subject];
     }
     return self;
@@ -39,7 +45,7 @@
 
 - (void)layoutViewWithWidth:(CGFloat)viewWidth
 {
-    
+  
 }
 
 

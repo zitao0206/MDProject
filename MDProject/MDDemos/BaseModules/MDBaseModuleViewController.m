@@ -15,7 +15,6 @@
 @interface MDBaseModuleViewController ()<UIScrollViewDelegate>
 //views
 @property (nonatomic, strong) UIScrollView *scrollView;
-
 //model
 @property (nonatomic, strong) id model;
 
@@ -125,8 +124,8 @@
         if ([obj conformsToProtocol:@protocol(MDBaseViewDelegate)]) {
             [obj layoutViewWithWidth:[self contentViewWidth]];
             obj.top = layoutOffestY;
-            obj.left = 15.f;
-            layoutOffestY = obj.bottom + 15;
+            obj.left = ([self screenWidth] - [self contentViewWidth])/2;
+            layoutOffestY = obj.bottom + [self spacingBetweenSubviews];
         }
     }];
     self.contentView.frame = CGRectMake(0, 0, self.view.width, layoutOffestY);
@@ -139,32 +138,12 @@
     __block CGFloat layoutOffestY = [self.contentView.subviews objectAtIndex:index].bottom;
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (idx > index) {
-            obj.top = layoutOffestY + 15;
-            layoutOffestY = obj.bottom + 15;
+            obj.top = layoutOffestY + [self spacingBetweenSubviews];
+            layoutOffestY = obj.bottom;
         }
     }];
     self.contentView.frame = CGRectMake(0, 0, self.view.width, layoutOffestY);
     self.scrollView.contentSize = CGSizeMake(self.view.width, layoutOffestY);
-}
-
-- (CGFloat)screenWidth
-{
-    return [UIScreen mainScreen].bounds.size.width;
-}
-
-- (CGFloat)contentViewWidth
-{
-    return [self screenWidth] - 30;
-}
-
-- (CGFloat)showHeight
-{
-    return [self screenHeight];
-}
-
-- (CGFloat)screenHeight
-{
-    return [UIScreen mainScreen].bounds.size.height;
 }
 
 
@@ -178,15 +157,29 @@
     self.contentView.width = self.scrollView.width;
 }
 
-#pragma mark - scrollview delegate
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (CGFloat)spacingBetweenSubviews
 {
-
+    return 0.0;
 }
 
-- (void)naviViewProcession:(UIScrollView *)scrollView
+- (CGFloat)screenWidth
 {
+    return [UIScreen mainScreen].bounds.size.width;
+}
+
+- (CGFloat)contentViewWidth
+{
+    return [self screenWidth];
+}
+
+- (CGFloat)showHeight
+{
+    return [self screenHeight];
+}
+
+- (CGFloat)screenHeight
+{
+    return [UIScreen mainScreen].bounds.size.height;
 }
 
 - (void)didReceiveMemoryWarning

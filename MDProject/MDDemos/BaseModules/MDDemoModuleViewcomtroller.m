@@ -22,59 +22,30 @@
  
 }
 
-
 - (NSArray *)loadContentViews
 {
     return @[@"MDDemoHeadModuleView",
-             @"MDDemoMiddleModuleView",
              @"MDDemoBottomModuleView",
+             @"MDDemoMiddleModuleView",
              @"MDDemoHeadModuleView",
              @"MDDemoMiddleModuleView",
-             @"MDDemoBottomModuleView",
-             @"MDDemoHeadModuleView",
-             @"MDDemoMiddleModuleView",
-             @"MDDemoBottomModuleView"
              ];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (CGFloat)contentViewWidth
 {
-    [super viewDidAppear:YES];
-    
-    UIImage *image = [self convertViewToImage:self.contentView];
-    [self loadImageFinished:image];
+    return [self screenWidth] - 30;
 }
 
-
-- (void)loadImageFinished:(UIImage *)image
+- (CGFloat)spacingBetweenSubviews
 {
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+    return 15.0;
 }
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+- (CGFloat)screenWidth
 {
-    
-    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+    return [UIScreen mainScreen].bounds.size.width;
 }
 
-- (UIImage *)convertViewToImage:(UIView *)v
-{
-    @autoreleasepool
-    {
-        CGSize s = CGSizeMake(v.width, v.height);
-        UIGraphicsBeginImageContextWithOptions(s, NO, 2);
-        [v.layer renderInContext:UIGraphicsGetCurrentContext()];
-        v.layer.contents = nil;
-        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return image;
-    }
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 @end

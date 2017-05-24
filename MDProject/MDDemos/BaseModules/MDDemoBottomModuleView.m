@@ -13,20 +13,25 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.backgroundColor = [UIColor yellowColor];
-        [self performSelector:@selector(test) withObject:self afterDelay:3.f];
+        self.backgroundColor = [UIColor lightGrayColor];
+        [self performSelector:@selector(test) withObject:self afterDelay:10.f];
     }
     return self;
 }
 
-- (void)reloadModelData:(id)model
+- (void)loadViewWithData:(id)model
 {
+    self.indexLabel.text = [[NSString alloc]initWithFormat:@"Module %ld",self.index];
     
 }
 
 - (void)layoutViewWithWidth:(CGFloat)viewWidth
 {
     self.frame = CGRectMake(0, 0, viewWidth, 100.0);
+    [self.indexLabel sizeToFit];
+    self.indexLabel.centerX = self.frame.size.width / 2;
+    self.indexLabel.centerY = self.frame.size.height / 2;
+    
 }
 
 - (void)test
