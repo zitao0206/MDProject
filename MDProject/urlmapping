@@ -2,4 +2,4 @@ main             : MainViewController
 rac              : MDRACViewController
 mdbasemodule     : MDDemoModuleViewcomtroller
 mddrawimage      : MDDrawImageViewController
-
+mdjson           : MDJsonDemoViewController

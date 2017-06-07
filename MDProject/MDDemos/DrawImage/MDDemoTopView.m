@@ -1,18 +1,18 @@
 //
-//  MDQuartzView.m
+//  MDDemoTopView.m
 //  MDProject
 //
-//  Created by lizitao on 2017/4/21.
+//  Created by lizitao on 2017/5/29.
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDQuartzView.h"
-@interface MDQuartzView ()
+#import "MDDemoTopView.h"
+
+@interface MDDemoTopView ()
 @property (nonatomic, strong) UILabel *label;
 
 @end
-
-@implementation MDQuartzView
+@implementation MDDemoTopView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -31,7 +31,7 @@
 
 - (void)test1
 {
-//    self.label.frame = CGRectMake(0, 0, 100, 100);
+    //    self.label.frame = CGRectMake(0, 0, 100, 100);
     
 }
 

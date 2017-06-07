@@ -66,6 +66,10 @@
     {
        contentCell.textLabel.text =@"DrawImage";
     }
+    else if (indexPath.row == 3)
+    {
+        contentCell.textLabel.text =@"Json动态化";
+    }
     return contentCell;
 }
 
@@ -97,6 +101,12 @@
     if (indexPath.row == 2)
     {
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mddrawimage"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 3)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdjson"]];
         action.animation = MDNaviAnimationPush;
         [[MDNavigator navigator] openURLAction:action];
     }
