@@ -50,25 +50,7 @@
     NSAttributedString * aS = [self obtainStrWith:self.stringTemp And:18];
     self.label.attributedText = aS;
     
-    NSDictionary *dic = [self obtainAttributesWith:aS];
-    NSArray *array = [dic allValues];
-    
-    if ([[dic valueForKey:@"NSFont"] isKindOfClass:[NSString class]])
-    {
-        NSLog(@"------>%@",[dic valueForKey:@"NSFont"]);
-        NSMutableParagraphStyle
-    }
-    
-    if ([[dic valueForKey:@"NSParagraphStyle"] isKindOfClass:[NSString class]])
-    {
-        NSLog(@"------>%@",[dic valueForKey:@"NSParagraphStyle"]);
-    }
-    
-    
-//    NSString *font = [dic valueForKey:@"NSFont"];
-//    NSString *paragraph = [dic valueForKey:@"NSParagraphStyle"];
-    
-//    NSString *json =  [self dicTOjsonString:dic];
+//    NSDictionary *dic = [self obtainAttributesWith:aS];
     
     [self.view addSubview:self.label];
 

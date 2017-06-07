@@ -7,6 +7,7 @@
 //
 
 #import "MDJsonDemoViewController.h"
+#import "MDJsonModel.h"
 
 @interface MDJsonDemoViewController ()
 
@@ -14,24 +15,44 @@
 
 @implementation MDJsonDemoViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSString *jsonstring = @"{\"name\":\"Mitchell\",\"age\":10,\"sex\":\"man\",\"ID\":\"aaa\"}";
+//    NSDictionary *dict = @{@"name":@"Mitchell",@"age":@10,@"sex":@"man",@"ID":@"aaa"};
+    NSDictionary *dic = [self JSONValue:jsonstring];
+    MDJsonModel *model = [MTLJSONAdapter modelOfClass:[MDJsonModel class] fromJSONDictionary:dic error:nil];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSString *)JSONRepresentation
+{
+    if (![NSJSONSerialization isValidJSONObject:self]) return @"{}";
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONReadingAllowFragments | NSJSONWritingPrettyPrinted error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+    }
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (id)JSONValue:(NSString *)s
+{
+    if (s.length == 0) return @{};
+    NSError *error = nil;
+    id obj = [NSJSONSerialization JSONObjectWithData:[s dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:&error];
+    if (error)
+    {
+        NSLog(@"%@", error);
+        return nil;
+    }
+    return obj;
 }
-*/
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+}
 
 @end

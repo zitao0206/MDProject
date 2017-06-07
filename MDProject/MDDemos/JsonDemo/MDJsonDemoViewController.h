@@ -6,8 +6,8 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MDBaseViewController.h"
 
-@interface MDJsonDemoViewController : UIViewController
+@interface MDJsonDemoViewController : MDBaseViewController
 
 @end
