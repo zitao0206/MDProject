@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */; };
 		D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */; };
-		D80A8EA81EE815E800E9D409 /* MDJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8EA71EE815E800E9D409 /* MDJsonModel.m */; };
+		D80A8EA81EE815E800E9D409 /* MDJsonLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8EA71EE815E800E9D409 /* MDJsonLabelModel.m */; };
+		D80A8EAB1EE840D000E9D409 /* UIColor+nvutils.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8EAA1EE840D000E9D409 /* UIColor+nvutils.m */; };
 		D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */; };
 		D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687F1E8A4BC200C1489F /* MDURLElement.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
@@ -71,8 +72,10 @@
 		D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRACViewController.m; sourceTree = "<group>"; };
 		D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonDemoViewController.h; sourceTree = "<group>"; };
 		D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonDemoViewController.m; sourceTree = "<group>"; };
-		D80A8EA61EE815E800E9D409 /* MDJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonModel.h; sourceTree = "<group>"; };
-		D80A8EA71EE815E800E9D409 /* MDJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonModel.m; sourceTree = "<group>"; };
+		D80A8EA61EE815E800E9D409 /* MDJsonLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonLabelModel.h; sourceTree = "<group>"; };
+		D80A8EA71EE815E800E9D409 /* MDJsonLabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonLabelModel.m; sourceTree = "<group>"; };
+		D80A8EA91EE840D000E9D409 /* UIColor+nvutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+nvutils.h"; sourceTree = "<group>"; };
+		D80A8EAA1EE840D000E9D409 /* UIColor+nvutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+nvutils.m"; sourceTree = "<group>"; };
 		D81D687B1E8A441600C1489F /* MDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseNavigationController.h; sourceTree = "<group>"; };
 		D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseNavigationController.m; sourceTree = "<group>"; };
 		D81D687E1E8A4BC200C1489F /* MDURLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDURLElement.h; sourceTree = "<group>"; };
@@ -190,8 +193,8 @@
 			children = (
 				D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */,
 				D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */,
-				D80A8EA61EE815E800E9D409 /* MDJsonModel.h */,
-				D80A8EA71EE815E800E9D409 /* MDJsonModel.m */,
+				D80A8EA61EE815E800E9D409 /* MDJsonLabelModel.h */,
+				D80A8EA71EE815E800E9D409 /* MDJsonLabelModel.m */,
 			);
 			path = JsonDemo;
 			sourceTree = "<group>";
@@ -384,6 +387,8 @@
 		D858C9741E7592B90042D9F3 /* MDFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				D80A8EA91EE840D000E9D409 /* UIColor+nvutils.h */,
+				D80A8EAA1EE840D000E9D409 /* UIColor+nvutils.m */,
 				D85023861EC745AB0054060E /* NSArray+functional.h */,
 				D85023871EC745AB0054060E /* NSArray+functional.m */,
 				D858C9771E7592B90042D9F3 /* NSString+Ext.h */,
@@ -589,6 +594,7 @@
 				D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */,
 				D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */,
 				D85023791EC69C980054060E /* MDDemoModuleViewcomtroller.m in Sources */,
+				D80A8EAB1EE840D000E9D409 /* UIColor+nvutils.m in Sources */,
 				D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */,
 				D858C97D1E7592B90042D9F3 /* NSURL+Ext.m in Sources */,
 				D855BA911EDC1B7200D2A565 /* MDDemoTopView.m in Sources */,
@@ -596,7 +602,7 @@
 				D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */,
 				D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */,
 				D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */,
-				D80A8EA81EE815E800E9D409 /* MDJsonModel.m in Sources */,
+				D80A8EA81EE815E800E9D409 /* MDJsonLabelModel.m in Sources */,
 				D858C9731E758FEA0042D9F3 /* MDURLAction.m in Sources */,
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
 				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
