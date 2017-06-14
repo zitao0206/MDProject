@@ -48,6 +48,90 @@
         [self.tableView reloadData];
     }];
     [self dataSourceArray];
+    [self coldSignalTest];
+    
+//    [self hotSignalTest];
+    
+}
+
+- (void)coldSignalTest
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [[RACScheduler mainThreadScheduler] afterDelay:1 schedule:^{
+            [subscriber sendNext:@1];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:10 schedule:^{
+            [subscriber sendNext:@2];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+            [subscriber sendNext:@3];
+        }];
+        [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+            [subscriber sendNext:@4];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+            [subscriber sendCompleted];
+        }];
+        return nil;
+    }];
+    NSLog(@"Signal was created.");
+    [[RACScheduler mainThreadScheduler] afterDelay:5.1 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 1 recveive: %@", x);
+            
+        }];
+    }];
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:2.1 schedule:^{
+        [signal subscribeNext:^(id x) {
+//            NSLog(@"Subscriber 2 recveive: %@", x);
+        }];
+    }];
+}
+
+- (void)hotSignalTest
+{
+    RACMulticastConnection *connection = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [[RACScheduler mainThreadScheduler] afterDelay:1 schedule:^{
+            [subscriber sendNext:@1];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+            [subscriber sendNext:@2];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+            [subscriber sendNext:@3];
+        }];
+        
+        [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+            [subscriber sendCompleted];
+        }];
+        return nil;
+    }] publish];
+    [connection connect];
+    RACSignal *signal = connection.signal;
+    
+    NSLog(@"Signal was created.");
+    [[RACScheduler mainThreadScheduler] afterDelay:1.1 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 1 recveive: %@", x);
+        }];
+    }];
+    
+    [[RACScheduler mainThreadScheduler] afterDelay:2.1 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 2 recveive: %@", x);
+        }];
+    }];
+    [[RACScheduler mainThreadScheduler] afterDelay:5.1 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 3 recveive: %@", x);
+        }];
+    }];
 }
 
 - (void)dataSourceArray

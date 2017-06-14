@@ -6,25 +6,22 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MTLModel.h"
-#import <Mantle/Mantle.h>
+#import "MDJsonModel.h"
 
-@interface MDJsonLabelContentModel : MTLModel<MTLJSONSerializing>
-/** 字体颜色*/
-@property (nonatomic, copy) NSString *textColor;
-/** 字体大小*/
-@property (nonatomic, strong) NSNumber *textSize; // double
-/** 文字*/
-@property (nonatomic, copy) NSString *text;
+@interface MDJsonLabelContentModel : NSObject
+/**字体颜色*/
+@property(nonatomic, strong) UIColor *textColor;
+/**字体大小*/
+@property(nonatomic, assign) double textSize; // double
+/**文字*/
+@property(nonatomic, copy) NSString *text;
 
 @end
 
-@interface MDJsonLabelModel : MTLModel<MTLJSONSerializing>
-/** 背景颜色*/
-@property (nonatomic, copy) NSString *backgroundColor;
-/** 行间距*/
-@property (nonatomic, strong) NSNumber *lineSpacing; // double
+@interface MDJsonLabelModel : MDJsonModel
+@property(nonatomic, assign) NSInteger numberOfLines;
+@property(nonatomic, assign) double lineSpacing;
 /** label中的文字*/
-@property (nonatomic, strong) NSArray <MDJsonLabelContentModel *> *textList;
+@property(nonatomic, strong) NSArray <MDJsonLabelContentModel *> *textList;
 
 @end
