@@ -75,14 +75,14 @@
 		D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRACViewController.m; sourceTree = "<group>"; };
 		D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonDemoViewController.h; sourceTree = "<group>"; };
 		D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonDemoViewController.m; sourceTree = "<group>"; };
-		D80A8EA61EE815E800E9D409 /* MDJsonLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonLabelModel.h; sourceTree = "<group>"; };
+		D80A8EA61EE815E800E9D409 /* MDJsonLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonLabelModel.h; path = ../MDJsonLabelModel.h; sourceTree = "<group>"; };
 		D80A8EA91EE840D000E9D409 /* UIColor+nvutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+nvutils.h"; sourceTree = "<group>"; };
 		D80A8EAA1EE840D000E9D409 /* UIColor+nvutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+nvutils.m"; sourceTree = "<group>"; };
-		D80A8EAE1EEE7DDC00E9D409 /* MDJsonLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonLabel.h; sourceTree = "<group>"; };
-		D80A8EAF1EEE7DDC00E9D409 /* MDJsonLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonLabel.m; sourceTree = "<group>"; };
-		D80A8EB11EEE9D2A00E9D409 /* MDJsonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonViewModel.h; sourceTree = "<group>"; };
-		D80A8EB41EF113EF00E9D409 /* MDJsonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonView.h; sourceTree = "<group>"; };
-		D80A8EB51EF113EF00E9D409 /* MDJsonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonView.m; sourceTree = "<group>"; };
+		D80A8EAE1EEE7DDC00E9D409 /* MDJsonLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonLabel.h; path = ../MDJsonLabel.h; sourceTree = "<group>"; };
+		D80A8EAF1EEE7DDC00E9D409 /* MDJsonLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDJsonLabel.m; path = ../MDJsonLabel.m; sourceTree = "<group>"; };
+		D80A8EB11EEE9D2A00E9D409 /* MDJsonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonViewModel.h; path = ../MDJsonViewModel.h; sourceTree = "<group>"; };
+		D80A8EB41EF113EF00E9D409 /* MDJsonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonView.h; path = ../MDJsonView.h; sourceTree = "<group>"; };
+		D80A8EB51EF113EF00E9D409 /* MDJsonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDJsonView.m; path = ../MDJsonView.m; sourceTree = "<group>"; };
 		D81D687B1E8A441600C1489F /* MDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseNavigationController.h; sourceTree = "<group>"; };
 		D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseNavigationController.m; sourceTree = "<group>"; };
 		D81D687E1E8A4BC200C1489F /* MDURLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDURLElement.h; sourceTree = "<group>"; };
@@ -150,11 +150,11 @@
 		D858C97E1E759CD30042D9F3 /* MDNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDNavigator.h; sourceTree = "<group>"; };
 		D858C97F1E759CD30042D9F3 /* MDNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDNavigator.m; sourceTree = "<group>"; };
 		D858C9841E75A4200042D9F3 /* urlmapping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = urlmapping; sourceTree = "<group>"; };
-		D8CEAF431EF12AB7009AA0EE /* MDJsonBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonBaseModel.h; sourceTree = "<group>"; };
-		D8CEAF461EF12B17009AA0EE /* MDJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonModel.h; sourceTree = "<group>"; };
+		D8CEAF431EF12AB7009AA0EE /* MDJsonBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonBaseModel.h; path = ../MDJsonBaseModel.h; sourceTree = "<group>"; };
+		D8CEAF461EF12B17009AA0EE /* MDJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDJsonModel.h; path = ../MDJsonModel.h; sourceTree = "<group>"; };
 		D8CEAF491EF13083009AA0EE /* MDJsonMappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonMappers.h; sourceTree = "<group>"; };
 		D8CEAF4A1EF13083009AA0EE /* MDJsonMappers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonMappers.m; sourceTree = "<group>"; };
-		D8CEAF4D1EF149EA009AA0EE /* MDJsonModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonModels.m; sourceTree = "<group>"; };
+		D8CEAF4D1EF149EA009AA0EE /* MDJsonModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDJsonModels.m; path = ../MDJsonModels.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,22 +200,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D80A8E981EE802FA00E9D409 /* JsonDemo */ = {
+		D808C9301EF27C7B0012FDC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */,
-				D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */,
 				D8CEAF461EF12B17009AA0EE /* MDJsonModel.h */,
-				D8CEAF491EF13083009AA0EE /* MDJsonMappers.h */,
-				D8CEAF4A1EF13083009AA0EE /* MDJsonMappers.m */,
+				D80A8EB11EEE9D2A00E9D409 /* MDJsonViewModel.h */,
 				D80A8EA61EE815E800E9D409 /* MDJsonLabelModel.h */,
+				D8CEAF431EF12AB7009AA0EE /* MDJsonBaseModel.h */,
+				D8CEAF4D1EF149EA009AA0EE /* MDJsonModels.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D808C9311EF286A20012FDC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				D80A8EAE1EEE7DDC00E9D409 /* MDJsonLabel.h */,
 				D80A8EAF1EEE7DDC00E9D409 /* MDJsonLabel.m */,
 				D80A8EB41EF113EF00E9D409 /* MDJsonView.h */,
 				D80A8EB51EF113EF00E9D409 /* MDJsonView.m */,
-				D80A8EB11EEE9D2A00E9D409 /* MDJsonViewModel.h */,
-				D8CEAF431EF12AB7009AA0EE /* MDJsonBaseModel.h */,
-				D8CEAF4D1EF149EA009AA0EE /* MDJsonModels.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D80A8E981EE802FA00E9D409 /* JsonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D808C9311EF286A20012FDC2 /* Views */,
+				D808C9301EF27C7B0012FDC2 /* Models */,
+				D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */,
+				D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */,
+				D8CEAF491EF13083009AA0EE /* MDJsonMappers.h */,
+				D8CEAF4A1EF13083009AA0EE /* MDJsonMappers.m */,
 			);
 			path = JsonDemo;
 			sourceTree = "<group>";

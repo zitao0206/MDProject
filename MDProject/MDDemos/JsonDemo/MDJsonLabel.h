@@ -13,5 +13,6 @@
 
 @interface MDJsonLabel : UILabel
 @property (nonatomic, copy) NSString *jsonString;
+@property (nonatomic, strong) MDJsonLabelModel *model;
 
 @end

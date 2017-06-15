@@ -9,6 +9,8 @@
 #import "MDJsonView.h"
 #import "MTLJSONAdapter.h"
 #import "MDJsonViewModel.h"
+#import "MDJsonLabelModel.h"
+#import "MDJsonLabel.h"
 #import "UIColor+nvutils.h"
 #import "UIView+ResizeFrame.h"
 
@@ -77,6 +79,14 @@
                 [self creatJsonSubViewsWith:(MDJsonViewModel *)subModel inView:view];
             }
         }
+        if ([subModel isKindOfClass:[MDJsonLabelModel class]]) {
+            MDJsonLabelModel *labelModel = (MDJsonLabelModel *)subModel;
+            MDJsonLabel *label = [MDJsonLabel new];
+            label.model = labelModel;
+            label.frame = CGRectMake(labelModel.x, labelModel.y, label.width, label.height);
+            [rootView addSubview:label];
+        }
+
     }
 }
 

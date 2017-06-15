@@ -11,7 +11,6 @@
 #import "UIView+ResizeFrame.h"
 
 @interface MDJsonLabel ()
-@property (nonatomic, strong) MDJsonLabelModel *model;
 
 @end
 
@@ -34,6 +33,15 @@
     }
 }
 
+- (void)setModel:(MDJsonLabelModel *)model
+{
+    _model = model;
+    if (_model) {
+        self.attributedText = [self obtainContentStringWithModel:_model];
+        [self obtainJsonLabelInfoWithModel:_model];
+    }
+}
+
 - (BOOL)validateData:(NSString *)jsonString
 {
     return [jsonString isKindOfClass:[NSString class]] || jsonString == nil;
@@ -42,10 +50,10 @@
 - (void)obtainJsonLabelInfoWithModel:(MDJsonLabelModel *)model
 {
     if (_model.x > 0) {
-        self.top = _model.x;
+        self.top = _model.y;
     }
     if (_model.y > 0) {
-        self.left = _model.y;
+        self.left = _model.x;
     }
     if (_model.width > 0) {
         self.width = _model.width;
@@ -53,6 +61,9 @@
     } else if (_model.height > 0) {
         self.height = _model.height;
         [self sizeToFit];
+    } else {
+        self.width = _model.width;
+        self.height = _model.height;
     }
     //背景色
     if (_model.backgroundColor) {
