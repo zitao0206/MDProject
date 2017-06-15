@@ -12,6 +12,7 @@
 #import "MDJsonViewModel.h"
 #import "MDJsonMappers.h"
 #import "MDJsonLabelModel.h"
+#import "MDJsonImageViewModel.h"
 
 @implementation MDJsonBaseModel
 
@@ -135,5 +136,24 @@
     }
     self.textList = subViewModels;
 }
+
+@end
+
+@implementation MDJsonImageViewModel
+
++(instancetype)modelWithDictionary:(NSDictionary *)dictionaryValue
+{
+    MDJsonImageViewModel *model = [MDJsonImageViewModel new];
+    [model setModelWithDictionary:dictionaryValue];
+    return model;
+}
+
+-(void)setModelWithDictionary:(NSDictionary *)dictionaryValue
+{
+    [super setModelWithDictionary:dictionaryValue];
+    self.url = [dictionaryValue objectForKey:@"url"];
+    self.localImageName = [dictionaryValue objectForKey:@"localImageName"];
+}
+
 
 @end

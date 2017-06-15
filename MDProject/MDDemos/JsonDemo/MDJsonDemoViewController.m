@@ -12,7 +12,6 @@
 #import "UIView+ResizeFrame.h"
 #import "MDJsonLabel.h"
 #import "MDJsonView.h"
-#import "MTLJSONAdapter.h"
 #import "MDJsonViewModel.h"
 
 @interface MDJsonDemoViewController ()

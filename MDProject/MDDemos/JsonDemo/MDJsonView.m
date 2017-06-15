@@ -7,7 +7,6 @@
 //
 
 #import "MDJsonView.h"
-#import "MTLJSONAdapter.h"
 #import "MDJsonViewModel.h"
 #import "MDJsonLabelModel.h"
 #import "MDJsonLabel.h"

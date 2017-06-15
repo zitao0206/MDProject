@@ -6,7 +6,7 @@ platform :ios, '8.0'
 target 'MDProject' do
   pod 'ReactiveCocoa', '~> 2.5.0'
   pod 'AFNetworking'
-  pod 'Mantle'
+  pod 'SDWebImage'
 end
 
 pre_install do |installer|

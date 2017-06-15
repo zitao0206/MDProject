@@ -28,7 +28,8 @@
 {
     return @{
              @"view":@"MDJsonViewModel",
-             @"label":@"MDJsonLabelModel"
+             @"label":@"MDJsonLabelModel",
+             @"imageView":@"MDJsonImageViewModel"
              };
 }
 @end

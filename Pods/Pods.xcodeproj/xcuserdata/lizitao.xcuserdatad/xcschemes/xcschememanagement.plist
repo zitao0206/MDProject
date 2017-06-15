@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Mantle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MDProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,25 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B0D2BC4789FBEF0D9C6C1391CEEFF838</key>
+		<key>138115E967EE34FDC0A2F903BBC196EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBDA1A62D8B986BD1CDE73693708CCB0</key>
+		<key>2B73D5E410A19CD9DDDDC763EDCBA514</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94CB35D0F206F2603F28C433D44AB083</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FAEE2711AA7F508B64DADB2F2D917F9C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
