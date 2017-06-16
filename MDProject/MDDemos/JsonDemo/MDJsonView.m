@@ -12,12 +12,14 @@
 #import "MDJsonLabel.h"
 #import "UIColor+nvutils.h"
 #import "UIView+ResizeFrame.h"
+#import "MDJsonImageView.h"
 
 @interface MDJsonView ()
 @property (nonatomic, strong) MDJsonViewModel *model;
 @end
 
 @implementation MDJsonView
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -84,6 +86,13 @@
             label.model = labelModel;
             label.frame = CGRectMake(labelModel.x, labelModel.y, label.width, label.height);
             [rootView addSubview:label];
+        }
+        if ([subModel isKindOfClass:[MDJsonImageViewModel class]]) {
+            MDJsonImageViewModel *imageViewModel = (MDJsonImageViewModel *)subModel;
+            MDJsonImageView *imageView = [MDJsonImageView new];
+            imageView.model = imageViewModel;
+            imageView.frame = CGRectMake(imageViewModel.x, imageViewModel.y, imageViewModel.width, imageViewModel.height);
+            [rootView addSubview:imageView];
         }
 
     }
