@@ -13,6 +13,7 @@
 #import "RACScheduler.h"
 #import "RACSubscriber.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "MDNavigationManager.h"
 
 @interface MDRACViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) RACDisposable *dataDisposable;
@@ -35,6 +36,8 @@
     [super viewDidLoad];
     self.title = @"VC详情页1";
     NSLog(@"----------->%@",self.navigationController.viewControllers);
+    NSLog(@"----------->%@",[MDNavigationManager manager].navigationController.viewControllers);
+    
     self.tableView = [[UITableView  alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -151,7 +154,23 @@
 - (RACSignal *)fetchDataSignal
 {
     RACSignal *signal = [RACSignal startEagerlyWithScheduler:[RACScheduler mainThreadScheduler] block:^(id<RACSubscriber> subscriber) {
-        NSArray <NSString *> *tempArray = @[@"Hefei",@"Suzhou",@"Beijing",@"Shanghai",@"Hangzhou",@"Nanjing",@"Shenzhen",@"Tianjing",@"Wuxi"];
+        NSArray <NSString *> *tempArray = @[@"Hefei",
+                                            @"Suzhou",
+                                            @"Beijing",
+                                            @"Shanghai",
+                                            @"Hangzhou",
+                                            @"Nanjing",
+                                            @"Shenzhen",
+                                            @"Tianjing",
+                                            @"Fuyang",
+                                            @"Xiamen",
+                                            @"Hainan",
+                                            @"Wuxi",
+                                            @"Wuhu",
+                                            @"Xianggang",
+                                            @"Aomen",
+                                            @"Haerbin",
+                                            @"Wuxi"];
         [subscriber sendNext:tempArray];
         [subscriber sendCompleted];
     }];
@@ -178,7 +197,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
+    return 100.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

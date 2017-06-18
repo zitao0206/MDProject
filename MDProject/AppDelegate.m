@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "MDNavigator.h"
 #import "MDBaseNavigationController.h"
+#import "MDNavigationManager.h"
 
 typedef NS_ENUM(NSInteger, LaunchMode) {
     LaunchModeNormal = 0,
@@ -62,7 +63,9 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
     NSLog(@"doForegroundLaunchJobs: %ld", self.launchMode);
     
     [self setupNavigator];
+    
     self.window.rootViewController = self.navigationController;
+    
     [self.window makeKeyAndVisible];
 }
 
@@ -85,6 +88,7 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
     MDNavigator *navigator = [MDNavigator navigator];
     // 设置主导航器
     [navigator setMainNavigationController:self.navigationController];
+    
     // 设置navigator可以处理的url scheme
     [navigator setHandleableURLScheme:@"dianping"];
     // 绑定urlmapping文件
@@ -97,7 +101,7 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
     self.launchMode = [self launchModeForLaunchOptions:launchOptions];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    
+    [MDNavigationManager manager];
     if ([self isBackgroundLaunch])
     {
         [self doBackgroundLaunchJobs];
