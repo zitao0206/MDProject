@@ -341,7 +341,6 @@
 				D81D68821E8A64D400C1489F /* Resource */,
 				D858C9741E7592B90042D9F3 /* MDFoundation */,
 				D858C96D1E7587110042D9F3 /* MDViewController */,
-				D858C8D51E75826F0042D9F3 /* NVObject */,
 				D858C8971E756B150042D9F3 /* AppDelegate.h */,
 				D858C8981E756B150042D9F3 /* AppDelegate.m */,
 				D858C8C71E756B6B0042D9F3 /* MainViewController.h */,
@@ -388,7 +387,8 @@
 				D858C8D81E75826F0042D9F3 /* NVSimpleMsg.h */,
 				D858C8D91E75826F0042D9F3 /* NVSimpleMsg.m */,
 			);
-			path = NVObject;
+			name = NVObject;
+			path = ../NVObject;
 			sourceTree = "<group>";
 		};
 		D858C96D1E7587110042D9F3 /* MDViewController */ = {
@@ -412,6 +412,7 @@
 		D858C9741E7592B90042D9F3 /* MDFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				D858C8D51E75826F0042D9F3 /* NVObject */,
 				D80A8EA91EE840D000E9D409 /* UIColor+nvutils.h */,
 				D80A8EAA1EE840D000E9D409 /* UIColor+nvutils.m */,
 				D85023861EC745AB0054060E /* NSArray+functional.h */,
