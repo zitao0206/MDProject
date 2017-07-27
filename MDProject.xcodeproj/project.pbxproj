@@ -43,12 +43,23 @@
 		D858C97D1E7592B90042D9F3 /* NSURL+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C97A1E7592B90042D9F3 /* NSURL+Ext.m */; };
 		D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C97F1E759CD30042D9F3 /* MDNavigator.m */; };
 		D858C9851E75A4200042D9F3 /* urlmapping in Resources */ = {isa = PBXBuildFile; fileRef = D858C9841E75A4200042D9F3 /* urlmapping */; };
+		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
+		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */; };
 		D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC331EF3BA2B00ACA832 /* MDJsonModels_All.m */; };
 		D870BC3D1EF3BA2B00ACA832 /* MDJsonImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC371EF3BA2B00ACA832 /* MDJsonImageView.m */; };
 		D870BC3E1EF3BA2B00ACA832 /* MDJsonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC391EF3BA2B00ACA832 /* MDJsonLabel.m */; };
 		D870BC3F1EF3BA2B00ACA832 /* MDJsonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC3B1EF3BA2B00ACA832 /* MDJsonView.m */; };
 		D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC561EF6456D00ACA832 /* MDNavigationManager.m */; };
+		D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BCB41F03A35E00ACA832 /* MDMultiThreadViewController.m */; };
+		D893332B1F283D2D00748499 /* MDQuartzDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D893332A1F283D2D00748499 /* MDQuartzDrawViewController.m */; };
+		D893332E1F28402700748499 /* MDFillingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D893332D1F28402700748499 /* MDFillingView.m */; };
+		D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89333391F29D3FA00748499 /* MDCoreImageFilterViewController.m */; };
+		D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D893333D1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m */; };
+		D89333401F29D6E600748499 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = D893333F1F29D6E600748499 /* desktop.png */; };
+		D89333431F29DCEF00748499 /* face1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D89333411F29DCEF00748499 /* face1.jpg */; };
+		D89333441F29DCEF00748499 /* face2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D89333421F29DCEF00748499 /* face2.jpeg */; };
+		D89333461F29DDAE00748499 /* face3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D89333451F29DDAE00748499 /* face3.jpg */; };
 		D8CEAF4B1EF13083009AA0EE /* MDJsonMappers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF4A1EF13083009AA0EE /* MDJsonMappers.m */; };
 		F7D059B8E21FF12EAD3D3DFA /* Pods_MDProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7926AA8710FFD4733AB06A /* Pods_MDProject.framework */; };
 /* End PBXBuildFile section */
@@ -147,6 +158,8 @@
 		D858C97E1E759CD30042D9F3 /* MDNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDNavigator.h; sourceTree = "<group>"; };
 		D858C97F1E759CD30042D9F3 /* MDNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDNavigator.m; sourceTree = "<group>"; };
 		D858C9841E75A4200042D9F3 /* urlmapping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = urlmapping; sourceTree = "<group>"; };
+		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
+		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDErrorPicFrame.png; sourceTree = "<group>"; };
 		D870BC2F1EF3BA2B00ACA832 /* MDJsonBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonBaseModel.h; sourceTree = "<group>"; };
 		D870BC301EF3BA2B00ACA832 /* MDJsonImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonImageViewModel.h; sourceTree = "<group>"; };
@@ -162,6 +175,20 @@
 		D870BC3B1EF3BA2B00ACA832 /* MDJsonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonView.m; sourceTree = "<group>"; };
 		D870BC551EF6456D00ACA832 /* MDNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDNavigationManager.h; sourceTree = "<group>"; };
 		D870BC561EF6456D00ACA832 /* MDNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDNavigationManager.m; sourceTree = "<group>"; };
+		D870BCB31F03A35E00ACA832 /* MDMultiThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMultiThreadViewController.h; sourceTree = "<group>"; };
+		D870BCB41F03A35E00ACA832 /* MDMultiThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMultiThreadViewController.m; sourceTree = "<group>"; };
+		D89333291F283D2D00748499 /* MDQuartzDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDQuartzDrawViewController.h; sourceTree = "<group>"; };
+		D893332A1F283D2D00748499 /* MDQuartzDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDQuartzDrawViewController.m; sourceTree = "<group>"; };
+		D893332C1F28402700748499 /* MDFillingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFillingView.h; sourceTree = "<group>"; };
+		D893332D1F28402700748499 /* MDFillingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFillingView.m; sourceTree = "<group>"; };
+		D89333381F29D3FA00748499 /* MDCoreImageFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCoreImageFilterViewController.h; sourceTree = "<group>"; };
+		D89333391F29D3FA00748499 /* MDCoreImageFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCoreImageFilterViewController.m; sourceTree = "<group>"; };
+		D893333C1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCoreImageFaceFeaturesViewController.h; sourceTree = "<group>"; };
+		D893333D1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCoreImageFaceFeaturesViewController.m; sourceTree = "<group>"; };
+		D893333F1F29D6E600748499 /* desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktop.png; sourceTree = "<group>"; };
+		D89333411F29DCEF00748499 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
+		D89333421F29DCEF00748499 /* face2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face2.jpeg; sourceTree = "<group>"; };
+		D89333451F29DDAE00748499 /* face3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face3.jpg; sourceTree = "<group>"; };
 		D8CEAF491EF13083009AA0EE /* MDJsonMappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonMappers.h; sourceTree = "<group>"; };
 		D8CEAF4A1EF13083009AA0EE /* MDJsonMappers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonMappers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +262,9 @@
 		D81D68821E8A64D400C1489F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D893333F1F29D6E600748499 /* desktop.png */,
+				D868149A1F175B1600E4E7BF /* ugcup.png */,
+				D86814981F1759E400E4E7BF /* sanjiang.jpeg */,
 				D81D68831E8A64D400C1489F /* launch.jpg */,
 			);
 			path = Resource;
@@ -261,6 +291,10 @@
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D893333B1F29D46D00748499 /* FaceFeatures */,
+				D89333371F29D3FA00748499 /* ImageFilter */,
+				D89333281F283D0500748499 /* QuartzDraw */,
+				D870BCB21F03A35E00ACA832 /* MutiThread */,
 				D870BC541EF6451F00ACA832 /* Navigation */,
 				D80A8E991EE8031600E9D409 /* RACDemo */,
 				D80A8E981EE802FA00E9D409 /* JsonDemo */,
@@ -468,6 +502,47 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		D870BCB21F03A35E00ACA832 /* MutiThread */ = {
+			isa = PBXGroup;
+			children = (
+				D870BCB31F03A35E00ACA832 /* MDMultiThreadViewController.h */,
+				D870BCB41F03A35E00ACA832 /* MDMultiThreadViewController.m */,
+			);
+			path = MutiThread;
+			sourceTree = "<group>";
+		};
+		D89333281F283D0500748499 /* QuartzDraw */ = {
+			isa = PBXGroup;
+			children = (
+				D89333291F283D2D00748499 /* MDQuartzDrawViewController.h */,
+				D893332A1F283D2D00748499 /* MDQuartzDrawViewController.m */,
+				D893332C1F28402700748499 /* MDFillingView.h */,
+				D893332D1F28402700748499 /* MDFillingView.m */,
+			);
+			path = QuartzDraw;
+			sourceTree = "<group>";
+		};
+		D89333371F29D3FA00748499 /* ImageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				D89333381F29D3FA00748499 /* MDCoreImageFilterViewController.h */,
+				D89333391F29D3FA00748499 /* MDCoreImageFilterViewController.m */,
+			);
+			path = ImageFilter;
+			sourceTree = "<group>";
+		};
+		D893333B1F29D46D00748499 /* FaceFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				D893333C1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.h */,
+				D893333D1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m */,
+				D89333411F29DCEF00748499 /* face1.jpg */,
+				D89333421F29DCEF00748499 /* face2.jpeg */,
+				D89333451F29DDAE00748499 /* face3.jpg */,
+			);
+			path = FaceFeatures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -538,7 +613,7 @@
 				TargetAttributes = {
 					D858C8901E756B150042D9F3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = L8RRGM4ZYF;
+						DevelopmentTeam = T78GX8TJ57;
 						ProvisioningStyle = Automatic;
 					};
 					D858C8A91E756B160042D9F3 = {
@@ -580,6 +655,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89333401F29D6E600748499 /* desktop.png in Resources */,
+				D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */,
+				D89333461F29DDAE00748499 /* face3.jpg in Resources */,
+				D868149B1F175B1600E4E7BF /* ugcup.png in Resources */,
+				D89333441F29DCEF00748499 /* face2.jpeg in Resources */,
+				D89333431F29DCEF00748499 /* face1.jpg in Resources */,
 				D81D68841E8A64D400C1489F /* launch.jpg in Resources */,
 				D858C8A41E756B150042D9F3 /* LaunchScreen.storyboard in Resources */,
 				D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */,
@@ -660,6 +741,7 @@
 				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
 				D85023881EC745AB0054060E /* NSArray+functional.m in Sources */,
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
+				D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */,
 				D85023751EC69A010054060E /* MDBaseModuleView.m in Sources */,
 				D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */,
 				D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */,
@@ -680,14 +762,18 @@
 				D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */,
 				D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */,
 				D870BC3E1EF3BA2B00ACA832 /* MDJsonLabel.m in Sources */,
+				D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */,
 				D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */,
 				D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */,
+				D893332E1F28402700748499 /* MDFillingView.m in Sources */,
+				D893332B1F283D2D00748499 /* MDQuartzDrawViewController.m in Sources */,
 				D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */,
 				D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */,
 				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,
 				D858C97C1E7592B90042D9F3 /* NSString+Ext.m in Sources */,
+				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
 				D858C8DA1E75826F0042D9F3 /* NVObject.m in Sources */,
 				D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */,
 				D850237C1EC69CB80054060E /* MDDemoHeadModuleView.m in Sources */,
@@ -832,7 +918,7 @@
 			baseConfigurationReference = 9115291D681CA11A0D197644 /* Pods-MDProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L8RRGM4ZYF;
+				DEVELOPMENT_TEAM = T78GX8TJ57;
 				INFOPLIST_FILE = MDProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzt.MDProject;
@@ -845,7 +931,7 @@
 			baseConfigurationReference = 024F71B27BF94CE05567BA5A /* Pods-MDProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L8RRGM4ZYF;
+				DEVELOPMENT_TEAM = T78GX8TJ57;
 				INFOPLIST_FILE = MDProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzt.MDProject;

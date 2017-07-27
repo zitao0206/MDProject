@@ -3,3 +3,7 @@ rac              : MDRACViewController
 mdbasemodule     : MDDemoModuleViewcomtroller
 mddrawimage      : MDDrawImageViewController
 mdjson           : MDJsonDemoViewController
+mdmultithread    : MDMultiThreadViewController
+mdquartzdraw     : MDQuartzDrawViewController
+mdfilter         : MDCoreImageFilterViewController
+mdfacefeatures   : MDCoreImageFaceFeaturesViewController

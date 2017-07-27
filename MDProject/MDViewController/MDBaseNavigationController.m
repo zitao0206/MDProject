@@ -35,13 +35,13 @@
 - (nullable UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     UIViewController *viewController =  [super popViewControllerAnimated:animated];
-    [[MDNavigationManager manager] addViewController:viewController];
+//    [[MDNavigationManager manager] addViewController:viewController];
     return viewController;
 }
 
-- (void)pushViewController:(UIViewController *)viewController1 animated:(BOOL)animated
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    UIViewController *viewController = [[MDNavigationManager manager] obtainViewCtroller:viewController1];
+//    UIViewController *viewController = [[MDNavigationManager manager] obtainViewCtroller:viewController1];
     if (!animated && viewController.urlAction.animation == MDNaviAnimationNone)
     {
         // 无动画

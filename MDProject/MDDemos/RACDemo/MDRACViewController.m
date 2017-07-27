@@ -36,6 +36,7 @@
 
 
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,56 +49,81 @@
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
-    @weakify(self);
-    [[[RACObserve(self, sourceArray) distinctUntilChanged] filter:^BOOL(NSArray *value) {
-        return [value count]>0?YES:NO;
-    }] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.tableView reloadData];
-    }];
+//    @weakify(self);
+//    [[[RACObserve(self, sourceArray) distinctUntilChanged] filter:^BOOL(NSArray *value) {
+//        return [value count]>0?YES:NO;
+//    }] subscribeNext:^(id x) {
+//        @strongify(self);
+//        [self.tableView reloadData];
+//    }];
     [self dataSourceArray];
-    [self coldSignalTest];
+//    [self coldSignalTest];
     
 //    [self hotSignalTest];
+    [self multicastSignalTest];
     
+}
+
+- (void)multicastSignalTest
+{
+    // This signal starts a new request on each subscription.
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@1];
+        [subscriber sendNext:@2];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+
+    RACMulticastConnection *connection = [signal multicast:[RACReplaySubject subject]];
+    [connection connect];
+    
+    [connection.signal subscribeNext:^(id response) {
+        NSLog(@"subscriber one: %@", response);
+    }];
+    
+    [connection.signal subscribeNext:^(id response) {
+        NSLog(@"subscriber two: %@", response);
+    }];
+
 }
 
 - (void)coldSignalTest
 {
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [[RACScheduler mainThreadScheduler] afterDelay:1 schedule:^{
+//        [[RACScheduler mainThreadScheduler] afterDelay:1 schedule:^{
             [subscriber sendNext:@1];
-        }];
+//        }];
         
-        [[RACScheduler mainThreadScheduler] afterDelay:10 schedule:^{
-            [subscriber sendNext:@2];
-        }];
-        
-        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
-            [subscriber sendNext:@3];
-        }];
-        [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
-            [subscriber sendNext:@4];
-        }];
+//        [[RACScheduler mainThreadScheduler] afterDelay:10 schedule:^{
+//            [subscriber sendNext:@2];
+//        }];
+//        
+//        [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
+//            [subscriber sendNext:@3];
+//        }];
+//        [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
+//            [subscriber sendNext:@4];
+//        }];
         
         [[RACScheduler mainThreadScheduler] afterDelay:4 schedule:^{
             [subscriber sendCompleted];
         }];
         return nil;
     }];
-    NSLog(@"Signal was created.");
-    [[RACScheduler mainThreadScheduler] afterDelay:5.1 schedule:^{
+        NSLog(@"Signal was created.");
+//    [[RACScheduler mainThreadScheduler] afterDelay:5.1 schedule:^{
         [signal subscribeNext:^(id x) {
+            
             NSLog(@"Subscriber 1 recveive: %@", x);
             
         }];
-    }];
+//    }];
     
-    [[RACScheduler mainThreadScheduler] afterDelay:2.1 schedule:^{
+//    [[RACScheduler mainThreadScheduler] afterDelay:1.0 schedule:^{
         [signal subscribeNext:^(id x) {
-//            NSLog(@"Subscriber 2 recveive: %@", x);
+            NSLog(@"Subscriber 2 recveive: %@", x);
         }];
-    }];
+//    }];
 }
 
 - (void)hotSignalTest
@@ -150,6 +176,7 @@
         @strongify(self);
         if ([data isKindOfClass:[NSArray class]]) {
             self.sourceArray = data;
+            [self.tableView reloadData];
         }
         [self.dataDisposable dispose];
     }];
@@ -161,20 +188,20 @@
     RACSignal *signal = [RACSignal startEagerlyWithScheduler:[RACScheduler mainThreadScheduler] block:^(id<RACSubscriber> subscriber) {
         NSArray <NSString *> *tempArray = @[@"Hefei",
                                             @"Suzhou",
-                                            @"Beijing",
-                                            @"Shanghai",
-                                            @"Hangzhou",
-                                            @"Nanjing",
-                                            @"Shenzhen",
-                                            @"Tianjing",
-                                            @"Fuyang",
-                                            @"Xiamen",
-                                            @"Hainan",
-                                            @"Wuxi",
-                                            @"Wuhu",
-                                            @"Xianggang",
-                                            @"Aomen",
-                                            @"Haerbin",
+                                            @"Beijing1",
+                                            @"Beijing2",
+                                            @"Beijing3",
+                                            @"Beijing4",
+                                            @"Beijing5",
+                                            @"Beijing6",
+                                            @"Beijing7",
+                                            @"Beijing8",
+                                            @"Beijing9",
+                                            @"Beijing10",
+                                            @"Beijing11",
+                                            @"Beijing12",
+                                            @"Beijing13",
+                                            @"Beijing14",
                                             @"Wuxi"];
         [subscriber sendNext:tempArray];
         [subscriber sendCompleted];
@@ -207,11 +234,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        
-    } else {
-        
-    }
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

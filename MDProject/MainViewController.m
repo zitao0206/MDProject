@@ -70,6 +70,23 @@
     {
         contentCell.textLabel.text =@"Json动态化";
     }
+    else if (indexPath.row == 4)
+    {
+        contentCell.textLabel.text =@"多线程";
+    }
+    else if (indexPath.row == 5)
+    {
+        contentCell.textLabel.text =@"Quartz 2D绘图";
+    }
+    else if (indexPath.row == 6)
+    {
+        contentCell.textLabel.text =@"Core Image/滤镜";
+    }
+    else if (indexPath.row == 7)
+    {
+        contentCell.textLabel.text =@"Core Image/人脸识别";
+    }
+
     return contentCell;
 }
 
@@ -110,6 +127,31 @@
         action.animation = MDNaviAnimationPush;
         [[MDNavigator navigator] openURLAction:action];
     }
+    if (indexPath.row == 4)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdmultithread"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 5)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdquartzdraw"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 6)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfilter"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 7)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfacefeatures"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+
 }
 
 
