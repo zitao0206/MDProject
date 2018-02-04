@@ -14,7 +14,6 @@
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor lightGrayColor];
-        [self performSelector:@selector(test) withObject:self afterDelay:10.f];
     }
     return self;
 }
@@ -32,11 +31,6 @@
     self.indexLabel.centerX = self.frame.size.width / 2;
     self.indexLabel.centerY = self.frame.size.height / 2;
     
-}
-
-- (void)test
-{
-    self.height = self.height + 30;
 }
 
 @end

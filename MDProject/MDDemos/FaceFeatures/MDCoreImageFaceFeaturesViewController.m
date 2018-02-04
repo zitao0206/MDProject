@@ -165,13 +165,13 @@
     [super viewDidLayoutSubviews];
     self.inputImageView.left = 15;
     self.inputImageView.top = 75;
-    
     self.selectBtn.top = self.inputImageView.bottom + 30;
     self.selectBtn.centerX = self.view.centerX;
     
     self.detectBtn.top = self.selectBtn.bottom + 10;
     self.detectBtn.centerX = self.view.centerX;
     
+    [self.outputImageView sizeToFit];
     self.outputImageView.left = 15;
     self.outputImageView.top = self.detectBtn.bottom + 30;
 }

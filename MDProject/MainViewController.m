@@ -86,6 +86,10 @@
     {
         contentCell.textLabel.text =@"Core Image/人脸识别";
     }
+    else if (indexPath.row == 8)
+    {
+        contentCell.textLabel.text =@"Runtime";
+    }
 
     return contentCell;
 }
@@ -148,6 +152,12 @@
     if (indexPath.row == 7)
     {
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfacefeatures"]];
+        action.animation = MDNaviAnimationPush;
+        [[MDNavigator navigator] openURLAction:action];
+    }
+    if (indexPath.row == 8)
+    {
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdruntime"]];
         action.animation = MDNaviAnimationPush;
         [[MDNavigator navigator] openURLAction:action];
     }

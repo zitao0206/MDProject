@@ -66,19 +66,16 @@
 
 #pragma mark Disposal
 
-- (void)dispose
-{
+- (void)dispose {
 	void (^disposeBlock)(void) = NULL;
 
-	while (YES)
-    {
+	while (YES) {
 		void *blockPtr = _disposeBlock;
-		if (OSAtomicCompareAndSwapPtrBarrier(blockPtr, NULL, &_disposeBlock))
-        {
-			if (blockPtr != (__bridge void *)self)
-            {
+		if (OSAtomicCompareAndSwapPtrBarrier(blockPtr, NULL, &_disposeBlock)) {
+			if (blockPtr != (__bridge void *)self) {
 				disposeBlock = CFBridgingRelease(blockPtr);
 			}
+
 			break;
 		}
 	}

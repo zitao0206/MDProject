@@ -135,6 +135,7 @@
 
 - (void)relayoutSubViewsWithIndex:(NSUInteger)index
 {
+//    [[self.contentView.subviews objectAtIndex:index] layoutViewWithWidth:[self contentViewWidth]];
     __block CGFloat layoutOffestY = [self.contentView.subviews objectAtIndex:index].bottom;
     [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (idx > index) {

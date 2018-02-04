@@ -25,10 +25,8 @@
 - (NSArray *)loadContentViews
 {
     return @[@"MDDemoHeadModuleView",
+             @"MDDemoMiddleModuleView",
              @"MDDemoBottomModuleView",
-             @"MDDemoMiddleModuleView",
-             @"MDDemoHeadModuleView",
-             @"MDDemoMiddleModuleView",
              ];
 }
 
@@ -46,6 +44,4 @@
 {
     return [UIScreen mainScreen].bounds.size.width;
 }
-
-
 @end

@@ -33,7 +33,9 @@
 - (void)configViewWithIndex:(NSUInteger)index
 {
     self.index = index;
+    @weakify (self);
     [[[[RACObserve(self, height) distinctUntilChanged] skip:1] deliverOnMainThread] subscribeNext:^(id x) {
+        @strongify(self);
         [self.heightChangeSignal sendNext:[NSNumber numberWithInteger:index]];
     }];
 }

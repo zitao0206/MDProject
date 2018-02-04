@@ -25,7 +25,6 @@
 - (void)loadViewWithData:(id)model
 {
     self.indexLabel.text = [[NSString alloc]initWithFormat:@"Module %ld",self.index];
-    
 }
 
 - (void)layoutViewWithWidth:(CGFloat)viewWidth

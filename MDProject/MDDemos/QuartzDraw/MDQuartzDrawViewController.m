@@ -15,6 +15,12 @@
 
 @implementation MDQuartzDrawViewController
 
++ (void)load
+{
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

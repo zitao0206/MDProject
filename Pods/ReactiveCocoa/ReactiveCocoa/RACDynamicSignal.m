@@ -33,8 +33,7 @@
 
 #pragma mark Managing Subscribers
 
-- (RACDisposable *)subscribe:(id<RACSubscriber>)subscriber
-{
+- (RACDisposable *)subscribe:(id<RACSubscriber>)subscriber {
 	NSCParameterAssert(subscriber != nil);
 
 	RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];

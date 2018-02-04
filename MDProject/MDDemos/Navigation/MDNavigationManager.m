@@ -7,7 +7,7 @@
 //
 
 #import "MDNavigationManager.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+//#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface MDNavigationManager ()
 @property(nonatomic, strong) NSMutableArray<__kindof UIViewController *> *cacheControllers;

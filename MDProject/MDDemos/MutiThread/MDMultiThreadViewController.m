@@ -25,8 +25,6 @@
 
 - (void)dealloc
 {
-
-
 }
 
 - (void)viewDidLoad
@@ -100,6 +98,8 @@
     [super viewDidAppear:YES];
     NSTimer *tttime = self.timer;
     [tttime invalidate];
+    self.timer = nil;
+    tttime = nil;
 }
 
 - (void)testDataFormatter
