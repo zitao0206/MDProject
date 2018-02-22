@@ -62,6 +62,7 @@
 		D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96CF203ED093005A094A /* MDDemoBaseTableViewController.m */; };
 		D85B96D3203ED328005A094A /* MDDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96D2203ED328005A094A /* MDDemoTableViewCell.m */; };
 		D85B96D6203ED495005A094A /* MDDemoTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96D5203ED495005A094A /* MDDemoTableViewCellModel.m */; };
+		D85B96D9203EE64F005A094A /* XYReactBasePageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96D8203EE64F005A094A /* XYReactBasePageTableViewController.m */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */; };
@@ -222,6 +223,8 @@
 		D85B96D2203ED328005A094A /* MDDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoTableViewCell.m; sourceTree = "<group>"; };
 		D85B96D4203ED495005A094A /* MDDemoTableViewCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoTableViewCellModel.h; sourceTree = "<group>"; };
 		D85B96D5203ED495005A094A /* MDDemoTableViewCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoTableViewCellModel.m; sourceTree = "<group>"; };
+		D85B96D7203EE64F005A094A /* XYReactBasePageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYReactBasePageTableViewController.h; sourceTree = "<group>"; };
+		D85B96D8203EE64F005A094A /* XYReactBasePageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYReactBasePageTableViewController.m; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDErrorPicFrame.png; sourceTree = "<group>"; };
@@ -594,6 +597,8 @@
 				D85B96B5203E8FD4005A094A /* XYBaseModuleView.m */,
 				D85B96B6203E8FD4005A094A /* XYBaseModuleModel.m */,
 				D85B96B7203E8FD4005A094A /* XYReactBasePageView.h */,
+				D85B96D7203EE64F005A094A /* XYReactBasePageTableViewController.h */,
+				D85B96D8203EE64F005A094A /* XYReactBasePageTableViewController.m */,
 			);
 			path = ReactivePageKit;
 			sourceTree = "<group>";
@@ -956,6 +961,7 @@
 				D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */,
 				D85B96B8203E8FD4005A094A /* XYReactBasePageView.m in Sources */,
 				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,
+				D85B96D9203EE64F005A094A /* XYReactBasePageTableViewController.m in Sources */,
 				D858C97C1E7592B90042D9F3 /* NSString+Ext.m in Sources */,
 				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
 				D858C8DA1E75826F0042D9F3 /* NVObject.m in Sources */,
