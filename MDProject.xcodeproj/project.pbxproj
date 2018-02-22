@@ -53,6 +53,10 @@
 		D85B96B9203E8FD4005A094A /* XYReactBasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96B4203E8FD4005A094A /* XYReactBasePageViewController.m */; };
 		D85B96BA203E8FD4005A094A /* XYBaseModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96B5203E8FD4005A094A /* XYBaseModuleView.m */; };
 		D85B96BB203E8FD4005A094A /* XYBaseModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96B6203E8FD4005A094A /* XYBaseModuleModel.m */; };
+		D85B96C4203E9071005A094A /* XYBottomModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96BD203E9070005A094A /* XYBottomModuleView.m */; };
+		D85B96C5203E9071005A094A /* XYTopModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96BF203E9070005A094A /* XYTopModuleView.m */; };
+		D85B96C6203E9071005A094A /* MDTestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C2203E9071005A094A /* MDTestBaseViewController.m */; };
+		D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C3203E9071005A094A /* XYMiddleModuleView.m */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */; };
@@ -195,6 +199,14 @@
 		D85B96B5203E8FD4005A094A /* XYBaseModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseModuleView.m; sourceTree = "<group>"; };
 		D85B96B6203E8FD4005A094A /* XYBaseModuleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseModuleModel.m; sourceTree = "<group>"; };
 		D85B96B7203E8FD4005A094A /* XYReactBasePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYReactBasePageView.h; sourceTree = "<group>"; };
+		D85B96BC203E9070005A094A /* XYTopModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopModuleView.h; sourceTree = "<group>"; };
+		D85B96BD203E9070005A094A /* XYBottomModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBottomModuleView.m; sourceTree = "<group>"; };
+		D85B96BE203E9070005A094A /* XYBottomModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBottomModuleView.h; sourceTree = "<group>"; };
+		D85B96BF203E9070005A094A /* XYTopModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopModuleView.m; sourceTree = "<group>"; };
+		D85B96C0203E9071005A094A /* XYMiddleModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMiddleModuleView.h; sourceTree = "<group>"; };
+		D85B96C1203E9071005A094A /* MDTestBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTestBaseViewController.h; sourceTree = "<group>"; };
+		D85B96C2203E9071005A094A /* MDTestBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTestBaseViewController.m; sourceTree = "<group>"; };
+		D85B96C3203E9071005A094A /* XYMiddleModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMiddleModuleView.m; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDErrorPicFrame.png; sourceTree = "<group>"; };
@@ -532,6 +544,14 @@
 		D85B96A0203E8F8C005A094A /* ReactivePageKit */ = {
 			isa = PBXGroup;
 			children = (
+				D85B96BE203E9070005A094A /* XYBottomModuleView.h */,
+				D85B96BD203E9070005A094A /* XYBottomModuleView.m */,
+				D85B96C0203E9071005A094A /* XYMiddleModuleView.h */,
+				D85B96C3203E9071005A094A /* XYMiddleModuleView.m */,
+				D85B96C1203E9071005A094A /* MDTestBaseViewController.h */,
+				D85B96C2203E9071005A094A /* MDTestBaseViewController.m */,
+				D85B96BC203E9070005A094A /* XYTopModuleView.h */,
+				D85B96BF203E9070005A094A /* XYTopModuleView.m */,
 				D85B96AE203E8FD4005A094A /* ReactivePageKit */,
 			);
 			path = ReactivePageKit;
@@ -863,6 +883,7 @@
 				D85B96BB203E8FD4005A094A /* XYBaseModuleModel.m in Sources */,
 				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
 				D85023881EC745AB0054060E /* NSArray+functional.m in Sources */,
+				D85B96C6203E9071005A094A /* MDTestBaseViewController.m in Sources */,
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
 				D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */,
 				D8D2AF7F2025D12200C4BCE7 /* UIViewController+Swizzling.m in Sources */,
@@ -894,12 +915,14 @@
 				D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */,
 				D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */,
 				D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */,
+				D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */,
 				D85B96B9203E8FD4005A094A /* XYReactBasePageViewController.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */,
 				D893332E1F28402700748499 /* MDFillingView.m in Sources */,
 				D8D2AF7920259F8F00C4BCE7 /* MDFather.m in Sources */,
 				D893332B1F283D2D00748499 /* MDQuartzDrawViewController.m in Sources */,
+				D85B96C5203E9071005A094A /* XYTopModuleView.m in Sources */,
 				D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */,
 				D858C8DB1E75826F0042D9F3 /* NVSimpleMsg.m in Sources */,
 				D85B96B8203E8FD4005A094A /* XYReactBasePageView.m in Sources */,
@@ -910,6 +933,7 @@
 				D85B9695203D704F005A094A /* MDInvokerViewController.m in Sources */,
 				D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */,
 				D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */,
+				D85B96C4203E9071005A094A /* XYBottomModuleView.m in Sources */,
 				D89FA5A4202EB1AD008569CB /* MDRuntimeInvocationViewController.m in Sources */,
 				D850237C1EC69CB80054060E /* MDDemoHeadModuleView.m in Sources */,
 				D858C8C91E756B6B0042D9F3 /* MainViewController.m in Sources */,

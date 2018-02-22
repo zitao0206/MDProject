@@ -2,6 +2,7 @@
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYBaseModuleModel.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/UIView+ResizeFrame-726F9CBC6498EB64.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/NSArray+functional.o
+/Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDTestBaseViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDBaseNavigationController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDMultiThreadViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/UIViewController+Swizzling.o
@@ -33,12 +34,14 @@
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDCoreImageFaceFeaturesViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDJsonModels_All.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDRACViewController.o
+/Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYMiddleModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYReactBasePageViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDDemoBottomModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDBaseViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDFillingView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDFather.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDQuartzDrawViewController.o
+/Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYTopModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDDemoMiddleModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/NVSimpleMsg.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYReactBasePageView.o
@@ -49,6 +52,7 @@
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDInvokerViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDSon.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDNavigationManager.o
+/Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/XYBottomModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDRuntimeInvocationViewController.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MDDemoHeadModuleView.o
 /Users/lizitao/Desktop/MDProject/MDProject/Build/Intermediates/MDProject.build/Debug-iphonesimulator/MDProject.build/Objects-normal/x86_64/MainViewController.o

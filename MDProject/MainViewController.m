@@ -46,6 +46,7 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+                       @"ReactivePage",
                        @"Invoker",
                        @"Runtime2",
                        @"Runtime1",
@@ -64,6 +65,11 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//0
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
     {//0
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://invoker"]];
         action.animation = MDNaviAnimationPush;
