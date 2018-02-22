@@ -68,14 +68,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MDDemoTableViewCell *contentCell = [tableView dequeueReusableCellWithIdentifier:@"MDDemoTableViewCell"];
-    
-    if (!contentCell) {
-        contentCell = [[MDDemoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MDDemoTableViewCell"];
+    MDDemoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MDDemoTableViewCell"];
+    if (!cell) {
+        cell = [[MDDemoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MDDemoTableViewCell"];
     }
-    contentCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    contentCell.model = [self.titleArr objectAtIndex:indexPath.row];
-    return contentCell;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.model = [self.titleArr objectAtIndex:indexPath.row];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

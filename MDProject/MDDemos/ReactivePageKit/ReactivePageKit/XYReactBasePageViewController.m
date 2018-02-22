@@ -30,14 +30,9 @@
     }
 }
 
-- (void)viewDidLoad
+- (void)loadView
 {
-    [super viewDidLoad];
-    [self loadSubviews];
-}
-
-- (void)loadSubviews
-{
+    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.scrollView = [UIScrollView new];
     self.scrollView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.scrollView];
@@ -48,6 +43,11 @@
     self.contentView = [UIView new];
     self.contentView.backgroundColor = [UIColor clearColor];
     [self.scrollView addSubview:self.contentView];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     [self loadContentModuleViews];
 }
 
