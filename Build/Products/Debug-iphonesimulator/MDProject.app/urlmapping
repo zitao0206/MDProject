@@ -7,4 +7,6 @@ mdmultithread    : MDMultiThreadViewController
 mdquartzdraw     : MDQuartzDrawViewController
 mdfilter         : MDCoreImageFilterViewController
 mdfacefeatures   : MDCoreImageFaceFeaturesViewController
-mdruntime        : MDRuntimeViewController
+mdruntime1       : MDRuntimeViewController
+mdruntime2       : MDRuntimeInvocationViewController
+invoker          : MDInvokerViewController
