@@ -57,6 +57,8 @@
 		D85B96C5203E9071005A094A /* XYTopModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96BF203E9070005A094A /* XYTopModuleView.m */; };
 		D85B96C6203E9071005A094A /* MDTestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C2203E9071005A094A /* MDTestBaseViewController.m */; };
 		D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C3203E9071005A094A /* XYMiddleModuleView.m */; };
+		D85B96CA203E9548005A094A /* MDTestBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C9203E9548005A094A /* MDTestBaseView.m */; };
+		D85B96CD203E9672005A094A /* MDDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */; };
@@ -207,6 +209,10 @@
 		D85B96C1203E9071005A094A /* MDTestBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTestBaseViewController.h; sourceTree = "<group>"; };
 		D85B96C2203E9071005A094A /* MDTestBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTestBaseViewController.m; sourceTree = "<group>"; };
 		D85B96C3203E9071005A094A /* XYMiddleModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMiddleModuleView.m; sourceTree = "<group>"; };
+		D85B96C8203E9548005A094A /* MDTestBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDTestBaseView.h; sourceTree = "<group>"; };
+		D85B96C9203E9548005A094A /* MDTestBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTestBaseView.m; sourceTree = "<group>"; };
+		D85B96CB203E9672005A094A /* MDDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoBaseViewController.h; sourceTree = "<group>"; };
+		D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoBaseViewController.m; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDErrorPicFrame.png; sourceTree = "<group>"; };
@@ -553,6 +559,10 @@
 				D85B96BC203E9070005A094A /* XYTopModuleView.h */,
 				D85B96BF203E9070005A094A /* XYTopModuleView.m */,
 				D85B96AE203E8FD4005A094A /* ReactivePageKit */,
+				D85B96C8203E9548005A094A /* MDTestBaseView.h */,
+				D85B96C9203E9548005A094A /* MDTestBaseView.m */,
+				D85B96CB203E9672005A094A /* MDDemoBaseViewController.h */,
+				D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */,
 			);
 			path = ReactivePageKit;
 			sourceTree = "<group>";
@@ -880,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83F6A0A1F3C877300D07AAC /* TestBlockViewController.m in Sources */,
+				D85B96CA203E9548005A094A /* MDTestBaseView.m in Sources */,
 				D85B96BB203E8FD4005A094A /* XYBaseModuleModel.m in Sources */,
 				D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */,
 				D85023881EC745AB0054060E /* NSArray+functional.m in Sources */,
@@ -911,6 +922,7 @@
 				D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */,
 				D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */,
 				D85B9699203D718E005A094A /* AuditingInvoker.m in Sources */,
+				D85B96CD203E9672005A094A /* MDDemoBaseViewController.m in Sources */,
 				D870BC3E1EF3BA2B00ACA832 /* MDJsonLabel.m in Sources */,
 				D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */,
 				D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */,
