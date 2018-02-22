@@ -46,19 +46,20 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
-                       @"ReactivePage_2",
-                       @"ReactivePage",
-                       @"Invoker",
-                       @"Runtime2",
-                       @"Runtime1",
-                       @"Core Image/人脸识别",
-                       @"Core Image/滤镜",
-                       @"Quartz 2D绘图",
-                       @"多线程",
-                       @"Json动态化",
-                       @"DrawImage",
-                       @"模块化实例",
-                       @"RAC开发",
+                       @"ReactivePage_3",                   //13
+                       @"ReactivePage_2",                   //12
+                       @"ReactivePage",                     //11
+                       @"Invoker",                          //10
+                       @"Runtime2",                         //9
+                       @"Runtime1",                         //8
+                       @"Core Image/人脸识别",                //7
+                       @"Core Image/滤镜",                   //6
+                       @"Quartz 2D绘图",                     //5
+                       @"多线程",                            //4
+                       @"Json动态化",                        //3
+                       @"DrawImage",                        //2
+                       @"模块化实例",                         //1
+                       @"RAC开发",                           //0
                        ];
     [self.titleArr addObjectsFromArray:array];
 }
@@ -66,62 +67,73 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
-    {//0
+    {//12
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage_3"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//12
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage_2"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//0
+    {//11
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//0
+    {//10
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://invoker"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//1
+    {//9
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdruntime2"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//2
+    {//8
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdruntime1"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//3
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfacefeatures"]];
-        action.animation = MDNaviAnimationPush;
-        [self.actionArr addObject:action];
-    }
-    {//4
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdquartzdraw"]];
-        action.animation = MDNaviAnimationPush;
-        [self.actionArr addObject:action];
-    }
-    {//5
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdmultithread"]];
+    
+    {//7
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfilter"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//6
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfacefeatures"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//5
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdquartzdraw"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//4
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdmultithread"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//3
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdjson"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//7
+    {//2
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mddrawimage"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//8
+    {//1
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdbasemodule"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
-    {//9
+    {//0
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://rac"]];
         [action setString:@"http://www.baidu.com" forKey:@"url"];
         action.animation = MDNaviAnimationPush;
@@ -149,20 +161,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
+    return 100.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1)
-    {
-        MDDemoModuleViewcomtroller *vc = [MDDemoModuleViewcomtroller new];
-        MDBaseModuleModel *model = [MDBaseModuleModel new];
-        model.title = @"模块化框架";
-        vc.model = model;
-        [self.navigationController pushViewController:vc animated:YES];
-        return;
-    }
+//    if (indexPath.row == 1)
+//    {
+//        MDDemoModuleViewcomtroller *vc = [MDDemoModuleViewcomtroller new];
+//        MDBaseModuleModel *model = [MDBaseModuleModel new];
+//        model.title = @"模块化框架";
+//        vc.model = model;
+//        [self.navigationController pushViewController:vc animated:YES];
+//        return;
+//    }
     MDURLAction *action = [self.actionArr objectAtIndex:indexPath.row];
     if (action == nil) return;
     [[MDNavigator navigator] openURLAction:action];

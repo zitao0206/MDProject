@@ -59,6 +59,9 @@
 		D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C3203E9071005A094A /* XYMiddleModuleView.m */; };
 		D85B96CA203E9548005A094A /* MDTestBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96C9203E9548005A094A /* MDTestBaseView.m */; };
 		D85B96CD203E9672005A094A /* MDDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */; };
+		D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96CF203ED093005A094A /* MDDemoBaseTableViewController.m */; };
+		D85B96D3203ED328005A094A /* MDDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96D2203ED328005A094A /* MDDemoTableViewCell.m */; };
+		D85B96D6203ED495005A094A /* MDDemoTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B96D5203ED495005A094A /* MDDemoTableViewCellModel.m */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */; };
@@ -213,6 +216,12 @@
 		D85B96C9203E9548005A094A /* MDTestBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTestBaseView.m; sourceTree = "<group>"; };
 		D85B96CB203E9672005A094A /* MDDemoBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoBaseViewController.h; sourceTree = "<group>"; };
 		D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoBaseViewController.m; sourceTree = "<group>"; };
+		D85B96CE203ED093005A094A /* MDDemoBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoBaseTableViewController.h; sourceTree = "<group>"; };
+		D85B96CF203ED093005A094A /* MDDemoBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoBaseTableViewController.m; sourceTree = "<group>"; };
+		D85B96D1203ED328005A094A /* MDDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoTableViewCell.h; sourceTree = "<group>"; };
+		D85B96D2203ED328005A094A /* MDDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoTableViewCell.m; sourceTree = "<group>"; };
+		D85B96D4203ED495005A094A /* MDDemoTableViewCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDemoTableViewCellModel.h; sourceTree = "<group>"; };
+		D85B96D5203ED495005A094A /* MDDemoTableViewCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDemoTableViewCellModel.m; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D870BBB21EF3B1D100ACA832 /* MDErrorPicFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDErrorPicFrame.png; sourceTree = "<group>"; };
@@ -563,6 +572,12 @@
 				D85B96C9203E9548005A094A /* MDTestBaseView.m */,
 				D85B96CB203E9672005A094A /* MDDemoBaseViewController.h */,
 				D85B96CC203E9672005A094A /* MDDemoBaseViewController.m */,
+				D85B96CE203ED093005A094A /* MDDemoBaseTableViewController.h */,
+				D85B96CF203ED093005A094A /* MDDemoBaseTableViewController.m */,
+				D85B96D1203ED328005A094A /* MDDemoTableViewCell.h */,
+				D85B96D2203ED328005A094A /* MDDemoTableViewCell.m */,
+				D85B96D4203ED495005A094A /* MDDemoTableViewCellModel.h */,
+				D85B96D5203ED495005A094A /* MDDemoTableViewCellModel.m */,
 			);
 			path = ReactivePageKit;
 			sourceTree = "<group>";
@@ -898,6 +913,8 @@
 				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
 				D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */,
 				D8D2AF7F2025D12200C4BCE7 /* UIViewController+Swizzling.m in Sources */,
+				D85B96D6203ED495005A094A /* MDDemoTableViewCellModel.m in Sources */,
+				D85B96D3203ED328005A094A /* MDDemoTableViewCell.m in Sources */,
 				D85023751EC69A010054060E /* MDBaseModuleView.m in Sources */,
 				D807FF6C1FD3FE060052AE95 /* UIView+ResizeFrame.m in Sources */,
 				D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */,
@@ -942,6 +959,7 @@
 				D858C97C1E7592B90042D9F3 /* NSString+Ext.m in Sources */,
 				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
 				D858C8DA1E75826F0042D9F3 /* NVObject.m in Sources */,
+				D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */,
 				D85B9695203D704F005A094A /* MDInvokerViewController.m in Sources */,
 				D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */,
 				D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */,

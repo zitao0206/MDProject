@@ -1,6 +1,9 @@
 dependencies: \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYReactBasePageViewController.m \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYReactBasePageViewController.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDViewController/MDBaseViewController.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDViewController/MDURLAction.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/NVObject/NVObject.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleModel.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDLayout/UIView+ResizeFrame.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Modules/module.modulemap \

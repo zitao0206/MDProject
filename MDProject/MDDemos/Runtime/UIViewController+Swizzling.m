@@ -20,17 +20,17 @@ static NSString *className = @"";
 {
     [super load];
     // 通过class_getInstanceMethod()函数从当前对象中的method list获取method结构体，如果是类方法就使用class_getClassMethod()函数获取。
-    Method fromBeginMethod = class_getInstanceMethod([self class], @selector(viewDidLoad));
-    Method toBeginMethod = class_getInstanceMethod([self class], @selector(swizzlingViewDidLoad));
-    if (!class_addMethod([self class], @selector(viewDidLoad), method_getImplementation(toBeginMethod), method_getTypeEncoding(toBeginMethod))) {
-        method_exchangeImplementations(fromBeginMethod, toBeginMethod);
-    }
-    
-    Method fromEndMethod = class_getInstanceMethod([self class], @selector(viewDidAppear:));
-    Method toMeEndthod = class_getInstanceMethod([self class], @selector(swizzlingViewDidAppear));
-    if (!class_addMethod([self class], @selector(viewDidAppear:), method_getImplementation(toMeEndthod), method_getTypeEncoding(toMeEndthod))) {
-        method_exchangeImplementations(fromEndMethod, toMeEndthod);
-    }
+//    Method fromBeginMethod = class_getInstanceMethod([self class], @selector(viewDidLoad));
+//    Method toBeginMethod = class_getInstanceMethod([self class], @selector(swizzlingViewDidLoad));
+//    if (!class_addMethod([self class], @selector(viewDidLoad), method_getImplementation(toBeginMethod), method_getTypeEncoding(toBeginMethod))) {
+//        method_exchangeImplementations(fromBeginMethod, toBeginMethod);
+//    }
+//    
+//    Method fromEndMethod = class_getInstanceMethod([self class], @selector(viewDidAppear:));
+//    Method toMeEndthod = class_getInstanceMethod([self class], @selector(swizzlingViewDidAppear));
+//    if (!class_addMethod([self class], @selector(viewDidAppear:), method_getImplementation(toMeEndthod), method_getTypeEncoding(toMeEndthod))) {
+//        method_exchangeImplementations(fromEndMethod, toMeEndthod);
+//    }
 }
 
 // 我们自己实现的方法，也就是和self的viewDidLoad方法进行交换的方法。

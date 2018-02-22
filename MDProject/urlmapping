@@ -12,3 +12,4 @@ mdruntime2       : MDRuntimeInvocationViewController
 invoker          : MDInvokerViewController
 reactivePage     : MDTestBaseViewController
 reactivePage_2   : MDDemoBaseViewController
+reactivePage_3   : MDDemoBaseTableViewController

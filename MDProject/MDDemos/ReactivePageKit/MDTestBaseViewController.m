@@ -6,13 +6,14 @@
 //
 
 #import "MDTestBaseViewController.h"
-#import "MDTestBaseView.h"
 
 @interface MDTestBaseViewController ()
-@property (nonatomic, strong) MDTestBaseView *testBaseView;
+
 @end
 
 @implementation MDTestBaseViewController
+
+
 
 - (void)viewDidLoad
 {
@@ -23,9 +24,6 @@
     XYBaseModuleModel *model = [XYBaseModuleModel new];
     model.title = @"hello";
     self.model = model;
-    
-    self.testBaseView = [[MDTestBaseView alloc]initWithFrame:CGRectMake(30, 60, 100, 400)];
-    [self.view addSubview:self.testBaseView];
 }
 
 - (NSArray *)moduleViews
