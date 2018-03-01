@@ -106,7 +106,7 @@
                   moduleName = "MDProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "540997417.281733"
+                  timestampString = "541051429.343123"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "284"
@@ -121,7 +121,7 @@
                   moduleName = "MDProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "540997417.2842031"
+                  timestampString = "541051429.345313"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "284"
@@ -136,7 +136,7 @@
                   moduleName = "MDProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "540997417.286357"
+                  timestampString = "541051429.34869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "284"
@@ -185,7 +185,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MDProject/MDDemos/Invoker/AuditingInvoker.m"
-            timestampString = "540997416.1784199"
+            timestampString = "541047531.189064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -201,12 +201,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MDProject/MDDemos/Invoker/AuditingInvoker.m"
-            timestampString = "540997416.1785491"
+            timestampString = "541047531.189153"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "-postInvoke:withTargrt:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MDProject/MDDemos/ReactivePageKit/MDDemoTableViewCell.m"
+            timestampString = "541051428.234899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-prepareForReuse"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

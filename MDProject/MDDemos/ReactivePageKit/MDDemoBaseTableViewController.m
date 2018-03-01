@@ -17,6 +17,11 @@
 
 @implementation MDDemoBaseTableViewController
 
+- (void)dealloc
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,6 +57,16 @@
                        @"苏州",
                        @"合肥",
                        @"三亚",
+                       @"海南",
+                       @"郑州",
+                       @"阜阳",
+                       @"芜湖",
+                       @"台州",
+                       @"台湾",
+                       @"香港",
+                       @"澳门",
+                       @"宿松",
+                       @"海口",
                        ];
     for (NSUInteger i = 0; i<array.count; i++) {
         MDDemoTableViewCellModel *model = [MDDemoTableViewCellModel new];
@@ -75,6 +90,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.model = [self.titleArr objectAtIndex:indexPath.row];
     return cell;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

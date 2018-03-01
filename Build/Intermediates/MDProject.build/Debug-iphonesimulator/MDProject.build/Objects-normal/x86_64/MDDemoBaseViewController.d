@@ -5,5 +5,5 @@ dependencies: \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDViewController/MDURLAction.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/NVObject/NVObject.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/MDTestBaseView.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYReactBasePageView.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleModel.h
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYReactBasePageView.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleModel.h

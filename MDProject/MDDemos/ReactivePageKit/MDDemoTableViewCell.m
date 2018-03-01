@@ -32,6 +32,11 @@
     return self;
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+}
+
 - (void)setModel:(MDDemoTableViewCellModel *)model
 {
     if (model == nil) return;

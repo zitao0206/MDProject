@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleView.m \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleView.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleView.m \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleView.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDLayout/UIView+ResizeFrame.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Modules/module.modulemap \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/RACObjCRuntime.h \
@@ -99,4 +99,4 @@ dependencies: \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/NSData+RACSupport.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/NSArray+RACSequenceAdditions.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/ReactiveCocoa-umbrella.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleViewDelegate.h
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleViewDelegate.h

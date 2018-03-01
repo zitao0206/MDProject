@@ -1,10 +1,10 @@
 dependencies: \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYReactBasePageViewController.m \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYReactBasePageViewController.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYReactBasePageViewController.m \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYReactBasePageViewController.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDViewController/MDBaseViewController.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDViewController/MDURLAction.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/NVObject/NVObject.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleModel.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleModel.h \
   /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDLayout/UIView+ResizeFrame.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Modules/module.modulemap \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/RACObjCRuntime.h \
@@ -103,5 +103,5 @@ dependencies: \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/NSData+RACSupport.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/NSArray+RACSequenceAdditions.h \
   /Users/lizitao/Desktop/MDProject/MDProject/Build/Products/Debug-iphonesimulator/ReactiveCocoa/ReactiveCocoa.framework/Headers/ReactiveCocoa-umbrella.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleView.h \
-  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/XYBaseModuleViewDelegate.h
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleView.h \
+  /Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/ReactivePageKit/ReactivePageKit/PageView/XYBaseModuleViewDelegate.h
