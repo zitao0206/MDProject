@@ -5,7 +5,7 @@
 ## Build generated
 build/
 Build/
-Build/Intermediates/*
+MDProject/Build/*
 DerivedData/
 */build/*
 Build/*
@@ -23,6 +23,7 @@ Build/*
 !default.perspectivev3
 xcuserdata/
 Pods/
+/Pods/*
 *.lock
 *.xcworkspace
 ## Other

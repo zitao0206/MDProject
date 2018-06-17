@@ -97,53 +97,6 @@
             endingLineNumber = "284"
             landmarkName = "-coldSignalTest1"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[MDRACViewController coldSignalTest1]_block_invoke.195"
-                  moduleName = "MDProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "545282469.545615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "284"
-                  endingLineNumber = "284"
-                  offsetFromSymbolStart = "45">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.198"
-                  moduleName = "MDProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "545282469.549348"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "284"
-                  endingLineNumber = "284"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.199"
-                  moduleName = "MDProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lizitao/Desktop/MDProject/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "545282469.5568089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "284"
-                  endingLineNumber = "284"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
