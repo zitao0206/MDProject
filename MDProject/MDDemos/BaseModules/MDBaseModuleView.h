@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "MDBaseViewDelegate.h"
 #import "UIView+ResizeFrame.h"
 

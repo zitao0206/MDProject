@@ -6,7 +6,7 @@
 //
 
 #import "XYBaseModuleView.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "XYBaseModuleViewDelegate.h"
 #import "UIView+ResizeFrame.h"
 

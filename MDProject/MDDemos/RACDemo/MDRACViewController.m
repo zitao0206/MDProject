@@ -12,7 +12,7 @@
 #import "RACSignal.h"
 #import "RACScheduler.h"
 #import "RACSubscriber.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "MDNavigationManager.h"
 #import "TestBlockViewController.h"
 #import "UIView+ResizeFrame.h"

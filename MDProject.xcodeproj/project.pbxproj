@@ -15,6 +15,7 @@
 		D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687F1E8A4BC200C1489F /* MDURLElement.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
 		D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */; };
+		D825672620D67D3E00129B0B /* MDCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D825672420D67D3E00129B0B /* MDCacheViewController.m */; };
 		D838F1541EA6FFD900252502 /* UIView+ResizeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D838F1531EA6FFD900252502 /* UIView+ResizeFrame.m */; };
 		D83F6A0A1F3C877300D07AAC /* TestBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F6A091F3C877300D07AAC /* TestBlockViewController.m */; };
 		D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023641EC692FF0054060E /* MDDrawImageViewController.m */; };
@@ -126,6 +127,8 @@
 		D81D68831E8A64D400C1489F /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		D81D68861E8A66EC00C1489F /* MDDataCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDataCacheManager.h; sourceTree = "<group>"; };
 		D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDataCacheManager.m; sourceTree = "<group>"; };
+		D825672420D67D3E00129B0B /* MDCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCacheViewController.m; sourceTree = "<group>"; };
+		D825672520D67D3E00129B0B /* MDCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCacheViewController.h; sourceTree = "<group>"; };
 		D838F1521EA6FFD900252502 /* UIView+ResizeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ResizeFrame.h"; sourceTree = "<group>"; };
 		D838F1531EA6FFD900252502 /* UIView+ResizeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ResizeFrame.m"; sourceTree = "<group>"; };
 		D83F6A081F3C877300D07AAC /* TestBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBlockViewController.h; sourceTree = "<group>"; };
@@ -358,6 +361,15 @@
 			path = MDDataCacheManager;
 			sourceTree = "<group>";
 		};
+		D825672320D67D1300129B0B /* PinCache */ = {
+			isa = PBXGroup;
+			children = (
+				D825672520D67D3E00129B0B /* MDCacheViewController.h */,
+				D825672420D67D3E00129B0B /* MDCacheViewController.m */,
+			);
+			path = PinCache;
+			sourceTree = "<group>";
+		};
 		D838F1511EA6FFD900252502 /* MDLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +382,7 @@
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D825672320D67D1300129B0B /* PinCache */,
 				D85B96A0203E8F8C005A094A /* ReactivePageKit */,
 				D85B9692203D7029005A094A /* Invoker */,
 				D8D2AF7320259D6100C4BCE7 /* Runtime */,
@@ -971,6 +984,7 @@
 				D858C8C91E756B6B0042D9F3 /* MainViewController.m in Sources */,
 				D8CEAF4B1EF13083009AA0EE /* MDJsonMappers.m in Sources */,
 				D85B969C203D729E005A094A /* AspectProxy.m in Sources */,
+				D825672620D67D3E00129B0B /* MDCacheViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 #import "XYReactBasePageView.h"
 #import "UIView+ResizeFrame.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "XYBaseModuleView.h"
 #import "XYBaseModuleViewDelegate.h"
 

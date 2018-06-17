@@ -8,7 +8,7 @@
 
 #import "MDBaseNavigationController.h"
 #import "MDURLAction.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "MDNavigationManager.h"
 
 @interface MDBaseNavigationController ()
