@@ -5,7 +5,10 @@
 ## Build generated
 build/
 DerivedData/
-MDProject/Build
+*/build/*
+Build/*
+*/Build/*
+*.dgph
 
 ## Various settings
 *.pbxuser
