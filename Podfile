@@ -4,9 +4,11 @@ use_frameworks!
 platform :ios, '8.0' 
 
 target 'MDProject' do
-  pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
-  pod 'AFNetworking'
-  pod 'SDWebImage'
+    pod 'ReactiveObjC', '3.1.0'
+    pod 'TMCache', '2.1.0'
+    pod 'PINCache', '2.0'
+    pod 'SDWebImage', '4.0.0'
+    pod 'Masonry', '0.6.1'
 end
 
 pre_install do |installer|
