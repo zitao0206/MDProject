@@ -4,6 +4,8 @@
 
 ## Build generated
 build/
+Build/
+Build/Intermediates/*
 DerivedData/
 */build/*
 Build/*

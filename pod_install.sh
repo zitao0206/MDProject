@@ -7,8 +7,6 @@ export COCOAPODS_DISABLE_DETERMINISTIC_UUIDS=YES
 #指定编译模式
 build_model="Debug"
 
-cd MDProject
-
 #-----------------Pod update-------------
 pod install
 
@@ -16,7 +14,7 @@ pod install
 #参考文档：http://www.cocoachina.com/ios/20161118/18124.html
 echo "正在设置编译优化选项: \c"
 sleep 3
-project=XiaoYing.xcodeproj/project.pbxproj
+project=MDProject.xcodeproj/project.pbxproj
 #更改线程数设置5
 defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks 8
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
