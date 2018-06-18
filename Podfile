@@ -4,6 +4,7 @@ use_frameworks!
 platform :ios, '8.0' 
 
 target 'MDProject' do
+    pod 'MDCommonKit', '1.0.6'
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'
     pod 'PINCache', '2.0'

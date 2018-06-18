@@ -1,5 +1,6 @@
 PODS:
   - Masonry (0.6.1)
+  - MDCommonKit (1.0.6)
   - PINCache (2.0)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.0.0):
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Masonry (= 0.6.1)
+  - MDCommonKit (= 1.0.6)
   - PINCache (= 2.0)
   - ReactiveObjC (= 3.1.0)
   - SDWebImage (= 4.0.0)
@@ -17,6 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
+    - MDCommonKit
     - PINCache
     - ReactiveObjC
     - SDWebImage
@@ -24,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
+  MDCommonKit: 33726d67979897597f4e596524c4647165adf7f3
   PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
-PODFILE CHECKSUM: 58c2cada770f05d58547041da79bf2df1ab586db
+PODFILE CHECKSUM: 0bf5ca59a31027da54bd13837867843c0d3e0c0a
 
 COCOAPODS: 1.5.3
