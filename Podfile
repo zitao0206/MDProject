@@ -1,30 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git' 
-use_frameworks!
 
-platform :ios, '8.0' 
+platform :ios, '8.0'
+
+eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 target 'MDProject' do
+    
     pod 'MDCommonKit', '1.0.6'
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'
     pod 'PINCache', '2.0'
     pod 'SDWebImage', '4.0.0'
     pod 'Masonry', '0.6.1'
-end
 
-pre_install do |installer|
-    `git config --global core.ignorecase false`
-    
-    # Avoid mkmf.log
-    require 'mkmf'
-    
-    module MakeMakefile::Logging
-    @logfile = File::NULL
-end
-
-if not find_executable 'xcproj'
-    raise 'Please install xcproj by running `brew install xcproj`'
-end
 end
 
 post_install do |installer|

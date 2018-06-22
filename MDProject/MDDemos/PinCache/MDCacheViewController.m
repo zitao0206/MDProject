@@ -10,6 +10,8 @@
 #import "PINCache.h"
 #import "SDImageCache.h"
 #import "MDDataCacheManager.h"
+#import "MDEasyCache.h"
+#import "MDCacheTestModel.h"
 
 @interface MDCacheViewController ()
 
@@ -23,52 +25,81 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
 //    [self imageCacheTest];
-    [self pinCacheTest];
+//    [self pinCacheTest];
+//    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(easyCacheTest) userInfo:nil repeats:YES];
+//    [self easyCacheTest];
     
+    [self easyCacheModelTest];
+   
 }
 
-- (void)pinCacheTest
+- (void)easyCacheModelTest
 {
-    NSString *stringValue = @"hello world..hello world..hello world..hello world..hello world..hello world..";
+    MDCacheTestModel *model = [MDCacheTestModel new];
+    model.age = @"30";
+    model.name = @"lizitao";
+    model.male = @"nan";
+    model.address = @"hangzhou";
     
-    [[PINCache sharedCache]setObject:stringValue forKey:@"string_key"];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[PINDiskCache sharedCache]objectForKey:@"string_key" block:^(PINDiskCache * _Nonnull cache, NSString * _Nonnull key, id<NSCoding>  _Nullable object, NSURL * _Nonnull fileURL) {
-            NSLog(@"0------>%@",object);
-
+    UIImage *image = [UIImage imageNamed:@"launch.jpg"];
+    
+    [[MDEasyCache easyCache] setObject:image forKey:@"model_key"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[MDEasyCache easyCache] objectForKey:@"model_key" completion:^(MDEasyCacheConfig *config) {
+            
+            NSLog(@"------->%@",config.object);
+            
         }];
-        NSLog(@"1------>%@",[[PINCache sharedCache] objectForKey:@"string_key"]);
-        NSLog(@"2------>%@",[[PINCache sharedCache].memoryCache objectForKey:@"string_key"]);
-        NSLog(@"3------>%@",[[PINCache sharedCache].diskCache objectForKey:@"string_key"]);
+    });
+}
 
+- (void)easyCacheTest
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *key = [NSString stringWithFormat:@"image_key"];
+        UIImage *image = [UIImage imageNamed:@"launch.jpg"];
+        [[MDEasyCache easyCache] setObject:image forKey:key completion:nil];
     });
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//
-//        [[PINCache sharedCache]objectForKey:@"image_key" block:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
-//             NSLog(@"0------>%@",object);
-//
-//        }];
-//
-//        NSLog(@"1------>%@",[[PINCache sharedCache].memoryCache objectForKey:@"image_key"]);
-//        NSLog(@"2------>%@",[[PINCache sharedCache].diskCache objectForKey:@"image_key"]);
-//
-////        NSLog(@"3------>%@",[[PINDiskCache sharedCache] objectForKey:@"image_key"]);
-////        NSLog(@"4------>%@",[[PINMemoryCache sharedCache] objectForKey:@"image_key"]);
-//    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *key = [NSString stringWithFormat:@"string_key"];
+        NSString *stringValue = @"hello world...";
+        [[MDEasyCache easyCache] setObject:stringValue forKey:key];
+    });
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [[PINCache sharedCache] objectForKey:@""];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *key = [NSString stringWithFormat:@"value_key"];
+        UIImage *image = [UIImage imageNamed:@"desktop.png"];
+        [[MDEasyCache easyCache] setObject:image forKey:key completion:nil];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-//        NSLog(@"1------>%@",[[TMCache sharedCache].memoryCache objectForKey:@"image_key"]);
-//        NSLog(@"2------>%@",[[TMCache sharedCache].diskCache objectForKey:@"image_key"]);
-
+        NSLog(@"1------->%@",[[MDEasyCache easyCache] objectForKey:@"image_key" completion:^(MDEasyCacheConfig *config) {
+            NSLog(@"---->%@",config.object);
+        }]);
         
-        //        NSLog(@"3------>%@",[[PINDiskCache sharedCache] objectForKey:@"image_key"]);
-        //        NSLog(@"4------>%@",[[PINMemoryCache sharedCache] objectForKey:@"image_key"]);
-//    });
+        NSLog(@"2------->%@",[[MDEasyCache easyCache] objectForKey:@"string_key" completion:^(MDEasyCacheConfig *config) {
+                 NSLog(@"---->%@",config.object);
+        }]);
+        NSLog(@"3------->%@",[[MDEasyCache easyCache] objectForKey:@"value_key"]);
+        
+        [[MDEasyCache easyCache] clearMemory];
+        [[MDEasyCache easyCache] clearDisk];
+ 
+        
+        NSLog(@"4------->%@",[[MDEasyCache easyCache] objectForKey:@"image_key" completion:^(MDEasyCacheConfig *config) {
+            NSLog(@"---->%@",config.object);
+        }]);
+        
+        NSLog(@"5------->%@",[[MDEasyCache easyCache] objectForKey:@"string_key" completion:^(MDEasyCacheConfig *config) {
+            NSLog(@"---->%@",config.object);
+        }]);
+        NSLog(@"6------->%@",[[MDEasyCache easyCache] objectForKey:@"value_key"]);
+       
+    });
+   
 }
 
 - (void)imageCacheTest
@@ -86,7 +117,7 @@
     [[SDImageCache sharedImageCache] storeImage:image forKey:@"image_key" toDisk:YES completion:^{
         
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         UIImage *image1 = [[SDImageCache sharedImageCache] imageFromCacheForKey:@"image_key"];
         NSLog(@"1------>%@",image1);
