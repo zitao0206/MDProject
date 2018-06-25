@@ -16,6 +16,10 @@
 		D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */; };
 		D825672620D67D3E00129B0B /* MDCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D825672420D67D3E00129B0B /* MDCacheViewController.m */; };
 		D825673B20DA0C8900129B0B /* MDCacheTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D825673A20DA0C8900129B0B /* MDCacheTestModel.m */; };
+		D825675220DCA92F00129B0B /* MDCrashShieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D825675120DCA92F00129B0B /* MDCrashShieldManager.m */; };
+		D825675620DCCCE300129B0B /* MDJSPatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D825675520DCCCE300129B0B /* MDJSPatchViewController.m */; };
+		D825675C20DCD45300129B0B /* bugfix.js in Resources */ = {isa = PBXBuildFile; fileRef = D825675B20DCD45300129B0B /* bugfix.js */; };
+		D825675F20DF373200129B0B /* MDFelix.m in Sources */ = {isa = PBXBuildFile; fileRef = D825675E20DF373200129B0B /* MDFelix.m */; };
 		D83F6A0A1F3C877300D07AAC /* TestBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F6A091F3C877300D07AAC /* TestBlockViewController.m */; };
 		D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023641EC692FF0054060E /* MDDrawImageViewController.m */; };
 		D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023661EC692FF0054060E /* MDQuartzView.m */; };
@@ -120,6 +124,13 @@
 		D825672520D67D3E00129B0B /* MDCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCacheViewController.h; sourceTree = "<group>"; };
 		D825673920DA0C8900129B0B /* MDCacheTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCacheTestModel.h; sourceTree = "<group>"; };
 		D825673A20DA0C8900129B0B /* MDCacheTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCacheTestModel.m; sourceTree = "<group>"; };
+		D825675020DCA92F00129B0B /* MDCrashShieldManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCrashShieldManager.h; sourceTree = "<group>"; };
+		D825675120DCA92F00129B0B /* MDCrashShieldManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCrashShieldManager.m; sourceTree = "<group>"; };
+		D825675420DCCCE300129B0B /* MDJSPatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDJSPatchViewController.h; sourceTree = "<group>"; };
+		D825675520DCCCE300129B0B /* MDJSPatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDJSPatchViewController.m; sourceTree = "<group>"; };
+		D825675B20DCD45300129B0B /* bugfix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix.js; sourceTree = "<group>"; };
+		D825675D20DF373200129B0B /* MDFelix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDFelix.h; sourceTree = "<group>"; };
+		D825675E20DF373200129B0B /* MDFelix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDFelix.m; sourceTree = "<group>"; };
 		D83F6A081F3C877300D07AAC /* TestBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBlockViewController.h; sourceTree = "<group>"; };
 		D83F6A091F3C877300D07AAC /* TestBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBlockViewController.m; sourceTree = "<group>"; };
 		D85023631EC692FF0054060E /* MDDrawImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDrawImageViewController.h; sourceTree = "<group>"; };
@@ -351,9 +362,23 @@
 			path = PinCache;
 			sourceTree = "<group>";
 		};
+		D825675320DCCCC900129B0B /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				D825675420DCCCE300129B0B /* MDJSPatchViewController.h */,
+				D825675020DCA92F00129B0B /* MDCrashShieldManager.h */,
+				D825675120DCA92F00129B0B /* MDCrashShieldManager.m */,
+				D825675520DCCCE300129B0B /* MDJSPatchViewController.m */,
+				D825675D20DF373200129B0B /* MDFelix.h */,
+				D825675E20DF373200129B0B /* MDFelix.m */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D825675320DCCCC900129B0B /* JSPatch */,
 				D825672320D67D1300129B0B /* PinCache */,
 				D85B96A0203E8F8C005A094A /* ReactivePageKit */,
 				D85B9692203D7029005A094A /* Invoker */,
@@ -435,6 +460,7 @@
 		D858C8931E756B150042D9F3 /* MDProject */ = {
 			isa = PBXGroup;
 			children = (
+				D825675B20DCD45300129B0B /* bugfix.js */,
 				D850235B1EC6922E0054060E /* MDDemos */,
 				D858C9841E75A4200042D9F3 /* urlmapping */,
 				D81D68851E8A66EC00C1489F /* MDDataCacheManager */,
@@ -676,6 +702,7 @@
 				D858C88D1E756B150042D9F3 /* Sources */,
 				D858C88E1E756B150042D9F3 /* Frameworks */,
 				D858C88F1E756B150042D9F3 /* Resources */,
+				44BC65548D29B749963B4D14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -780,6 +807,7 @@
 				D89333461F29DDAE00748499 /* face3.jpg in Resources */,
 				D868149B1F175B1600E4E7BF /* ugcup.png in Resources */,
 				D89333441F29DCEF00748499 /* face2.jpeg in Resources */,
+				D825675C20DCD45300129B0B /* bugfix.js in Resources */,
 				D89333431F29DCEF00748499 /* face1.jpg in Resources */,
 				D81D68841E8A64D400C1489F /* launch.jpg in Resources */,
 				D858C8A41E756B150042D9F3 /* LaunchScreen.storyboard in Resources */,
@@ -806,6 +834,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44BC65548D29B749963B4D14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MDProject/Pods-MDProject-resources.sh",
+				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MDProject/Pods-MDProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E6BC0F07E11F24DC728865AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -850,6 +896,7 @@
 				D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */,
 				D855BA911EDC1B7200D2A565 /* MDDemoTopView.m in Sources */,
 				D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */,
+				D825675620DCCCE300129B0B /* MDJSPatchViewController.m in Sources */,
 				D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */,
 				D870BC3F1EF3BA2B00ACA832 /* MDJsonView.m in Sources */,
 				D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */,
@@ -857,6 +904,7 @@
 				D858C9731E758FEA0042D9F3 /* MDURLAction.m in Sources */,
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
 				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
+				D825675220DCA92F00129B0B /* MDCrashShieldManager.m in Sources */,
 				D870BC3D1EF3BA2B00ACA832 /* MDJsonImageView.m in Sources */,
 				D85B969F203D7633005A094A /* Calculator.m in Sources */,
 				D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */,
@@ -879,6 +927,7 @@
 				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,
 				D85B96D9203EE64F005A094A /* XYReactBasePageTableViewController.m in Sources */,
 				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
+				D825675F20DF373200129B0B /* MDFelix.m in Sources */,
 				D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */,
 				D85B9695203D704F005A094A /* MDInvokerViewController.m in Sources */,
 				D85B96E7203FB0DB005A094A /* XYBaseModuleModel.m in Sources */,
@@ -1034,6 +1083,7 @@
 				DEVELOPMENT_TEAM = BMP99N9345;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = MDProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzt.MDProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1050,6 +1100,7 @@
 				DEVELOPMENT_TEAM = BMP99N9345;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = MDProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzt.MDProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

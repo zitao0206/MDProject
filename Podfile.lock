@@ -1,7 +1,11 @@
 PODS:
+  - Aspects (1.4.1)
+  - JSPatch (1.1.3):
+    - JSPatch/Core (= 1.1.3)
+  - JSPatch/Core (1.1.3)
   - Masonry (0.6.1)
   - MDCommonKit (1.0.6)
-  - MDEasyCache (1.0.6)
+  - MDEasyCache (1.0.8)
   - PINCache (2.0)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.0.0):
@@ -10,6 +14,8 @@ PODS:
   - TMCache (2.1.0)
 
 DEPENDENCIES:
+  - Aspects
+  - JSPatch
   - Masonry (= 0.6.1)
   - MDCommonKit (= 1.0.6)
   - MDEasyCache (from `/Users/lizitao/Desktop/MDProjects/MDEasyCache`)
@@ -20,6 +26,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Aspects
+    - JSPatch
     - Masonry
     - MDCommonKit
     - PINCache
@@ -32,6 +40,8 @@ EXTERNAL SOURCES:
     :path: "/Users/lizitao/Desktop/MDProjects/MDEasyCache"
 
 SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MDCommonKit: 33726d67979897597f4e596524c4647165adf7f3
   MDEasyCache: 11e8fadadc9a7d8090c80f0e88ed93a3a739b67d
@@ -40,6 +50,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
-PODFILE CHECKSUM: f78cce94260d6df1653a258637773038c0894eda
+PODFILE CHECKSUM: 3fb42e912f3d2473fa3bf39e386350a9bd7a1173
 
 COCOAPODS: 1.5.3

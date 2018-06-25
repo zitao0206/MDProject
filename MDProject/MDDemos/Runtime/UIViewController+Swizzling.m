@@ -8,6 +8,7 @@
 
 #import "UIViewController+Swizzling.h"
 #import <objc/message.h>
+#import "MDNavigator.h"
 
 static CFTimeInterval beginTime = 0.0;
 static CFTimeInterval endTime = 0.0;
@@ -15,6 +16,8 @@ static CFTimeInterval intervalTime = 0.0;
 static NSString *className = @"";
 
 @implementation UIViewController(Swizzling)
+
+
 
 + (void)load
 {
@@ -25,7 +28,7 @@ static NSString *className = @"";
 //    if (!class_addMethod([self class], @selector(viewDidLoad), method_getImplementation(toBeginMethod), method_getTypeEncoding(toBeginMethod))) {
 //        method_exchangeImplementations(fromBeginMethod, toBeginMethod);
 //    }
-//    
+    
 //    Method fromEndMethod = class_getInstanceMethod([self class], @selector(viewDidAppear:));
 //    Method toMeEndthod = class_getInstanceMethod([self class], @selector(swizzlingViewDidAppear));
 //    if (!class_addMethod([self class], @selector(viewDidAppear:), method_getImplementation(toMeEndthod), method_getTypeEncoding(toMeEndthod))) {
@@ -33,18 +36,19 @@ static NSString *className = @"";
 //    }
 }
 
+
 // 我们自己实现的方法，也就是和self的viewDidLoad方法进行交换的方法。
 - (void)swizzlingViewDidLoad
 {
     NSString *str = [NSString stringWithFormat:@"%@", self.class];
-    NSLog(@"viewDidLoad---->%@", self.class);
+    NSLog(@"swizzlingViewDidLoad---->%@", self.class);
     // 我们在这里加一个判断，将系统的UIViewController的对象剔除掉
-    if(![str containsString:@"UI"]) {
+//    if(![str containsString:@"UI"]) {
 //        NSLog(@"viewDidLoad统计打点 : %@", self.class);
-        beginTime = CFAbsoluteTimeGetCurrent();
+//        beginTime = CFAbsoluteTimeGetCurrent();
 //        NSLog(@"beginTime:-------------->%@",@(beginTime));
         className = str;
-    }
+//    }
     [self swizzlingViewDidLoad];
 }
 

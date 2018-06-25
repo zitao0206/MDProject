@@ -11,6 +11,7 @@
 #import "MDNavigator.h"
 #import "MDBaseNavigationController.h"
 #import "MDNavigationManager.h"
+#import "MDCrashShieldManager.h"
 
 typedef NS_ENUM(NSInteger, LaunchMode) {
     LaunchModeNormal = 0,
@@ -90,7 +91,7 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
     [navigator setMainNavigationController:self.navigationController];
     
     // 设置navigator可以处理的url scheme
-    [navigator setHandleableURLScheme:@"dianping"];
+    [navigator setHandleableURLScheme:@"xiaoying"];
     // 绑定urlmapping文件
     [navigator setFileNamesOfURLMapping:@[@"urlmapping"]];
 }
@@ -106,11 +107,14 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
     {
         [self doBackgroundLaunchJobs];
         NSLog(@"background launch:%ld -- %@", self.launchMode, launchOptions.description);
-    }
-    else
-    {
+    } else {
         [self doForegroundLaunchJobs];
         NSLog(@"foreground launch:%ld -- %@", self.launchMode, launchOptions.description);
+    }
+    {
+        [[MDCrashShieldManager manager] startPatch];
+        NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"js"];
+        
     }
 
     return YES;

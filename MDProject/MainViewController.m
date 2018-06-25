@@ -46,6 +46,7 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+                       @"JSPatch",                          //15
                        @"Cache",                            //14
                        @"ReactivePage_3",                   //13
                        @"ReactivePage_2",                   //12
@@ -68,6 +69,11 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//15
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://jspatch"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
     {//14
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://cache"]];
         action.animation = MDNaviAnimationPush;
