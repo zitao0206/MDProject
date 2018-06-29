@@ -8,6 +8,9 @@
 
 #import "MDJSPatchViewController.h"
 #import "MDRuntimeViewController.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import "MDSon.h"
 
 @interface MDJSPatchViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -35,22 +38,10 @@
     [self.view addSubview:self.tableView];
     [self loadTitleArray];
     [self.tableView reloadData];
-    self.title =@"hello world";
-    NSLog(@"%@",@([self divideUsingDenominator:1.0]));
-    NSLog(@"%@",@([self divideUsingDenominator1:1.0]));
-    
-}
 
-- (float)divideUsingDenominator:(NSInteger)denominator
-{
-    NSLog(@"----->%@",@(denominator));
-    return 1.f/denominator;
-}
-
-- (float)divideUsingDenominator1:(NSInteger)denominator
-{
-    NSLog(@"----->123%@",@(denominator));
-    return 1.f/denominator;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self performSelector:@selector(jump) withObject:nil];
+    });
 }
 
 - (void)loadTitleArray
@@ -103,7 +94,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //会超出数组范围导致crash
-    NSString *content = self.titleArr[[indexPath row] + 1];
+    NSString *content = self.titleArr[indexPath.row];
     NSLog(@"执行了....%@",content);
     [self jump];
 }
@@ -112,5 +103,6 @@
 {
     [self.navigationController pushViewController:[MDJSPatchViewController new] animated:YES];
 }
+
 
 @end

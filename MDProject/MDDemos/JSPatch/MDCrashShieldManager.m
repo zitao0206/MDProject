@@ -10,6 +10,9 @@
 #import <objc/message.h>
 #import "JPEngine.h"
 #import "MDFelix.h"
+#import "MDEasyHotFixTool.h"
+#import "Felix.h"
+#import "MDBanksy.h"
 
 @implementation MDCrashShieldManager
 
@@ -45,14 +48,28 @@
 
 - (void)startPatch
 {
-    NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"js"];
+    NSString *corePath = [[NSBundle mainBundle] pathForResource:@"MDEasyHotFixTool" ofType:@"js"];
+    NSString *coreScriptString = [NSString stringWithContentsOfFile:corePath encoding:NSUTF8StringEncoding error:nil];
+
+    
+    NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"bugfix_jspatch" ofType:@"js"];
     NSString *fixScriptString = [NSString stringWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil];
-    [JPEngine startEngine];
-    if (fixScriptString.length > 0) {
-        [JPEngine evaluateScript:fixScriptString];
-    }
-    [MDFelix fixIt];
-    [MDFelix evalString:fixScriptString];
+//    [JPEngine evaluateScript:fixScriptString];
+    
+    NSString *txtPath1 = [[NSBundle mainBundle] pathForResource:@"bugfix_banksy" ofType:@"js"];
+    NSString *fixScriptString1 = [NSString stringWithContentsOfFile:txtPath1 encoding:NSUTF8StringEncoding error:nil];
+//    [MDBanksy banksy];
+//    [MDBanksy registJSKeyword];
+//    [MDBanksy evalString:fixScriptString1];
+    
+    [Felix fixIt];
+    [Felix evalString:fixScriptString1];
+    
+//    [MDFelix fixIt];
+//    [MDFelix evalString:fixScriptString1];
+//
+//    [[MDEasyHotFixTool tool] startInitContext];
+//    [[MDEasyHotFixTool tool] evaluateScript:fixScriptString];
 }
 
 @end

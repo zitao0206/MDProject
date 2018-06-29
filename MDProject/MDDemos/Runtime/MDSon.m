@@ -14,20 +14,20 @@
 {
 }
 
-+ (BOOL)resolveInstanceMethod:(SEL)sel
-{
-    Method backup = class_getInstanceMethod([self class], @selector(backupInstanceMethod:));
-    class_addMethod([self class], sel, class_getMethodImplementation(self, @selector(backupInstanceMethod:)), method_getTypeEncoding(backup));
-    return [super resolveInstanceMethod:sel];
-}
-
-+ (BOOL)resolveClassMethod:(SEL)sel
-{
-    Method backup = class_getClassMethod(self, @selector(backupClassMethod:));
-    Class metaClass = objc_getMetaClass(class_getName(self));
-    class_addMethod(metaClass, sel, class_getMethodImplementation(metaClass, @selector(backupClassMethod:)), method_getTypeEncoding(backup));
-    return [super resolveClassMethod:sel];
-}
+//+ (BOOL)resolveInstanceMethod:(SEL)sel
+//{
+//    Method backup = class_getInstanceMethod([self class], @selector(backupInstanceMethod:));
+//    class_addMethod([self class], sel, class_getMethodImplementation(self, @selector(backupInstanceMethod:)), method_getTypeEncoding(backup));
+//    return [super resolveInstanceMethod:sel];
+//}
+//
+//+ (BOOL)resolveClassMethod:(SEL)sel
+//{
+//    Method backup = class_getClassMethod(self, @selector(backupClassMethod:));
+//    Class metaClass = objc_getMetaClass(class_getName(self));
+//    class_addMethod(metaClass, sel, class_getMethodImplementation(metaClass, @selector(backupClassMethod:)), method_getTypeEncoding(backup));
+//    return [super resolveClassMethod:sel];
+//}
 
 - (void)backupInstanceMethod:(SEL)aSel
 {

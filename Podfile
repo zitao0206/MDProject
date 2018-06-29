@@ -12,8 +12,9 @@ target 'MDProject' do
     pod 'PINCache', '2.0'
     pod 'SDWebImage', '4.0.0'
     pod 'Masonry', '0.6.1'
+    pod 'MDEasyCache', '1.0.8'
     pod 'JSPatch'
-    pod 'Aspects'
+    pod 'Aspects', '1.4.1'
 
 end
 

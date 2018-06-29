@@ -30,7 +30,32 @@
 //    [self easyCacheTest];
     
     [self easyCacheModelTest];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performSelector:@selector(jump1) withObject:nil];
+    });
    
+}
+
+- (void)jump
+{
+    NSLog(@"----->jump");
+    
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+    NSString *sel = NSStringFromSelector(selector);
+    if ([sel rangeOfString:@"set"].location == 0) {
+        return [NSMethodSignature signatureWithObjCTypes:"v@:@"];
+    } else {
+        return [NSMethodSignature signatureWithObjCTypes:"@@:"];
+    }
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation
+{
+    
 }
 
 - (void)easyCacheModelTest
