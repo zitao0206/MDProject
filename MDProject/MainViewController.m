@@ -12,6 +12,9 @@
 #import "UIView+ResizeFrame.h"
 #import "MDDemoModuleViewcomtroller.h"
 #import "MDBaseModuleModel.h"
+#import "MDZipArchiveViewController.h"
+#import "AppDelegate.h"
+#import "MDHopeStateMachingViewController.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -40,12 +43,72 @@
     [self.view addSubview:self.tableView];
     [self loadTitleArray];
     [self loadActionArray];
+    
+//    UIButton *tempBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    
+//    tempBtn.frame = CGRectMake(100, 100, 100, 100);
+//    
+//    tempBtn.backgroundColor = [UIColor cyanColor];
+//    
+//    [tempBtn setTitle:@"测试1" forState:UIControlStateNormal];
+//    
+//    [tempBtn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:tempBtn];
+ 
 }
+
+- (void)clickBtn1:(UIButton *)sender
+{
+    
+    // 创建一个测试的alertView
+    
+    UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:@"测试" message:@"测试" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    [alterView show];
+    UIWindow *window1 = [UIApplication sharedApplication].keyWindow;
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIWindow *window2 = appdelegate.window;
+    NSLog(@"\n\nwindow1 = %@    \n\nwindow2 = %@  \n\nwindow1.rootViewController = %@ \n\nwindow2.rootViewController = %@",window1,window2,window1.rootViewController,window2.rootViewController);
+    
+}
+
+
+- (void)clickBtn:(UIButton *)sender
+{
+    // 创建一个测试的alertView
+    UIAlertController *alertController =  [UIAlertController alertControllerWithTitle:@"Test" message:@"test..." preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"xiaoying_str_com_cancel", @"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    
+    UIAlertAction *actionAskAgain = [UIAlertAction actionWithTitle:@"Cacel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    }];
+    
+    [alertController addAction:actionAskAgain];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    UIWindow *window0 = alertController.view.window;
+    
+    UIWindow *window1 = [UIApplication sharedApplication].keyWindow;
+    
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIWindow *window2 = appdelegate.window;
+    
+    NSLog(@"\nwindow0=%@\nwindow0.rootViewController = %@",window0,window0.rootViewController);
+    
+    
+    NSLog(@"\n\nwindow1 = %@    \n\nwindow2 = %@  \n\nwindow1.rootViewController = %@ \n\nwindow2.rootViewController = %@",window1,window2,window1.rootViewController,window2.rootViewController);
+  
+    
+}
+
+
 
 - (void)loadTitleArray
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+                       @"stateMaching",                     //17
+                       @"ZipTest",                          //16
                        @"JSPatch",                          //15
                        @"Cache",                            //14
                        @"ReactivePage_3",                   //13
@@ -69,84 +132,94 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//17
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://stateMaching"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//16
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://zipArchive"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
     {//15
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://jspatch"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://jspatch"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//14
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://cache"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://cache"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//13
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage_3"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://reactivePage_3"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//12
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage_2"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://reactivePage_2"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//11
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://reactivePage"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://reactivePage"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//10
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://invoker"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://invoker"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//9
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdruntime2"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdruntime2"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//8
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdruntime1"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdruntime1"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     
     {//7
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfilter"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdfilter"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//6
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdfacefeatures"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdfacefeatures"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//5
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdquartzdraw"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdquartzdraw"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//4
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdmultithread"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdmultithread"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//3
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdjson"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdjson"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//2
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mddrawimage"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mddrawimage"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//1
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://mdbasemodule"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://mdbasemodule"]];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];
     }
     {//0
-        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"dianping://rac"]];
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://rac"]];
         [action setString:@"http://www.baidu.com" forKey:@"url"];
         action.animation = MDNaviAnimationPush;
         [self.actionArr addObject:action];

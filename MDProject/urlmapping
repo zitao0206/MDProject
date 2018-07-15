@@ -15,3 +15,5 @@ reactivePage_2   : MDDemoBaseViewController
 reactivePage_3   : MDDemoBaseTableViewController
 cache            : MDCacheViewController
 jspatch          : MDJSPatchViewController
+zipArchive       : MDZipArchiveViewController
+stateMaching     : MDHopeStateMachingViewController

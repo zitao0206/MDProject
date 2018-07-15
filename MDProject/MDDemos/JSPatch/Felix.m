@@ -109,12 +109,9 @@ typedef struct {float f;} __FelixFloat__;
         klass = object_getClass(klass);
     }
     SEL sel = NSSelectorFromString(selectorName);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-         [fixImpl callWithArguments:nil];
-    });
-//    [klass aspect_hookSelector:sel withOptions:option usingBlock:^(id<AspectInfo> aspectInfo){
-//        [fixImpl callWithArguments:@[aspectInfo.instance, aspectInfo.originalInvocation, aspectInfo.arguments]];
-//    } error:nil];
+    [klass aspect_hookSelector:sel withOptions:option usingBlock:^(id<AspectInfo> aspectInfo){
+        [fixImpl callWithArguments:@[aspectInfo.instance, aspectInfo.originalInvocation, aspectInfo.arguments]];
+    } error:nil];
 }
 
 + (void)_invocation:(NSInvocation *)invo signature:(NSMethodSignature *)sig setArgument:(id)obj atIndex:(NSInteger)index
@@ -316,6 +313,7 @@ break; \
 + (void)fixIt
 {
     [self context][@"fixInstanceMethod"] = ^(NSString *instanceName, NSString *selectorName, JSValue *fixImpl) {
+        [fixImpl callWithArguments:nil];
         [self _fixWithMethod:NO aspectionOptions:AspectPositionInstead instanceName:instanceName selectorName:selectorName fixImpl:fixImpl];
     };
     
@@ -343,9 +341,6 @@ break; \
         [self _invocation:invocation signature:invocation.methodSignature setArgument:value atIndex:index+2];
     };
     
-    [self context][@"_OC_callI"] = ^id(JSValue *obj, NSString *selectorName, JSValue *arguments, BOOL isSuper) {
-        return [self _instance:[obj toObject]  performSelector:selectorName withObject:nil withObject:nil withObject:nil withObject:nil withObject:nil];
-    };
     [self context][@"dispatch_after"] = ^(double time, JSValue *func) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [func callWithArguments:nil];

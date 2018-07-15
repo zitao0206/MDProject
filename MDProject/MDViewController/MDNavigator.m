@@ -33,7 +33,7 @@ static MDNavigator *gNavigator = nil;
 {
     if (self = [super init])
     {
-        _handleableURLScheme = @"dianping";
+        _handleableURLScheme = @"mydemo";
     }
     return self;
 }

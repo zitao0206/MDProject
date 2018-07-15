@@ -9,10 +9,15 @@
 #import "MDCrashShieldManager.h"
 #import <objc/message.h>
 #import "JPEngine.h"
-#import "MDFelix.h"
 #import "MDEasyHotFixTool.h"
 #import "Felix.h"
 #import "MDBanksy.h"
+#import "SSZipArchive.h"
+#import "NSString+Ext.h"
+#import <CommonCrypto/CommonDigest.h>
+
+#define MDZipDefaultCachePath      [((NSString *)NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0]) stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",MDZipEasyDefaultCachePrefix]]
+NSString * const MDZipEasyDefaultCachePrefix = @"com.leon.mdeasycache.default";
 
 @implementation MDCrashShieldManager
 
@@ -48,6 +53,29 @@
 
 - (void)startPatch
 {
+    NSString *mm = @"lizitao8221376";
+    NSString *key1 = mm.md5;
+    NSString *key2 = [NSString md5:mm];
+    NSLog(@"0---------->%@ ",key1);
+    NSLog(@"1---------->%@ ",key2);
+    
+    
+    NSString *zipPath = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"zip"];
+    NSLog(@"1------>%@",zipPath);
+    
+    [SSZipArchive unzipFileAtPath:zipPath toDestination:MDZipDefaultCachePath overwrite:YES password:@"lizitao8221376" error:nil];
+    NSLog(@"2------->%@",MDZipDefaultCachePath);
+    
+    NSString *path = [NSString stringWithFormat:@"%@/bugfix",MDZipDefaultCachePath];
+    
+    NSString *jsContent = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"3------>%@",jsContent);
+    [Felix fixIt];
+    [Felix evalString:jsContent];
+}
+
+- (void)startPatch1
+{
     NSString *corePath = [[NSBundle mainBundle] pathForResource:@"MDEasyHotFixTool" ofType:@"js"];
     NSString *coreScriptString = [NSString stringWithContentsOfFile:corePath encoding:NSUTF8StringEncoding error:nil];
 
@@ -64,9 +92,7 @@
     
     [Felix fixIt];
     [Felix evalString:fixScriptString1];
-    
-//    [MDFelix fixIt];
-//    [MDFelix evalString:fixScriptString1];
+
 //
 //    [[MDEasyHotFixTool tool] startInitContext];
 //    [[MDEasyHotFixTool tool] evaluateScript:fixScriptString];

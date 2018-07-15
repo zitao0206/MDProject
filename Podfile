@@ -15,6 +15,8 @@ target 'MDProject' do
     pod 'MDEasyCache', '1.0.8'
     pod 'JSPatch'
     pod 'Aspects', '1.4.1'
+    pod 'SSZipArchive', '0.4.0'
+    pod 'MDStatePageKit'
 
 end
 

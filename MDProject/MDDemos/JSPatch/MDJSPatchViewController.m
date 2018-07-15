@@ -96,12 +96,13 @@
     //会超出数组范围导致crash
     NSString *content = self.titleArr[indexPath.row];
     NSLog(@"执行了....%@",content);
-    [self jump];
+    [[self class] jump:100 and:50];
 }
 
-- (void)jump
++ (void)jump:(int)value1 and:(int)value2
 {
-    [self.navigationController pushViewController:[MDJSPatchViewController new] animated:YES];
+    int sum = value1 - value2;
+    NSLog(@"------->%d",sum);
 }
 
 

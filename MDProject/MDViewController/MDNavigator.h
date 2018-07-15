@@ -27,7 +27,6 @@
 
 /**
  设置可以处理的URL Scheme
- 默认是：@"dianping"
  */
 - (void)setHandleableURLScheme:(NSString *)scheme;
 
