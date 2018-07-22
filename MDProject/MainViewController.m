@@ -43,19 +43,6 @@
     [self.view addSubview:self.tableView];
     [self loadTitleArray];
     [self loadActionArray];
-    
-//    UIButton *tempBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-//    
-//    tempBtn.frame = CGRectMake(100, 100, 100, 100);
-//    
-//    tempBtn.backgroundColor = [UIColor cyanColor];
-//    
-//    [tempBtn setTitle:@"测试1" forState:UIControlStateNormal];
-//    
-//    [tempBtn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [self.view addSubview:tempBtn];
- 
 }
 
 - (void)clickBtn1:(UIButton *)sender
@@ -110,7 +97,7 @@
                        @"stateMaching",                     //17
                        @"ZipTest",                          //16
                        @"JSPatch",                          //15
-                       @"Cache",                            //14
+                       @"EasyCache",                        //14
                        @"ReactivePage_3",                   //13
                        @"ReactivePage_2",                   //12
                        @"ReactivePage",                     //11

@@ -7,16 +7,7 @@
 
 #import "MDHopeStateMachingViewController.h"
 
-@interface MDHopeStateMachingViewController ()
-
-@end
-
 @implementation MDHopeStateMachingViewController
-
-- (void)dealloc
-{
-    
-}
 
 - (void)viewDidLoad
 {
