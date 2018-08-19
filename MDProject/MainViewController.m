@@ -94,6 +94,7 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+                       @"SDWebImage",                     //18
                        @"stateMaching",                     //17
                        @"ZipTest",                          //16
                        @"JSPatch",                          //15
@@ -119,6 +120,11 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//18
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://SDWebImage"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
     {//17
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://stateMaching"]];
         action.animation = MDNaviAnimationPush;

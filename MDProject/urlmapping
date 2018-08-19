@@ -17,3 +17,4 @@ cache            : MDCacheViewController
 jspatch          : MDJSPatchViewController
 zipArchive       : MDZipArchiveViewController
 stateMaching     : MDHopeStateMachingViewController
+sdWebImage       : MDSDWebImageViewController
