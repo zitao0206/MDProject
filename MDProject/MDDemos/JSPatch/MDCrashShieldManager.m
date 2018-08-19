@@ -11,7 +11,6 @@
 #import "JPEngine.h"
 #import "MDEasyHotFixTool.h"
 #import "Felix.h"
-#import "MDBanksy.h"
 #import "SSZipArchive.h"
 #import "NSString+Ext.h"
 #import <CommonCrypto/CommonDigest.h>

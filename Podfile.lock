@@ -5,15 +5,13 @@ PODS:
   - JSPatch/Core (1.1.3)
   - Masonry (0.6.1)
   - MDCommonKit (1.0.6)
-  - MDEasyCache (1.0.8)
-  - MDFelix (1.0.1):
-    - Aspects
-  - MDStatePageKit (0.1.0)
+  - MDEasyCache (1.0.10)
+  - MDStatePageKit (1.0.5)
   - PINCache (2.0)
   - ReactiveObjC (3.1.0)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - SSZipArchive (0.4.0)
   - TMCache (2.1.0)
 
@@ -22,12 +20,11 @@ DEPENDENCIES:
   - JSPatch
   - Masonry (= 0.6.1)
   - MDCommonKit (= 1.0.6)
-  - MDEasyCache (= 1.0.8)
-  - MDFelix (from `/Users/lizitao/Desktop/MDProjects/MDFelix`)
-  - MDStatePageKit (from `/Users/lizitao/Desktop/MDProjects/MDStatePageKit`)
+  - MDEasyCache (~> 1.0.0)
+  - MDStatePageKit (~> 1.0.0)
   - PINCache (= 2.0)
   - ReactiveObjC (= 3.1.0)
-  - SDWebImage (= 4.0.0)
+  - SDWebImage (= 4.4.2)
   - SSZipArchive (= 0.4.0)
   - TMCache (= 2.1.0)
 
@@ -38,32 +35,26 @@ SPEC REPOS:
     - Masonry
     - MDCommonKit
     - MDEasyCache
+    - MDStatePageKit
     - PINCache
     - ReactiveObjC
     - SDWebImage
     - SSZipArchive
     - TMCache
 
-EXTERNAL SOURCES:
-  MDFelix:
-    :path: "/Users/lizitao/Desktop/MDProjects/MDFelix"
-  MDStatePageKit:
-    :path: "/Users/lizitao/Desktop/MDProjects/MDStatePageKit"
-
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MDCommonKit: 33726d67979897597f4e596524c4647165adf7f3
-  MDEasyCache: 240eb0c44390b54b9f100e87630c3f54fd82b339
-  MDFelix: 41b634bf0b52c69abba854d8d8e9d7e8ef5be346
-  MDStatePageKit: 9034a86828f00bcd4c052da12e1419ab62fec60b
+  MDEasyCache: cd950981f8106d0cae509fea1bda38e13ce29748
+  MDStatePageKit: 8e41f88c7706ce0e02be362e3af8f3bbb5b3018c
   PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SSZipArchive: d3d66fc0e3fb6ac0f723d95481aae71aae916cc3
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
-PODFILE CHECKSUM: 97577faa0efc288df386f29ce4b1ef7668a272ea
+PODFILE CHECKSUM: f1e74a54d7d7275fc6d2bb3ec90d44997ab0d49d
 
 COCOAPODS: 1.5.3
