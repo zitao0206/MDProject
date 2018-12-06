@@ -15,6 +15,7 @@
 #import "MDZipArchiveViewController.h"
 #import "AppDelegate.h"
 #import "MDHopeStateMachingViewController.h"
+#import "View+MASAdditions.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -43,6 +44,12 @@
     [self.view addSubview:self.tableView];
     [self loadTitleArray];
     [self loadActionArray];
+    
+//    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.view).offset(15);
+//        make.left.equalTo(self.view).offset(15);
+//    }];
+
 }
 
 - (void)clickBtn1:(UIButton *)sender
@@ -94,7 +101,9 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
-                       @"SDWebImage",                     //18
+                       @"CATransition",                     //20
+                       @"window",                           //19
+                       @"SDWebImage",                       //18
                        @"stateMaching",                     //17
                        @"ZipTest",                          //16
                        @"JSPatch",                          //15
@@ -120,6 +129,16 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//19
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://transition"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//19
+        MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://window"]];
+        action.animation = MDNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
     {//18
         MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://SDWebImage"]];
         action.animation = MDNaviAnimationPush;

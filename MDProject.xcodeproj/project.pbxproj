@@ -11,6 +11,10 @@
 		D802A33E21291A6F005876B1 /* MDSDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D802A33D21291A6F005876B1 /* MDSDWebImageViewController.m */; };
 		D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */; };
 		D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */; };
+		D81703A221B9157300F5B907 /* MDTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A121B9157300F5B907 /* MDTransitionViewController.m */; };
+		D81703A521B9158800F5B907 /* MDTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */; };
+		D81703AA21B91ACF00F5B907 /* MagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */; };
+		D81703AB21B91ACF00F5B907 /* MagicMoveBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */; };
 		D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */; };
 		D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687F1E8A4BC200C1489F /* MDURLElement.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
@@ -98,6 +102,7 @@
 		D8D2AF7920259F8F00C4BCE7 /* MDFather.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7820259F8F00C4BCE7 /* MDFather.m */; };
 		D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7B20259FA700C4BCE7 /* MDSon.m */; };
 		D8D2AF7F2025D12200C4BCE7 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7E2025D12200C4BCE7 /* UIViewController+Swizzling.m */; };
+		D8D5F807214F81FB002E6963 /* MDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5F806214F81FB002E6963 /* MDWindowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +132,14 @@
 		D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRACViewController.m; sourceTree = "<group>"; };
 		D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonDemoViewController.h; sourceTree = "<group>"; };
 		D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonDemoViewController.m; sourceTree = "<group>"; };
+		D81703A021B9157300F5B907 /* MDTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDTransitionViewController.h; sourceTree = "<group>"; };
+		D81703A121B9157300F5B907 /* MDTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTransitionViewController.m; sourceTree = "<group>"; };
+		D81703A321B9158800F5B907 /* MDTransitionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDTransitionDetailViewController.h; sourceTree = "<group>"; };
+		D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTransitionDetailViewController.m; sourceTree = "<group>"; };
+		D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveTransition.m; sourceTree = "<group>"; };
+		D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveBackTransition.m; sourceTree = "<group>"; };
+		D81703A821B91ACF00F5B907 /* MagicMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransition.h; sourceTree = "<group>"; };
+		D81703A921B91ACF00F5B907 /* MagicMoveBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveBackTransition.h; sourceTree = "<group>"; };
 		D81D687B1E8A441600C1489F /* MDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseNavigationController.h; sourceTree = "<group>"; };
 		D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseNavigationController.m; sourceTree = "<group>"; };
 		D81D687E1E8A4BC200C1489F /* MDURLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDURLElement.h; sourceTree = "<group>"; };
@@ -297,6 +310,8 @@
 		D8D2AF7B20259FA700C4BCE7 /* MDSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDSon.m; sourceTree = "<group>"; };
 		D8D2AF7D2025D12200C4BCE7 /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		D8D2AF7E2025D12200C4BCE7 /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
+		D8D5F805214F81FB002E6963 /* MDWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDWindowViewController.h; sourceTree = "<group>"; };
+		D8D5F806214F81FB002E6963 /* MDWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDWindowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +391,21 @@
 			path = RACDemo;
 			sourceTree = "<group>";
 		};
+		D817039F21B9155C00F5B907 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				D81703A021B9157300F5B907 /* MDTransitionViewController.h */,
+				D81703A121B9157300F5B907 /* MDTransitionViewController.m */,
+				D81703A321B9158800F5B907 /* MDTransitionDetailViewController.h */,
+				D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */,
+				D81703A921B91ACF00F5B907 /* MagicMoveBackTransition.h */,
+				D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */,
+				D81703A821B91ACF00F5B907 /* MagicMoveTransition.h */,
+				D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		D81D68821E8A64D400C1489F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +456,8 @@
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D817039F21B9155C00F5B907 /* Transition */,
+				D8D5F804214F8180002E6963 /* UIWindow */,
 				D802A33B21291A56005876B1 /* SDWebImage */,
 				D8BEF7CF20FB2E7B004C1088 /* StateMachine */,
 				D874C8B620EA15850021B513 /* ZipArchive */,
@@ -814,6 +846,15 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
+		D8D5F804214F8180002E6963 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				D8D5F805214F81FB002E6963 /* MDWindowViewController.h */,
+				D8D5F806214F81FB002E6963 /* MDWindowViewController.m */,
+			);
+			path = UIWindow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1050,6 +1091,9 @@
 				D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */,
 				D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */,
 				D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */,
+				D81703A521B9158800F5B907 /* MDTransitionDetailViewController.m in Sources */,
+				D81703AB21B91ACF00F5B907 /* MagicMoveBackTransition.m in Sources */,
+				D81703AA21B91ACF00F5B907 /* MagicMoveTransition.m in Sources */,
 				D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D85B96E4203FB0DB005A094A /* XYReactBasePageView.m in Sources */,
@@ -1064,10 +1108,12 @@
 				D85B96D9203EE64F005A094A /* XYReactBasePageTableViewController.m in Sources */,
 				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
 				D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */,
+				D8D5F807214F81FB002E6963 /* MDWindowViewController.m in Sources */,
 				D85B9695203D704F005A094A /* MDInvokerViewController.m in Sources */,
 				D85B96E7203FB0DB005A094A /* XYBaseModuleModel.m in Sources */,
 				D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */,
 				D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */,
+				D81703A221B9157300F5B907 /* MDTransitionViewController.m in Sources */,
 				D8BEF7ED20FB2E7C004C1088 /* MDHopeThirdState.m in Sources */,
 				D85B96C4203E9071005A094A /* XYBottomModuleView.m in Sources */,
 				D89FA5A4202EB1AD008569CB /* MDRuntimeInvocationViewController.m in Sources */,

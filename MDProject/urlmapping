@@ -18,3 +18,6 @@ jspatch          : MDJSPatchViewController
 zipArchive       : MDZipArchiveViewController
 stateMaching     : MDHopeStateMachingViewController
 sdWebImage       : MDSDWebImageViewController
+window           : MDWindowViewController
+transition       : MDTransitionViewController
+trandetail       : MDTransitionDetailViewController

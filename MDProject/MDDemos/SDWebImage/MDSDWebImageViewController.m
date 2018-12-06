@@ -27,11 +27,11 @@
 
     NSURL *url = [NSURL URLWithString:@"https://avatars2.githubusercontent.com/u/22806992?s=460&v=4"];
     [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
-    [self.imageView sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        NSData *imageData = UIImageJPEGRepresentation(image, (CGFloat)1.0);
-        [[SDImageCache sharedImageCache] storeImageDataToDisk:imageData forKey:@"image_from_network"];
-
-    }];
+//    [self.imageView sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        NSData *imageData = UIImageJPEGRepresentation(image, (CGFloat)1.0);
+//        [[SDImageCache sharedImageCache] storeImageDataToDisk:imageData forKey:@"image_from_network"];
+//
+//    }];
     
     UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:@"image_from_network"];
   
