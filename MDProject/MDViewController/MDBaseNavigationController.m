@@ -7,7 +7,7 @@
 //
 
 #import "MDBaseNavigationController.h"
-#import "MDURLAction.h"
+#import "XYUrlAction.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "MDNavigationManager.h"
 

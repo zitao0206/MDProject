@@ -15,8 +15,6 @@
 		D81703A521B9158800F5B907 /* MDTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */; };
 		D81703AA21B91ACF00F5B907 /* MagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */; };
 		D81703AB21B91ACF00F5B907 /* MagicMoveBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */; };
-		D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */; };
-		D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D687F1E8A4BC200C1489F /* MDURLElement.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
 		D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */; };
 		D825672620D67D3E00129B0B /* MDCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D825672420D67D3E00129B0B /* MDCacheViewController.m */; };
@@ -47,9 +45,6 @@
 		D858C8AF1E756B160042D9F3 /* MDProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8AE1E756B160042D9F3 /* MDProjectTests.m */; };
 		D858C8BA1E756B160042D9F3 /* MDProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8B91E756B160042D9F3 /* MDProjectUITests.m */; };
 		D858C8C91E756B6B0042D9F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8C81E756B6B0042D9F3 /* MainViewController.m */; };
-		D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C96F1E7587110042D9F3 /* MDBaseViewController.m */; };
-		D858C9731E758FEA0042D9F3 /* MDURLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C9721E758FEA0042D9F3 /* MDURLAction.m */; };
-		D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C97F1E759CD30042D9F3 /* MDNavigator.m */; };
 		D858C9851E75A4200042D9F3 /* urlmapping in Resources */ = {isa = PBXBuildFile; fileRef = D858C9841E75A4200042D9F3 /* urlmapping */; };
 		D85B9695203D704F005A094A /* MDInvokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B9694203D704F005A094A /* MDInvokerViewController.m */; };
 		D85B9699203D718E005A094A /* AuditingInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B9698203D718E005A094A /* AuditingInvoker.m */; };
@@ -140,11 +135,6 @@
 		D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveBackTransition.m; sourceTree = "<group>"; };
 		D81703A821B91ACF00F5B907 /* MagicMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransition.h; sourceTree = "<group>"; };
 		D81703A921B91ACF00F5B907 /* MagicMoveBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveBackTransition.h; sourceTree = "<group>"; };
-		D81D687B1E8A441600C1489F /* MDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseNavigationController.h; sourceTree = "<group>"; };
-		D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseNavigationController.m; sourceTree = "<group>"; };
-		D81D687E1E8A4BC200C1489F /* MDURLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDURLElement.h; sourceTree = "<group>"; };
-		D81D687F1E8A4BC200C1489F /* MDURLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDURLElement.m; sourceTree = "<group>"; };
-		D81D68811E8A521D00C1489F /* MDBaseNavigatorProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBaseNavigatorProtocal.h; sourceTree = "<group>"; };
 		D81D68831E8A64D400C1489F /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		D81D68861E8A66EC00C1489F /* MDDataCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDataCacheManager.h; sourceTree = "<group>"; };
 		D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDataCacheManager.m; sourceTree = "<group>"; };
@@ -204,12 +194,6 @@
 		D858C8BB1E756B160042D9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D858C8C71E756B6B0042D9F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D858C8C81E756B6B0042D9F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D858C96E1E7587110042D9F3 /* MDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseViewController.h; sourceTree = "<group>"; };
-		D858C96F1E7587110042D9F3 /* MDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseViewController.m; sourceTree = "<group>"; };
-		D858C9711E758FEA0042D9F3 /* MDURLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDURLAction.h; sourceTree = "<group>"; };
-		D858C9721E758FEA0042D9F3 /* MDURLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDURLAction.m; sourceTree = "<group>"; };
-		D858C97E1E759CD30042D9F3 /* MDNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDNavigator.h; sourceTree = "<group>"; };
-		D858C97F1E759CD30042D9F3 /* MDNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDNavigator.m; sourceTree = "<group>"; };
 		D858C9841E75A4200042D9F3 /* urlmapping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = urlmapping; sourceTree = "<group>"; };
 		D85B9693203D704F005A094A /* MDInvokerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDInvokerViewController.h; sourceTree = "<group>"; };
 		D85B9694203D704F005A094A /* MDInvokerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDInvokerViewController.m; sourceTree = "<group>"; };
@@ -550,7 +534,6 @@
 				D850235B1EC6922E0054060E /* MDDemos */,
 				D858C9841E75A4200042D9F3 /* urlmapping */,
 				D81D68821E8A64D400C1489F /* Resource */,
-				D858C96D1E7587110042D9F3 /* MDViewController */,
 				D858C8971E756B150042D9F3 /* AppDelegate.h */,
 				D858C8981E756B150042D9F3 /* AppDelegate.m */,
 				D858C8C71E756B6B0042D9F3 /* MainViewController.h */,
@@ -587,24 +570,6 @@
 				D858C8BB1E756B160042D9F3 /* Info.plist */,
 			);
 			path = MDProjectUITests;
-			sourceTree = "<group>";
-		};
-		D858C96D1E7587110042D9F3 /* MDViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D858C96E1E7587110042D9F3 /* MDBaseViewController.h */,
-				D858C96F1E7587110042D9F3 /* MDBaseViewController.m */,
-				D858C9711E758FEA0042D9F3 /* MDURLAction.h */,
-				D858C9721E758FEA0042D9F3 /* MDURLAction.m */,
-				D858C97E1E759CD30042D9F3 /* MDNavigator.h */,
-				D858C97F1E759CD30042D9F3 /* MDNavigator.m */,
-				D81D687B1E8A441600C1489F /* MDBaseNavigationController.h */,
-				D81D687C1E8A441600C1489F /* MDBaseNavigationController.m */,
-				D81D687E1E8A4BC200C1489F /* MDURLElement.h */,
-				D81D687F1E8A4BC200C1489F /* MDURLElement.m */,
-				D81D68811E8A521D00C1489F /* MDBaseNavigatorProtocal.h */,
-			);
-			path = MDViewController;
 			sourceTree = "<group>";
 		};
 		D85B9692203D7029005A094A /* Invoker */ = {
@@ -1049,7 +1014,6 @@
 				D85B96CA203E9548005A094A /* MDTestBaseView.m in Sources */,
 				D85B96C6203E9071005A094A /* MDTestBaseViewController.m in Sources */,
 				D825673B20DA0C8900129B0B /* MDCacheTestModel.m in Sources */,
-				D81D687D1E8A441600C1489F /* MDBaseNavigationController.m in Sources */,
 				D8BEF7FF20FB3E72004C1088 /* MDHopeFirstFirstState.m in Sources */,
 				D8BEF7EC20FB2E7C004C1088 /* MDHopeSecondState.m in Sources */,
 				D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */,
@@ -1068,11 +1032,9 @@
 				D855BA911EDC1B7200D2A565 /* MDDemoTopView.m in Sources */,
 				D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */,
 				D825675620DCCCE300129B0B /* MDJSPatchViewController.m in Sources */,
-				D858C9801E759CD30042D9F3 /* MDNavigator.m in Sources */,
 				D870BC3F1EF3BA2B00ACA832 /* MDJsonView.m in Sources */,
 				D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */,
 				D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */,
-				D858C9731E758FEA0042D9F3 /* MDURLAction.m in Sources */,
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
 				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
 				D8BEF7FE20FB3E72004C1088 /* MDHopeFirstSecondState.m in Sources */,
@@ -1097,14 +1059,12 @@
 				D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D85B96E4203FB0DB005A094A /* XYReactBasePageView.m in Sources */,
-				D858C9701E7587110042D9F3 /* MDBaseViewController.m in Sources */,
 				D893332E1F28402700748499 /* MDFillingView.m in Sources */,
 				D8D2AF7920259F8F00C4BCE7 /* MDFather.m in Sources */,
 				D893332B1F283D2D00748499 /* MDQuartzDrawViewController.m in Sources */,
 				D8BEF7EE20FB2E7C004C1088 /* MDHopeStateMachingViewController.m in Sources */,
 				D85B96C5203E9071005A094A /* XYTopModuleView.m in Sources */,
 				D850237F1EC69E060054060E /* MDDemoMiddleModuleView.m in Sources */,
-				D81D68801E8A4BC200C1489F /* MDURLElement.m in Sources */,
 				D85B96D9203EE64F005A094A /* XYReactBasePageTableViewController.m in Sources */,
 				D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */,
 				D85B96D0203ED093005A094A /* MDDemoBaseTableViewController.m in Sources */,

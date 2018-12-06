@@ -9,8 +9,7 @@
 #import "MDTransitionDetailViewController.h"
 #import "MagicMoveBackTransition.h"
 #import "MDTransitionViewController.h"
-#import "MDURLAction.h"
-#import "MDNavigator.h"
+#import "XYUrlAction.h"
 
 @interface MDTransitionDetailViewController ()<UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImage *image;
@@ -33,10 +32,9 @@
     return nil;
 }
 
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction
+- (void)handleWithURLAction:(XYUrlAction *)urlAction
 {
     self.image = (UIImage *)[urlAction anyObjectForKey:@"image"];
-    return YES;
 }
 
 - (void)viewDidLoad

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MDURLAction.h"
+#import "XYUrlAction.h"
 #import "MDBaseNavigationController.h"
 #import "MDBaseNavigatorProtocal.h"
 
@@ -38,7 +38,7 @@
  */
 - (void)setFileNamesOfURLMapping:(NSArray *)fileNames;
 
-- (UIViewController *)openURLAction:(MDURLAction *)urlAction;
+- (UIViewController *)openURLAction:(XYUrlAction *)urlAction;
 
 @end
 

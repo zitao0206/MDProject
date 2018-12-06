@@ -8,10 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "MDNavigator.h"
-#import "MDBaseNavigationController.h"
 #import "MDNavigationManager.h"
 #import "MDCrashShieldManager.h"
+#import <XYPageMaster/XYPageMaster.h>
 
 typedef NS_ENUM(NSInteger, LaunchMode) {
     LaunchModeNormal = 0,
@@ -22,7 +21,6 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
 
 @interface AppDelegate ()
 @property (nonatomic, assign) LaunchMode launchMode;
-@property (strong, nonatomic) MDBaseNavigationController *navigationController;
 
 @end
 
@@ -56,44 +54,23 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
 
 - (void)doBackgroundLaunchJobs
 {
-    NSLog(@"doBackgroundLaunchJobs: %ld", self.launchMode);
+    NSLog(@"doBackgroundLaunchJobs: %@", @(self.launchMode));
 }
 
 - (void)doForegroundLaunchJobs
 {
-    NSLog(@"doForegroundLaunchJobs: %ld", self.launchMode);
+    NSLog(@"doForegroundLaunchJobs: %@", @(self.launchMode));
     
     [self setupNavigator];
-    
-    self.window.rootViewController = self.navigationController;
     
     [self.window makeKeyAndVisible];
 }
 
-- (MDBaseNavigationController *)navigationController
-{
-    if (!_navigationController)
-    {
-        MainViewController *mainViewController = [[MainViewController alloc] init];
-        MDURLAction *action = [MDURLAction new];
-        action.animation = MDNaviAnimationNone;
-        mainViewController.urlAction = action;
-        _navigationController = [[MDBaseNavigationController alloc] initWithRootViewController:mainViewController];
-    }
-    return _navigationController;
-}
-
 - (void)setupNavigator
 {
-    // 创建MDNavigator
-    MDNavigator *navigator = [MDNavigator navigator];
-    // 设置主导航器
-    [navigator setMainNavigationController:self.navigationController];
-    
-    // 设置navigator可以处理的url scheme
-    [navigator setHandleableURLScheme:@"xiaoying"];
-    // 绑定urlmapping文件
-    [navigator setFileNamesOfURLMapping:@[@"urlmapping"]];
+    NSDictionary *params = @{@"schema":@"mydemo",@"pagesFile":@"urlmapping",@"rootVC":@"MainViewController"};
+    [[XYPageMaster master] setupNavigationControllerWithParams:params];
+    self.window.rootViewController = [XYPageMaster master].navigationContorller;
 }
 
 
@@ -112,8 +89,8 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
         NSLog(@"foreground launch:%@ -- %@", @(self.launchMode), launchOptions.description);
     }
     {
-        [[MDCrashShieldManager manager] startPatch];
-        NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"js"];
+//        [[MDCrashShieldManager manager] startPatch];
+//        NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"js"];
         
     }
     [self windowNotificationRegist];

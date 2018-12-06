@@ -6,22 +6,22 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDURLAction.h"
+#import "XYUrlAction.h"
 #import "NSURL+Ext.h"
 #import "NSString+Ext.h"
 #import <objc/runtime.h>
 
-@interface MDURLAction()
+@interface XYUrlAction()
 // setParams:forKey:
 @property (strong, nonatomic) NSMutableDictionary *params;
 
 @end
 
-@implementation MDURLAction
+@implementation XYUrlAction
 
 + (id)actionWithURL:(NSURL *)url
 {
-    return [[MDURLAction alloc] initWithURL:url];
+    return [[XYUrlAction alloc] initWithURL:url];
 }
 
 + (id)actionWithURLString:(NSString *)urlString
@@ -165,12 +165,12 @@
 
 @implementation UIViewController (urlAction)
 
-- (void)setUrlAction:(MDURLAction *)urlAction
+- (void)setUrlAction:(XYUrlAction *)urlAction
 {
     objc_setAssociatedObject(self, @"UIViewControllerNVURLAction", urlAction, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (MDURLAction *)urlAction
+- (XYUrlAction *)urlAction
 {
     return objc_getAssociatedObject(self, @"UIViewControllerNVURLAction");
 }

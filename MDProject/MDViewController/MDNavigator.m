@@ -142,14 +142,14 @@ static MDNavigator *gNavigator = nil;
     return _urlMapping;
 }
 
-- (UIViewController *)openURLAction:(MDURLAction *)urlAction
+- (UIViewController *)openURLAction:(XYUrlAction *)urlAction
 {
     return [self openURLAction:urlAction fromViewController:nil];
 }
 
-- (UIViewController *)openURLAction:(MDURLAction *)urlAction fromViewController:(UIViewController *)controller
+- (UIViewController *)openURLAction:(XYUrlAction *)urlAction fromViewController:(UIViewController *)controller
 {
-    if (![urlAction isKindOfClass:[MDURLAction class]])
+    if (![urlAction isKindOfClass:[XYUrlAction class]])
     {
         NSLog(@"open url action error urlAction(%@) is not a kind of MDURLAction", NSStringFromClass([urlAction class]));
         return nil;
@@ -157,7 +157,7 @@ static MDNavigator *gNavigator = nil;
     return [self handleOpenURLAction:urlAction];
 }
 
-- (UIViewController *)handleOpenURLAction:(MDURLAction *)urlAction
+- (UIViewController *)handleOpenURLAction:(XYUrlAction *)urlAction
 {
     MDURLElement *element = [self findElementWithURLAction:urlAction];
     
@@ -185,7 +185,7 @@ static MDNavigator *gNavigator = nil;
     return controller;
 }
 
-- (MDURLElement *)findElementWithURLAction:(MDURLAction *)urlAction
+- (MDURLElement *)findElementWithURLAction:(XYUrlAction *)urlAction
 {
     if (urlAction.url.host.length < 1)
     {
@@ -222,7 +222,7 @@ static MDNavigator *gNavigator = nil;
     return nil;
 }
 
-- (void)openViewController:(UIViewController *)controller withURLAction:(MDURLAction *)urlAction
+- (void)openViewController:(UIViewController *)controller withURLAction:(XYUrlAction *)urlAction
 {
     controller.urlAction = urlAction;
     if ([controller respondsToSelector:@selector(handleWithURLAction:)])
@@ -236,7 +236,7 @@ static MDNavigator *gNavigator = nil;
     [self pushViewController:controller withURLAction:urlAction];
 }
 
-- (void)pushViewController:(UIViewController *)controller withURLAction:(MDURLAction *)urlAction
+- (void)pushViewController:(UIViewController *)controller withURLAction:(XYUrlAction *)urlAction
 {
     // 如果是处理堵塞的页面，一次性压入所有页面，只有最后一个页面使用动画
     MDNaviAnimation animation = MDNaviAnimationNone;
@@ -244,7 +244,7 @@ static MDNavigator *gNavigator = nil;
     [self.mainNavigationContorller pushViewController:controller withAnimation:(animation!=MDNaviAnimationNone)];
 }
 
-- (void)pushSingletonViewController:(UIViewController *)controller withURLAction:(MDURLAction *)urlAction
+- (void)pushSingletonViewController:(UIViewController *)controller withURLAction:(XYUrlAction *)urlAction
 {
     if (!controller)
     {

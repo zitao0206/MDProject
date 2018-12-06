@@ -7,7 +7,6 @@
 //
 
 #import "MDRACViewController.h"
-#import "MDNavigator.h"
 #import "RACDisposable.h"
 #import "RACSignal.h"
 #import "RACScheduler.h"
@@ -16,6 +15,7 @@
 #import "MDNavigationManager.h"
 #import "TestBlockViewController.h"
 #import "UIView+ResizeFrame.h"
+#import "XYPageMaster.h"
 
 
 @interface MDRACViewController ()<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
@@ -39,11 +39,10 @@
 
 @implementation MDRACViewController
 
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction
+- (void)handleWithURLAction:(XYUrlAction *)urlAction
 {
     NSString *string = [urlAction stringForKey:@"url"];
     NSLog(@"1------->%@",string);
-    return YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated

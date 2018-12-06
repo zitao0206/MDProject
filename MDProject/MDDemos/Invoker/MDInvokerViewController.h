@@ -6,8 +6,8 @@
 //  Copyright © 2018年 lizitao. All rights reserved.
 //
 
-#import "MDBaseViewController.h"
+#import "XYPageMasterViewController.h"
 
-@interface MDInvokerViewController : MDBaseViewController
+@interface MDInvokerViewController : XYPageMasterViewController
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDBaseViewController.h"
+#import "XYPageMasterViewController.h"
 
-@interface MDBaseModuleViewController : MDBaseViewController
+@interface MDBaseModuleViewController : XYPageMasterViewController
 @property (nonatomic, strong) UIView *contentView;
 
 @end

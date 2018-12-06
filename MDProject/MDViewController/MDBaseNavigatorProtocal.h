@@ -17,7 +17,7 @@
  例如try模块和list模块就是不需要展示的
  默认是YES
  */
-- (BOOL)shouldShow:(MDURLAction *)urlAction;
+- (BOOL)shouldShow:(XYUrlAction *)urlAction;
 
 /**
  页面是否是单例（即在导航堆栈中只会保留一个页面，当跳转到该页面的时候会将其堆栈之上的页面都pop掉）
@@ -29,7 +29,7 @@
  询问在进入该页面之前是否需要先登录
  默认是NO
  */
-+ (BOOL)needsLogin:(MDURLAction *)urlAction;
++ (BOOL)needsLogin:(XYUrlAction *)urlAction;
 
 /**
  设置该页面是不是modal方式的展示模式
@@ -40,7 +40,7 @@
 /**
  导航控制器将要显示页面前，会调用handleWithURLAction:方法
  */
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction;
+- (BOOL)handleWithURLAction:(XYUrlAction *)urlAction;
 
 @end
 

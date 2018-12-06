@@ -6,8 +6,8 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDBaseViewController.h"
+#import "XYPageMasterViewController.h"
 
-@interface MDCoreImageFilterViewController : MDBaseViewController
+@interface MDCoreImageFilterViewController : XYPageMasterViewController
 
 @end

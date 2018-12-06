@@ -13,7 +13,7 @@
 typedef NSInteger MDNaviAnimation;
 #define MDNaviAnimationNone -1 // 没有动画
 #define MDNaviAnimationPush  0 // 标准的导航压入动画
-@interface MDURLAction : NSObject
+@interface XYUrlAction : NSObject
 /**
  需要导航到的url地址
  */
@@ -62,6 +62,6 @@ typedef NSInteger MDNaviAnimation;
 @end
 
 @interface UIViewController (urlAction)
-@property (nonatomic, strong) MDURLAction *urlAction;
+@property (nonatomic, strong) XYUrlAction *urlAction;
 @end
 

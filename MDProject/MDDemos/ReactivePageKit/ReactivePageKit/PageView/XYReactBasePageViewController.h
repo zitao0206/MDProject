@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MDBaseViewController.h"
+#import "XYPageMasterViewController.h"
 #import "XYBaseModuleModel.h"
-@interface XYReactBasePageViewController : MDBaseViewController
+@interface XYReactBasePageViewController : XYPageMasterViewController
 @property (nonatomic, strong) id model;
 @end

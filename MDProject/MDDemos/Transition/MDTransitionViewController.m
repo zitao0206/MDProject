@@ -7,8 +7,7 @@
 //
 
 #import "MDTransitionViewController.h"
-#import "MDURLAction.h"
-#import "MDNavigator.h"
+#import "XYPageMaster.h"
 #import "MagicMoveTransition.h"
 #import "MDTransitionDetailViewController.h"
 
@@ -105,16 +104,16 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MDURLAction *action = [MDURLAction actionWithURL:[NSURL URLWithString:@"mydemo://trandetail"]];
+    XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://trandetail"]];
     if (indexPath.row > 10) {
         [action setAnyObject:[UIImage imageNamed:@"desktop.png"] forKey:@"image"];
     } else {
         [action setAnyObject:[UIImage imageNamed:@"launch.jpg"] forKey:@"image"];
     }
 
-    action.animation = MDNaviAnimationPush;
+    action.animation = XYNaviAnimationPush;
     if (action == nil) return;
-    [[MDNavigator navigator] openURLAction:action];
+    [[XYPageMaster master] openURLAction:action];
 
 }
 

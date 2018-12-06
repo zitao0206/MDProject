@@ -10,7 +10,7 @@
 
 @implementation UIViewController (MDURLAction)
 
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction
+- (BOOL)handleWithURLAction:(XYUrlAction *)urlAction
 {
     return YES;
 }
@@ -28,7 +28,7 @@
     return NO;
 }
 
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction
+- (BOOL)handleWithURLAction:(XYUrlAction *)urlAction
 {
     self.urlAction = urlAction;
     

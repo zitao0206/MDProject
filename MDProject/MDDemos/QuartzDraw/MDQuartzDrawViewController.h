@@ -6,8 +6,8 @@
 //  Copyright © 2017年 lizitao. All rights reserved.
 //
 
-#import "MDBaseViewController.h"
+#import "XYPageMasterViewController.h"
 
-@interface MDQuartzDrawViewController : MDBaseViewController
+@interface MDQuartzDrawViewController : XYPageMasterViewController
 
 @end

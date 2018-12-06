@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MDURLAction.h"
+#import "XYUrlAction.h"
 
 @interface UIViewController (MDURLAction)
 
-- (BOOL)handleWithURLAction:(MDURLAction *)urlAction;
+- (BOOL)handleWithURLAction:(XYUrlAction *)urlAction;
 
 @end
 
