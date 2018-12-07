@@ -8,7 +8,6 @@
 
 #import "UIViewController+Swizzling.h"
 #import <objc/message.h>
-#import "MDNavigator.h"
 
 static CFTimeInterval beginTime = 0.0;
 static CFTimeInterval endTime = 0.0;
