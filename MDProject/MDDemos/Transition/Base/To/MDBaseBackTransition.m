@@ -1,20 +1,16 @@
 //
-//  MagicMoveBackTransition.m
-//  CATransition
+//  MDBaseBackTransition.m
+//  MDProject
 //
-//  Created by xuxiwen on 16/6/11.
-//  Copyright © 2016年 xuxiwen. All rights reserved.
+//  Created by lizitao on 2018/12/7.
+//  Copyright © 2018年 lizitao. All rights reserved.
 //
 
-#import "MagicMoveBackTransition.h"
-#import "MDTransitionViewController.h"
-#import "MDTransitionDetailViewController.h"
-#import "MDTransitionDetailViewController.h"
-#import "MDTransitionViewController.h"
+#import "MDBaseBackTransition.h"
+#import "MDBaseFromViewController.h"
+#import "MDBaseToViewController.h"
 
-@implementation MagicMoveBackTransition
-
-#pragma mark - 返回动画时间
+@implementation MDBaseBackTransition
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
@@ -22,32 +18,26 @@
 }
 
 #pragma mark - 两个VC过渡动画
-
-
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    
     // 目的VC
-    MDTransitionViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    MDBaseFromViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     // 起始VC
-    MDTransitionDetailViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    MDBaseToViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     // 转场视图容器
     UIView *containerView = [transitionContext containerView];
     
     
-    UIView *screenShot = [fromVC.imageView snapshotViewAfterScreenUpdates:NO];
+    UIView *screenShot = [[fromVC obtainCoverView] snapshotViewAfterScreenUpdates:NO];
     screenShot.backgroundColor = [UIColor clearColor];
-    screenShot.frame = [containerView convertRect:fromVC.imageView.frame fromView:fromVC.imageView.superview];
-    fromVC.imageView.hidden = YES;
-    
+    screenShot.frame = [containerView convertRect:[fromVC obtainCoverView].frame fromView:[fromVC obtainCoverView].superview];
+    [fromVC obtainCoverView].hidden = YES;
     
     // 初始化第二个Vc
-    
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
     
     UICollectionViewCell *cell = (UICollectionViewCell *)[toVC.collectionView cellForItemAtIndexPath:toVC.indexPath];
     cell.hidden = YES;
-    
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];
     [containerView addSubview:screenShot];
     
@@ -62,19 +52,13 @@
     } completion:^(BOOL finished) {
         
         [screenShot removeFromSuperview];
-        fromVC.imageView.hidden = NO;
+        [fromVC obtainCoverView].hidden = NO;
         cell.hidden = NO;
         fromVC.view.alpha = 1;
-
-        // 结束
         
+        // 结束
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
         
     }];
-    
-    
-    
-    
-    
 }
 @end

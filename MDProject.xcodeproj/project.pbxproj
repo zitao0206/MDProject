@@ -11,10 +11,10 @@
 		D802A33E21291A6F005876B1 /* MDSDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D802A33D21291A6F005876B1 /* MDSDWebImageViewController.m */; };
 		D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */; };
 		D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */; };
-		D81703A221B9157300F5B907 /* MDTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A121B9157300F5B907 /* MDTransitionViewController.m */; };
-		D81703A521B9158800F5B907 /* MDTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */; };
-		D81703AA21B91ACF00F5B907 /* MagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */; };
-		D81703AB21B91ACF00F5B907 /* MagicMoveBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */; };
+		D81703A221B9157300F5B907 /* MDFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A121B9157300F5B907 /* MDFromViewController.m */; };
+		D81703A521B9158800F5B907 /* MDToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A421B9158800F5B907 /* MDToViewController.m */; };
+		D81703AA21B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A621B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m */; };
+		D81703AB21B91ACF00F5B907 /* MDToViewControllerBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D81703A721B91ACF00F5B907 /* MDToViewControllerBackTransition.m */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
 		D81D68881E8A66EC00C1489F /* MDDataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */; };
 		D825672620D67D3E00129B0B /* MDCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D825672420D67D3E00129B0B /* MDCacheViewController.m */; };
@@ -38,6 +38,10 @@
 		D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023811EC69E210054060E /* MDDemoBottomModuleView.m */; };
 		D85023851EC6AAC20054060E /* MDBaseModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85023841EC6AAC20054060E /* MDBaseModuleModel.m */; };
 		D855BA911EDC1B7200D2A565 /* MDDemoTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D855BA901EDC1B7200D2A565 /* MDDemoTopView.m */; };
+		D85647A721BA1BDD00325464 /* MDBaseBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D85647A021BA1BDD00325464 /* MDBaseBackTransition.m */; };
+		D85647A821BA1BDD00325464 /* MDBaseToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85647A121BA1BDD00325464 /* MDBaseToViewController.m */; };
+		D85647A921BA1BDD00325464 /* MDBaseFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85647A521BA1BDD00325464 /* MDBaseFromViewController.m */; };
+		D85647AA21BA1BDD00325464 /* MDBaseForwardTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D85647A621BA1BDD00325464 /* MDBaseForwardTransition.m */; };
 		D858C8961E756B150042D9F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8951E756B150042D9F3 /* main.m */; };
 		D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8981E756B150042D9F3 /* AppDelegate.m */; };
 		D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A01E756B150042D9F3 /* Assets.xcassets */; };
@@ -127,14 +131,13 @@
 		D80A8E9B1EE8031600E9D409 /* MDRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRACViewController.m; sourceTree = "<group>"; };
 		D80A8E9D1EE8034900E9D409 /* MDJsonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJsonDemoViewController.h; sourceTree = "<group>"; };
 		D80A8E9E1EE8034900E9D409 /* MDJsonDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJsonDemoViewController.m; sourceTree = "<group>"; };
-		D81703A021B9157300F5B907 /* MDTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDTransitionViewController.h; sourceTree = "<group>"; };
-		D81703A121B9157300F5B907 /* MDTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTransitionViewController.m; sourceTree = "<group>"; };
-		D81703A321B9158800F5B907 /* MDTransitionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDTransitionDetailViewController.h; sourceTree = "<group>"; };
-		D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDTransitionDetailViewController.m; sourceTree = "<group>"; };
-		D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveTransition.m; sourceTree = "<group>"; };
-		D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveBackTransition.m; sourceTree = "<group>"; };
-		D81703A821B91ACF00F5B907 /* MagicMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransition.h; sourceTree = "<group>"; };
-		D81703A921B91ACF00F5B907 /* MagicMoveBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveBackTransition.h; sourceTree = "<group>"; };
+		D81703A021B9157300F5B907 /* MDFromViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDFromViewController.h; sourceTree = "<group>"; };
+		D81703A121B9157300F5B907 /* MDFromViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDFromViewController.m; sourceTree = "<group>"; };
+		D81703A321B9158800F5B907 /* MDToViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDToViewController.h; sourceTree = "<group>"; };
+		D81703A421B9158800F5B907 /* MDToViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDToViewController.m; sourceTree = "<group>"; };
+		D81703A621B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFromViewControllerForwardTransition.m; sourceTree = "<group>"; };
+		D81703A721B91ACF00F5B907 /* MDToViewControllerBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDToViewControllerBackTransition.m; sourceTree = "<group>"; };
+		D81703A821B91ACF00F5B907 /* MDFromViewControllerForwardTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFromViewControllerForwardTransition.h; sourceTree = "<group>"; };
 		D81D68831E8A64D400C1489F /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		D81D68861E8A66EC00C1489F /* MDDataCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDataCacheManager.h; sourceTree = "<group>"; };
 		D81D68871E8A66EC00C1489F /* MDDataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDataCacheManager.m; sourceTree = "<group>"; };
@@ -179,6 +182,15 @@
 		D85023841EC6AAC20054060E /* MDBaseModuleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseModuleModel.m; sourceTree = "<group>"; };
 		D855BA8F1EDC1B7200D2A565 /* MDDemoTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDemoTopView.h; sourceTree = "<group>"; };
 		D855BA901EDC1B7200D2A565 /* MDDemoTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDDemoTopView.m; sourceTree = "<group>"; };
+		D856479E21BA1BDD00325464 /* MDBaseToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseToViewController.h; sourceTree = "<group>"; };
+		D856479F21BA1BDD00325464 /* MDBaseBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseBackTransition.h; sourceTree = "<group>"; };
+		D85647A021BA1BDD00325464 /* MDBaseBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseBackTransition.m; sourceTree = "<group>"; };
+		D85647A121BA1BDD00325464 /* MDBaseToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseToViewController.m; sourceTree = "<group>"; };
+		D85647A321BA1BDD00325464 /* MDBaseFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseFromViewController.h; sourceTree = "<group>"; };
+		D85647A421BA1BDD00325464 /* MDBaseForwardTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBaseForwardTransition.h; sourceTree = "<group>"; };
+		D85647A521BA1BDD00325464 /* MDBaseFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseFromViewController.m; sourceTree = "<group>"; };
+		D85647A621BA1BDD00325464 /* MDBaseForwardTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBaseForwardTransition.m; sourceTree = "<group>"; };
+		D85647AB21BA259400325464 /* MDToViewControllerBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDToViewControllerBackTransition.h; sourceTree = "<group>"; };
 		D858C8911E756B150042D9F3 /* MDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858C8951E756B150042D9F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D858C8971E756B150042D9F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -378,14 +390,15 @@
 		D817039F21B9155C00F5B907 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				D81703A021B9157300F5B907 /* MDTransitionViewController.h */,
-				D81703A121B9157300F5B907 /* MDTransitionViewController.m */,
-				D81703A321B9158800F5B907 /* MDTransitionDetailViewController.h */,
-				D81703A421B9158800F5B907 /* MDTransitionDetailViewController.m */,
-				D81703A921B91ACF00F5B907 /* MagicMoveBackTransition.h */,
-				D81703A721B91ACF00F5B907 /* MagicMoveBackTransition.m */,
-				D81703A821B91ACF00F5B907 /* MagicMoveTransition.h */,
-				D81703A621B91ACF00F5B907 /* MagicMoveTransition.m */,
+				D856479021BA199A00325464 /* Base */,
+				D81703A021B9157300F5B907 /* MDFromViewController.h */,
+				D81703A121B9157300F5B907 /* MDFromViewController.m */,
+				D85647AB21BA259400325464 /* MDToViewControllerBackTransition.h */,
+				D81703A321B9158800F5B907 /* MDToViewController.h */,
+				D81703A421B9158800F5B907 /* MDToViewController.m */,
+				D81703A721B91ACF00F5B907 /* MDToViewControllerBackTransition.m */,
+				D81703A821B91ACF00F5B907 /* MDFromViewControllerForwardTransition.h */,
+				D81703A621B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -500,6 +513,37 @@
 				D85023841EC6AAC20054060E /* MDBaseModuleModel.m */,
 			);
 			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		D856479021BA199A00325464 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D85647A221BA1BDD00325464 /* From */,
+				D856479D21BA1BDD00325464 /* To */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D856479D21BA1BDD00325464 /* To */ = {
+			isa = PBXGroup;
+			children = (
+				D856479E21BA1BDD00325464 /* MDBaseToViewController.h */,
+				D856479F21BA1BDD00325464 /* MDBaseBackTransition.h */,
+				D85647A021BA1BDD00325464 /* MDBaseBackTransition.m */,
+				D85647A121BA1BDD00325464 /* MDBaseToViewController.m */,
+			);
+			path = To;
+			sourceTree = "<group>";
+		};
+		D85647A221BA1BDD00325464 /* From */ = {
+			isa = PBXGroup;
+			children = (
+				D85647A321BA1BDD00325464 /* MDBaseFromViewController.h */,
+				D85647A421BA1BDD00325464 /* MDBaseForwardTransition.h */,
+				D85647A521BA1BDD00325464 /* MDBaseFromViewController.m */,
+				D85647A621BA1BDD00325464 /* MDBaseForwardTransition.m */,
+			);
+			path = From;
 			sourceTree = "<group>";
 		};
 		D858C8881E756B150042D9F3 = {
@@ -1027,6 +1071,7 @@
 				D8D2AF7620259DF700C4BCE7 /* MDRuntimeViewController.m in Sources */,
 				D850236C1EC692FF0054060E /* MDQuartzView.m in Sources */,
 				D85023791EC69C980054060E /* MDDemoModuleViewcomtroller.m in Sources */,
+				D85647A721BA1BDD00325464 /* MDBaseBackTransition.m in Sources */,
 				D85B96E5203FB0DB005A094A /* XYReactBasePageViewController.m in Sources */,
 				D858C8991E756B150042D9F3 /* AppDelegate.m in Sources */,
 				D855BA911EDC1B7200D2A565 /* MDDemoTopView.m in Sources */,
@@ -1035,8 +1080,10 @@
 				D870BC3F1EF3BA2B00ACA832 /* MDJsonView.m in Sources */,
 				D85023721EC693410054060E /* MDBaseModuleViewController.m in Sources */,
 				D850236B1EC692FF0054060E /* MDDrawImageViewController.m in Sources */,
+				D85647A821BA1BDD00325464 /* MDBaseToViewController.m in Sources */,
 				D858C8961E756B150042D9F3 /* main.m in Sources */,
 				D850236E1EC692FF0054060E /* UGCDrawTextLayer.m in Sources */,
+				D85647AA21BA1BDD00325464 /* MDBaseForwardTransition.m in Sources */,
 				D8BEF7FE20FB3E72004C1088 /* MDHopeFirstSecondState.m in Sources */,
 				D874C8B920EA159B0021B513 /* MDZipArchiveViewController.m in Sources */,
 				D825675220DCA92F00129B0B /* MDCrashShieldManager.m in Sources */,
@@ -1053,9 +1100,10 @@
 				D893333E1F29D49100748499 /* MDCoreImageFaceFeaturesViewController.m in Sources */,
 				D870BC3C1EF3BA2B00ACA832 /* MDJsonModels_All.m in Sources */,
 				D80A8E9C1EE8031600E9D409 /* MDRACViewController.m in Sources */,
-				D81703A521B9158800F5B907 /* MDTransitionDetailViewController.m in Sources */,
-				D81703AB21B91ACF00F5B907 /* MagicMoveBackTransition.m in Sources */,
-				D81703AA21B91ACF00F5B907 /* MagicMoveTransition.m in Sources */,
+				D81703A521B9158800F5B907 /* MDToViewController.m in Sources */,
+				D81703AB21B91ACF00F5B907 /* MDToViewControllerBackTransition.m in Sources */,
+				D85647A921BA1BDD00325464 /* MDBaseFromViewController.m in Sources */,
+				D81703AA21B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m in Sources */,
 				D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
 				D85B96E4203FB0DB005A094A /* XYReactBasePageView.m in Sources */,
@@ -1073,7 +1121,7 @@
 				D85B96E7203FB0DB005A094A /* XYBaseModuleModel.m in Sources */,
 				D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */,
 				D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */,
-				D81703A221B9157300F5B907 /* MDTransitionViewController.m in Sources */,
+				D81703A221B9157300F5B907 /* MDFromViewController.m in Sources */,
 				D8BEF7ED20FB2E7C004C1088 /* MDHopeThirdState.m in Sources */,
 				D85B96C4203E9071005A094A /* XYBottomModuleView.m in Sources */,
 				D89FA5A4202EB1AD008569CB /* MDRuntimeInvocationViewController.m in Sources */,

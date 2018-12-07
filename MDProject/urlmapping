@@ -19,5 +19,5 @@ zipArchive       : MDZipArchiveViewController
 stateMaching     : MDHopeStateMachingViewController
 sdWebImage       : MDSDWebImageViewController
 window           : MDWindowViewController
-transition       : MDTransitionViewController
-trandetail       : MDTransitionDetailViewController
+transition       : MDFromViewController
+trandetail       : MDToViewController

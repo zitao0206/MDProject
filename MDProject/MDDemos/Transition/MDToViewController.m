@@ -1,49 +1,46 @@
 //
-//  MDTransitionDetailViewController.m
+//  MDToViewController.m
 //  MDProject
 //
 //  Created by lizitao on 2018/12/6.
 //  Copyright © 2018年 lizitao. All rights reserved.
 //
 
-#import "MDTransitionDetailViewController.h"
-#import "MagicMoveBackTransition.h"
-#import "MDTransitionViewController.h"
+#import "MDToViewController.h"
+#import "MDToViewControllerBackTransition.h"
+#import "MDFromViewController.h"
 #import "XYUrlAction.h"
 
-@interface MDTransitionDetailViewController ()<UINavigationControllerDelegate>
+@interface MDToViewController ()
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UILabel *titleLabel;
 @end
 
-@implementation MDTransitionDetailViewController
-
-// 执行手势驱动代理方法
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                            animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                         fromViewController:(UIViewController *)fromVC
-                                                           toViewController:(UIViewController *)toVC
-{
-    if ([toVC isKindOfClass:[MDTransitionViewController class]]) {
-        MagicMoveBackTransition *backTransition = [[MagicMoveBackTransition alloc] init];
-        return backTransition;
-    }
-    return nil;
-}
+@implementation MDToViewController
 
 - (void)handleWithURLAction:(XYUrlAction *)urlAction
 {
     self.image = (UIImage *)[urlAction anyObjectForKey:@"image"];
 }
 
+- (UIView *)obtainCoverView
+{
+    return self.imageView;
+}
+
+- (UIImageView *)imageView
+{
+    if (_imageView == nil) {
+        _imageView = [[UIImageView alloc]initWithImage:self.image];
+    }
+    return _imageView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-  
-    
+
     self.imageView = [[UIImageView alloc]initWithImage:self.image];
     [self.imageView sizeToFit];
     
@@ -77,13 +74,6 @@
 
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
-    
-}
-
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -91,7 +81,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"MDTransitionDetailViewController dealloc...");
+    NSLog(@"MDToViewController dealloc...");
 }
 
 @end

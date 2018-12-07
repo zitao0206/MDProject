@@ -1,5 +1,5 @@
 //
-//  MagicMoveBackTransition.h
+//  MDFromViewControllerForwardTransition.h
 //  CATransition
 //
 //  Created by xuxiwen on 16/6/11.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "MDBaseForwardTransition.h"
 
-@interface MagicMoveBackTransition : NSObject<UIViewControllerAnimatedTransitioning>
+@interface MDFromViewControllerForwardTransition : MDBaseForwardTransition
 
 @end

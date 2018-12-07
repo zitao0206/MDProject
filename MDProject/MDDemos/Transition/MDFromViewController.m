@@ -1,38 +1,23 @@
 //
-//  MDTransitionViewController.m
+//  MDFromViewController.m
 //  MDProject
 //
 //  Created by lizitao on 2018/12/6.
 //  Copyright © 2018年 lizitao. All rights reserved.
 //
 
-#import "MDTransitionViewController.h"
+#import "MDFromViewController.h"
 #import "XYPageMaster.h"
-#import "MagicMoveTransition.h"
-#import "MDTransitionDetailViewController.h"
+#import "MDFromViewControllerForwardTransition.h"
+#import "MDToViewController.h"
 
 #define  CellWidth   self.view.frame.size.width/4
 #define  CellHeight  self.view.frame.size.width/4
 
-@interface MDTransitionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate>
+@interface MDFromViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @end
 
-@implementation MDTransitionViewController
-
-#pragma mark - 返回我们写好的转场对象
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                            animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                         fromViewController:(UIViewController *)fromVC
-                                                           toViewController:(UIViewController *)toVC
-{
-    NSLog(@"1执行了。。。。。");
-    if ([toVC isKindOfClass:[MDTransitionDetailViewController class]]) {
-        MagicMoveTransition *transition = [[MagicMoveTransition alloc] init];
-        return transition;
-    }
-    return nil;
-}
+@implementation MDFromViewController
 
 - (void)viewDidLoad
 {
@@ -41,11 +26,7 @@
     [self initCollectionView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
-}
+
 
 - (void)initCollectionView
 {
@@ -110,8 +91,6 @@
     } else {
         [action setAnyObject:[UIImage imageNamed:@"launch.jpg"] forKey:@"image"];
     }
-
-    action.animation = XYNaviAnimationPush;
     if (action == nil) return;
     [[XYPageMaster master] openURLAction:action];
 
