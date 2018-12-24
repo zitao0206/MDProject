@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MDBaseFromViewController : UIViewController
-//默认是collectionView
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionView *collectionView;//默认是collectionView
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, assign) CGRect finiRect;
 @end

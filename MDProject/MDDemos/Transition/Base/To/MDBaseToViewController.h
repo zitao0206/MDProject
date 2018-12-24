@@ -10,6 +10,6 @@
 
 @interface MDBaseToViewController : UIViewController
 
-- (UIView *)obtainCoverView;
+- (UIView *)obtainCoverView; //子类须重写
 
 @end

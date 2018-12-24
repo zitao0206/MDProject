@@ -1,4 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git' 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://192.168.1.33:9090/Pods/Specs.git'
 
 platform :ios, '9.0'
 
@@ -6,6 +7,7 @@ eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 target 'MDProject' do
     
+    pod 'XYFelix', '~> 1.0.0'
     pod 'MDEasyCache', '~> 1.0.0'
     pod 'MDStatePageKit', '~> 1.0.0'
     pod 'MDCommonKit', '1.0.6'

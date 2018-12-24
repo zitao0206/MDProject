@@ -22,17 +22,14 @@
                                                            toViewController:(UIViewController *)toVC
 {   
     if ([toVC isKindOfClass:[MDBaseFromViewController class]] && [fromVC isKindOfClass:[MDBaseToViewController class]]) {
-        NSString *backVCTransition = [NSString stringWithFormat:@"%@BackTransition",NSStringFromClass([fromVC class])];
+        NSString *backVCTransition = [NSString stringWithFormat:@"%@BackTransition1",NSStringFromClass([fromVC class])];
         MDBaseBackTransition *transition = [NSClassFromString(backVCTransition) new];
+        if (![transition conformsToProtocol:@protocol(UIViewControllerAnimatedTransitioning)]) {
+            transition = [MDBaseBackTransition new];
+        }
         return transition;
     }
     return nil;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-   
 }
 
 - (void)viewDidAppear:(BOOL)animated
