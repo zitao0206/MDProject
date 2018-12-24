@@ -101,6 +101,7 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+                       @"XYFelix",                          //21
                        @"CATransition",                     //20
                        @"window",                           //19
                        @"SDWebImage",                       //18
@@ -129,7 +130,12 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
-    {//19
+    {//21
+        XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://transition"]];
+        action.animation = XYNaviAnimationPush;
+        [self.actionArr addObject:action];
+    }
+    {//20
         XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://transition"]];
         action.animation = XYNaviAnimationPush;
         [self.actionArr addObject:action];

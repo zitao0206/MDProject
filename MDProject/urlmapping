@@ -21,3 +21,4 @@ sdWebImage       : MDSDWebImageViewController
 window           : MDWindowViewController
 transition       : MDFromViewController
 trandetail       : MDToViewController
+hotfix           : MDHotfixViewController

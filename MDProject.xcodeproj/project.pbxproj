@@ -102,6 +102,7 @@
 		D8D2AF7C20259FA700C4BCE7 /* MDSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7B20259FA700C4BCE7 /* MDSon.m */; };
 		D8D2AF7F2025D12200C4BCE7 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7E2025D12200C4BCE7 /* UIViewController+Swizzling.m */; };
 		D8D5F807214F81FB002E6963 /* MDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5F806214F81FB002E6963 /* MDWindowViewController.m */; };
+		D8E4800C21D0764E00FCA0ED /* MDHotfixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -308,6 +309,8 @@
 		D8D2AF7E2025D12200C4BCE7 /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		D8D5F805214F81FB002E6963 /* MDWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDWindowViewController.h; sourceTree = "<group>"; };
 		D8D5F806214F81FB002E6963 /* MDWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDWindowViewController.m; sourceTree = "<group>"; };
+		D8E4800A21D0764E00FCA0ED /* MDHotfixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDHotfixViewController.h; sourceTree = "<group>"; };
+		D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDHotfixViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +456,7 @@
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4800921D0763300FCA0ED /* XYFelix */,
 				D817039F21B9155C00F5B907 /* Transition */,
 				D8D5F804214F8180002E6963 /* UIWindow */,
 				D802A33B21291A56005876B1 /* SDWebImage */,
@@ -864,6 +868,15 @@
 			path = UIWindow;
 			sourceTree = "<group>";
 		};
+		D8E4800921D0763300FCA0ED /* XYFelix */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4800A21D0764E00FCA0ED /* MDHotfixViewController.h */,
+				D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */,
+			);
+			path = XYFelix;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1018,10 +1031,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MDProject/Pods-MDProject-resources.sh",
 				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
+				"${PODS_CONFIGURATION_BUILD_DIR}/XYFelix/XYFelix.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XYFelix.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1106,6 +1121,7 @@
 				D81703AA21B91ACF00F5B907 /* MDFromViewControllerForwardTransition.m in Sources */,
 				D85B96C7203E9071005A094A /* XYMiddleModuleView.m in Sources */,
 				D85023821EC69E210054060E /* MDDemoBottomModuleView.m in Sources */,
+				D8E4800C21D0764E00FCA0ED /* MDHotfixViewController.m in Sources */,
 				D85B96E4203FB0DB005A094A /* XYReactBasePageView.m in Sources */,
 				D893332E1F28402700748499 /* MDFillingView.m in Sources */,
 				D8D2AF7920259F8F00C4BCE7 /* MDFather.m in Sources */,
