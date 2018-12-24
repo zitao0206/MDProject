@@ -131,8 +131,7 @@
 {
     self.actionArr = [NSMutableArray new];
     {//21
-        XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://transition"]];
-        action.animation = XYNaviAnimationPush;
+        XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hotfix"]];
         [self.actionArr addObject:action];
     }
     {//20

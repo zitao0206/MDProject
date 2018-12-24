@@ -79,7 +79,6 @@
 		D870BC571EF6456D00ACA832 /* MDNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BC561EF6456D00ACA832 /* MDNavigationManager.m */; };
 		D870BCB51F03A35E00ACA832 /* MDMultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D870BCB41F03A35E00ACA832 /* MDMultiThreadViewController.m */; };
 		D874C8B920EA159B0021B513 /* MDZipArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D874C8B820EA159B0021B513 /* MDZipArchiveViewController.m */; };
-		D874C8BB20EA16910021B513 /* bugfix.zip in Resources */ = {isa = PBXBuildFile; fileRef = D874C8BA20EA16900021B513 /* bugfix.zip */; };
 		D893332B1F283D2D00748499 /* MDQuartzDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D893332A1F283D2D00748499 /* MDQuartzDrawViewController.m */; };
 		D893332E1F28402700748499 /* MDFillingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D893332D1F28402700748499 /* MDFillingView.m */; };
 		D893333A1F29D3FA00748499 /* MDCoreImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89333391F29D3FA00748499 /* MDCoreImageFilterViewController.m */; };
@@ -103,6 +102,7 @@
 		D8D2AF7F2025D12200C4BCE7 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2AF7E2025D12200C4BCE7 /* UIViewController+Swizzling.m */; };
 		D8D5F807214F81FB002E6963 /* MDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5F806214F81FB002E6963 /* MDWindowViewController.m */; };
 		D8E4800C21D0764E00FCA0ED /* MDHotfixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */; };
+		D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */ = {isa = PBXBuildFile; fileRef = D8E4800D21D0775B00FCA0ED /* bugfix.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,7 +268,6 @@
 		D870BCB41F03A35E00ACA832 /* MDMultiThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMultiThreadViewController.m; sourceTree = "<group>"; };
 		D874C8B720EA159B0021B513 /* MDZipArchiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDZipArchiveViewController.h; sourceTree = "<group>"; };
 		D874C8B820EA159B0021B513 /* MDZipArchiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDZipArchiveViewController.m; sourceTree = "<group>"; };
-		D874C8BA20EA16900021B513 /* bugfix.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = bugfix.zip; sourceTree = "<group>"; };
 		D89333291F283D2D00748499 /* MDQuartzDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDQuartzDrawViewController.h; sourceTree = "<group>"; };
 		D893332A1F283D2D00748499 /* MDQuartzDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDQuartzDrawViewController.m; sourceTree = "<group>"; };
 		D893332C1F28402700748499 /* MDFillingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFillingView.h; sourceTree = "<group>"; };
@@ -311,6 +310,7 @@
 		D8D5F806214F81FB002E6963 /* MDWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDWindowViewController.m; sourceTree = "<group>"; };
 		D8E4800A21D0764E00FCA0ED /* MDHotfixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDHotfixViewController.h; sourceTree = "<group>"; };
 		D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDHotfixViewController.m; sourceTree = "<group>"; };
+		D8E4800D21D0775B00FCA0ED /* bugfix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,7 +575,7 @@
 		D858C8931E756B150042D9F3 /* MDProject */ = {
 			isa = PBXGroup;
 			children = (
-				D874C8BA20EA16900021B513 /* bugfix.zip */,
+				D8E4800D21D0775B00FCA0ED /* bugfix.js */,
 				D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */,
 				D825675B20DCD45300129B0B /* bugfix_jspatch.js */,
 				D825676320E0CE1900129B0B /* MDEasyHotFixTool.js */,
@@ -995,7 +995,6 @@
 				D868149B1F175B1600E4E7BF /* ugcup.png in Resources */,
 				D89333441F29DCEF00748499 /* face2.jpeg in Resources */,
 				D825675C20DCD45300129B0B /* bugfix_jspatch.js in Resources */,
-				D874C8BB20EA16910021B513 /* bugfix.zip in Resources */,
 				D89333431F29DCEF00748499 /* face1.jpg in Resources */,
 				D81D68841E8A64D400C1489F /* launch.jpg in Resources */,
 				D825676420E0CE1900129B0B /* MDEasyHotFixTool.js in Resources */,
@@ -1003,6 +1002,7 @@
 				D870BBB31EF3B1D100ACA832 /* MDErrorPicFrame.png in Resources */,
 				D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */,
 				D858C9851E75A4200042D9F3 /* urlmapping in Resources */,
+				D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
