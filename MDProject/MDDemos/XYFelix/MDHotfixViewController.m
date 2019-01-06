@@ -20,9 +20,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self insteadMethod];
 //    NSLog(@"--------------->%@",@([self changeReturnValue]));
-    [self changeParamValue:100];
+//    [self changeParamValue:100];
 //    [self insertBeforeMethod];
-//    NSLog(@"---->%@",@([self insertAfterMethod]));
+    NSLog(@"---->%@",@([self insertAfterMethod]));
 //    [self insertAfterMethod];
 }
 
@@ -50,6 +50,8 @@
 - (NSUInteger)insertAfterMethod
 {
     NSLog(@"insertAfterMethod...");
+    
+    
     return 100;
 }
 

@@ -1,4 +1,4 @@
-////方法替换
+//////方法替换
 //var className = "MDHotfixViewController";
 //var selectorName = 'insteadMethod';
 //var fixImpl = function(instance, originInvocation, originArguments)
@@ -22,7 +22,7 @@
 //fixInstanceMethod(className, selectorName, fixImpl);
 
 
-////修改传参
+//修改传参
 //var className = "MDHotfixViewController";
 //var selectorName = 'changeParamValue:';
 //var fixImpl = function(instance, originInvocation, originArguments)
@@ -38,16 +38,16 @@
 //var selectorName = 'insertBeforeMethod';
 //var fixImpl = function(instance, originInvocation, originArguments)
 //{
-//    console.log("runAfterInstanceMethod...");
+//    console.log("runBeforeInstanceMethod...");
 //}
 //runBeforeInstanceMethod(className, selectorName, fixImpl);
 
 
 ////方法后插入代码
-//var className = "MDHotfixViewController";
-//var selectorName = 'insertAfterMethod';
-//var fixImpl = function(instance, originInvocation, originArguments)
-//{
-//    console.log("runAfterInstanceMethod...");
-//}
-//runAfterInstanceMethod(className, selectorName, fixImpl);
+var className = "MDHotfixViewController";
+var selectorName = 'insertAfterMethod';
+var fixImpl = function(instance, originInvocation, originArguments)
+{
+    console.log("runAfterInstanceMethod...");
+}
+runAfterInstanceMethod(className, selectorName, fixImpl);
