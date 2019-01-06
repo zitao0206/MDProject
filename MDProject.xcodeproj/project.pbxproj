@@ -103,6 +103,7 @@
 		D8D5F807214F81FB002E6963 /* MDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5F806214F81FB002E6963 /* MDWindowViewController.m */; };
 		D8E4800C21D0764E00FCA0ED /* MDHotfixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */; };
 		D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */ = {isa = PBXBuildFile; fileRef = D8E4800D21D0775B00FCA0ED /* bugfix.js */; };
+		D8E9CFF721E20C3500CE6914 /* MDWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E9CFF621E20C3500CE6914 /* MDWebViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +312,8 @@
 		D8E4800A21D0764E00FCA0ED /* MDHotfixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDHotfixViewController.h; sourceTree = "<group>"; };
 		D8E4800B21D0764E00FCA0ED /* MDHotfixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDHotfixViewController.m; sourceTree = "<group>"; };
 		D8E4800D21D0775B00FCA0ED /* bugfix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix.js; sourceTree = "<group>"; };
+		D8E9CFF521E20C3500CE6914 /* MDWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDWebViewViewController.h; sourceTree = "<group>"; };
+		D8E9CFF621E20C3500CE6914 /* MDWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDWebViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +459,7 @@
 		D850235B1EC6922E0054060E /* MDDemos */ = {
 			isa = PBXGroup;
 			children = (
+				D8E9CFF421E20C2100CE6914 /* WebView */,
 				D8E4800921D0763300FCA0ED /* XYFelix */,
 				D817039F21B9155C00F5B907 /* Transition */,
 				D8D5F804214F8180002E6963 /* UIWindow */,
@@ -877,6 +881,15 @@
 			path = XYFelix;
 			sourceTree = "<group>";
 		};
+		D8E9CFF421E20C2100CE6914 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D8E9CFF521E20C3500CE6914 /* MDWebViewViewController.h */,
+				D8E9CFF621E20C3500CE6914 /* MDWebViewViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1106,6 +1119,7 @@
 				D85B969F203D7633005A094A /* Calculator.m in Sources */,
 				D8BEF7EA20FB2E7C004C1088 /* MDHopeFirstState.m in Sources */,
 				D80A8E9F1EE8034900E9D409 /* MDJsonDemoViewController.m in Sources */,
+				D8E9CFF721E20C3500CE6914 /* MDWebViewViewController.m in Sources */,
 				D850236D1EC692FF0054060E /* UGCDrawLayer.m in Sources */,
 				D85B9699203D718E005A094A /* AuditingInvoker.m in Sources */,
 				D802A33E21291A6F005876B1 /* MDSDWebImageViewController.m in Sources */,
