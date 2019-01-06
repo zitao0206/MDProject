@@ -22,3 +22,4 @@ window           : MDWindowViewController
 transition       : MDFromViewController
 trandetail       : MDToViewController
 hotfix           : MDHotfixViewController
+webview          : MDWebViewViewController

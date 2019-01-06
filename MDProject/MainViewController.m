@@ -130,6 +130,10 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//22
+        XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://webview"]];
+        [self.actionArr addObject:action];
+    }
     {//21
         XYUrlAction *action = [XYUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hotfix"]];
         [self.actionArr addObject:action];
