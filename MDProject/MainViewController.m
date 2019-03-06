@@ -276,18 +276,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row == 1)
-//    {
-//        MDDemoModuleViewcomtroller *vc = [MDDemoModuleViewcomtroller new];
-//        MDBaseModuleModel *model = [MDBaseModuleModel new];
-//        model.title = @"模块化框架";
-//        vc.model = model;
-//        [self.navigationController pushViewController:vc animated:YES];
-//        return;
-//    }
-    XYUrlAction *action = [self.actionArr objectAtIndex:indexPath.row];
-    if (action == nil) return;
-    [[XYPageMaster master] openURLAction:action];
+    if (indexPath.row == 0)
+    {
+        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
+            XYNaviTransition *naviTransiton = [XYNaviTransition new];
+            naviTransiton.animation = XYNaviAnimationTransition;
+            naviTransiton.transition.type = kCATransitionMoveIn;
+            naviTransiton.transition.subtype = kCATransitionFromTop;
+            naviTransiton.transition.duration = 2.0;
+            action.naviTransition = naviTransiton;
+        }];
+    } else {
+        XYUrlAction *action = [self.actionArr objectAtIndex:indexPath.row];
+        if (action == nil) return;
+        [[XYPageMaster master] openURLAction:action];
+    }
+
 }
 
 
