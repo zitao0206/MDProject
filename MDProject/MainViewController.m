@@ -16,6 +16,7 @@
 #import "MDHopeStateMachingViewController.h"
 #import "View+MASAdditions.h"
 #import "XYPageMaster.h"
+#import "XYReactWhiteBoard.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -24,6 +25,8 @@
 @property (nonatomic, strong) UILabel *label2;
 @property (nonatomic, strong) NSMutableArray <NSString *> *titleArr;
 @property (nonatomic, strong) NSMutableArray <XYUrlAction *> *actionArr;
+
+@property (nonatomic, strong) NSMutableArray *mutableArray;
 
 @end
 
@@ -49,8 +52,64 @@
 //        make.top.equalTo(self.view).offset(15);
 //        make.left.equalTo(self.view).offset(15);
 //    }];
+    
+    self.mutableArray = [NSMutableArray arrayWithCapacity:5];
+    for (int i = 0; i < 5; i++) {
+        [self.mutableArray addObject:[NSString stringWithFormat:@"object-%i", i]];
+    }
+    [self test];
+    
+    [[[XYReactWhiteBoard shareBoard] signalForKey:@"whiteKey"] subscribeNext:^(id x) {
+       
+        NSLog(@"value is coming: %@",x);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"remove value...");
+            [[XYReactWhiteBoard shareBoard] removeValueForKey:@"whiteKey"];
+         
+        });
+       
+        
+    }];
+    
+ 
 
 }
+
+- (void)test
+{
+    NSString *ooo = @"ooo";
+    NSString *fff = @"fff";
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self updateMutableArray:ooo];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self updateMutableArray:fff];
+    });
+    
+}
+
+- (void)updateMutableArray:(NSString *)value
+{
+    @synchronized (self.mutableArray)
+    {
+        for (int i = 0; i < self.mutableArray.count; i ++) {
+            NSString *currentObject = [self.mutableArray objectAtIndex:i];
+            [self.mutableArray replaceObjectAtIndex:i withObject:[currentObject stringByAppendingFormat:@"-%@", value]];
+            NSLog(@"1-%@", [self.mutableArray objectAtIndex:i]);
+        }
+    }
+}
+
+- (void)updateMutableArray2:(NSString *)value
+{
+    for (int i = 0; i < self.mutableArray.count; i ++) {
+        NSString *currentObject = [self.mutableArray objectAtIndex:i];
+        [self.mutableArray replaceObjectAtIndex:i withObject:[currentObject stringByAppendingFormat:@"-%@", value]];
+        NSLog(@"2-%@", [self.mutableArray objectAtIndex:i]);
+    }
+}
+
 
 - (void)clickBtn1:(UIButton *)sender
 {
@@ -278,14 +337,15 @@
 {
     if (indexPath.row == 0)
     {
-        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
-            XYNaviTransition *naviTransiton = [XYNaviTransition new];
-            naviTransiton.animation = XYNaviAnimationTransition;
-            naviTransiton.transition.type = kCATransitionMoveIn;
-            naviTransiton.transition.subtype = kCATransitionFromTop;
-            naviTransiton.transition.duration = 2.0;
-            action.naviTransition = naviTransiton;
-        }];
+//        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
+//            XYNaviTransition *naviTransiton = [XYNaviTransition new];
+//            naviTransiton.animation = XYNaviAnimationTransition;
+//            naviTransiton.transition.type = kCATransitionMoveIn;
+//            naviTransiton.transition.subtype = kCATransitionFromTop;
+//            naviTransiton.transition.duration = 0.3;
+//            action.naviTransition = naviTransiton;
+//        }];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"xiaoying://url=www.baidu.com"]];
     } else {
         XYUrlAction *action = [self.actionArr objectAtIndex:indexPath.row];
         if (action == nil) return;

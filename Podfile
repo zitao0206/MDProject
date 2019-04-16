@@ -12,7 +12,7 @@ target 'MDProject' do
     pod 'MDStatePageKit', '~> 1.0.0'
     pod 'MDCommonKit', '1.0.6'
     pod 'XYPageMaster', '2.0.16'
-    pod 'XYReactDataBoard', '~> 2.0.0'
+    pod 'XYReactDataBoard', '2.0.6'
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'
     pod 'PINCache', '2.0'

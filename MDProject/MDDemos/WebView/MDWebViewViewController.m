@@ -9,6 +9,7 @@
 #import "MDWebViewViewController.h"
 #import "UIView+ResizeFrame.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "XYReactWhiteBoard.h"
 
 @interface MDWebViewViewController () <UIWebViewDelegate>
 
@@ -19,6 +20,11 @@
 @end
 
 @implementation MDWebViewViewController
+
+- (void)dealloc
+{
+    NSLog(@"-------------------释放了....%@",self);
+}
 
 - (void)viewDidLoad
 {
@@ -35,6 +41,8 @@
     UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
     
     [view1 addGestureRecognizer:labelTapGestureRecognizer];
+    
+    [[XYReactWhiteBoard shareBoard] setValue:self forKey:@"whiteKey"];
 }
 
 - (void)labelTouchUpInside:(UITapGestureRecognizer *)recognizer
@@ -53,7 +61,7 @@
     self.webView = [[UIWebView alloc] init];
     self.webView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
     self.webView.delegate = self;
-    self.webView.scrollView.backgroundColor = [UIColor whiteColor];;
+    self.webView.scrollView.backgroundColor = [UIColor whiteColor];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:3];
     [self.webView loadRequest:request];

@@ -16,6 +16,7 @@
 #import "TestBlockViewController.h"
 #import "UIView+ResizeFrame.h"
 #import "XYPageMaster.h"
+#import "XYReactWhiteBoard.h"
 
 
 @interface MDRACViewController ()<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
@@ -53,12 +54,16 @@
 
 - (void)dealloc
 {
+    NSLog(@"-------------------释放了....%@",self);
 //    [self removeObserver:self forKeyPath:@"myTextFieldString1"];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[XYReactWhiteBoard shareBoard] setValue:self forKey:@"whiteKey"];
+    
 //    self.title = @"VC详情页1";
 //    NSLog(@"----------->%@",self.navigationController.viewControllers);
 //    NSLog(@"----------->%@",[MDNavigationManager manager].navigationController.viewControllers);
@@ -120,7 +125,7 @@
     [self.resultLabel sizeToFit];
     [self.view addSubview:self.resultLabel];
     
-    @weakify(self);
+//    @weakify(self);
 //    RACSignal *signal1 = [RACObserve(self, myTextFieldString1) distinctUntilChanged];
 //    RACSignal *signal2 = [RACObserve(self, myTextFieldString2) distinctUntilChanged];
 //    RACSignal *signal3 = [RACObserve(self, myTextFieldString3) distinctUntilChanged];
@@ -168,8 +173,10 @@
 //    [signal subscribeNext:^(id x) {
 //
 //    }];
+
     
 }
+
 
 - (void)onTextFieldChanged:(UITextField *)textField forEvent:(UIEvent *)event
 {
