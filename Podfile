@@ -7,15 +7,20 @@ eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 target 'MDProject' do
     
-    
+    #业务代码库
     pod 'MDHomeProject', '~> 0.0.1'
     
-#    pod 'XYFelix', '~> 1.0.0'
+    #业务组件、解决方案
+    #  pod 'XYFelix', '~> 1.0.0'
     pod 'MDEasyCache', '~> 1.0.0'
     pod 'MDStatePageKit', '~> 1.0.0'
-    pod 'MDCommonKit', '1.0.6'
+   
     pod 'XYPageMaster', '2.0.16'
     pod 'XYReactDataBoard', '2.0.6'
+    
+    pod 'MDCommonKit', '1.0.6'
+    
+    #第三方
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'
     pod 'PINCache', '2.0'
@@ -24,8 +29,6 @@ target 'MDProject' do
     pod 'JSPatch'
     pod 'Aspects', '1.4.1'
     pod 'SSZipArchive', '0.4.0'
-    
-    
     pod 'AFNetworking','3.2.1'
 
 end

@@ -21,6 +21,18 @@ PODS:
   - Masonry (0.6.1)
   - MDCommonKit (1.0.6)
   - MDEasyCache (1.0.12)
+  - MDHomeProject (0.0.22):
+    - AFNetworking
+    - Aspects
+    - Masonry
+    - MDCommonKit
+    - MDEasyCache
+    - MDStatePageKit
+    - ReactiveObjC
+    - SDWebImage
+    - SSZipArchive
+    - XYPageMaster (= 2.0.16)
+    - XYReactDataBoard
   - MDStatePageKit (1.0.5)
   - PINCache (2.0)
   - ReactiveObjC (3.1.0)
@@ -29,34 +41,24 @@ PODS:
   - SDWebImage/Core (4.4.2)
   - SSZipArchive (0.4.0)
   - TMCache (2.1.0)
-  - XYCategory (1.0.9)
-  - XYCommonAPIManager/Core (1.1.1):
-    - AFNetworking
-    - XYCategory
-  - XYCommonAPIManager/DomainRouter (1.1.1):
-    - AFNetworking
-    - XYCategory
-    - XYCommonAPIManager/Core
-    - XYModuleManager (= 1.0.9)
-  - XYModuleManager (1.0.9)
   - XYPageMaster (2.0.16)
   - XYReactDataBoard (2.0.6):
     - ReactiveObjC (= 3.1.0)
 
 DEPENDENCIES:
+  - AFNetworking (= 3.2.1)
   - Aspects (= 1.4.1)
   - JSPatch
   - Masonry (= 0.6.1)
-  - MDCommonKit (= 1.0.6)
+  - MDCommonKit (from `/Users/lizitao/Desktop/MDProjects/MDCommonKit`)
   - MDEasyCache (~> 1.0.0)
+  - MDHomeProject (from `/Users/lizitao/Desktop/MDProjects/MDHomeProject`)
   - MDStatePageKit (~> 1.0.0)
   - PINCache (= 2.0)
   - ReactiveObjC (= 3.1.0)
   - SDWebImage (= 4.4.2)
   - SSZipArchive (= 0.4.0)
   - TMCache (= 2.1.0)
-  - XYCommonAPIManager/Core (= 1.1.1)
-  - XYCommonAPIManager/DomainRouter (= 1.1.1)
   - XYPageMaster (= 2.0.16)
   - XYReactDataBoard (= 2.0.6)
 
@@ -64,15 +66,11 @@ SPEC REPOS:
   http://192.168.1.33:9090/Pods/Specs.git:
     - Aspects
     - SSZipArchive
-    - XYCategory
-    - XYCommonAPIManager
-    - XYModuleManager
     - XYReactDataBoard
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - JSPatch
     - Masonry
-    - MDCommonKit
     - MDEasyCache
     - MDStatePageKit
     - PINCache
@@ -81,6 +79,12 @@ SPEC REPOS:
     - TMCache
     - XYPageMaster
 
+EXTERNAL SOURCES:
+  MDCommonKit:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDCommonKit"
+  MDHomeProject:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDHomeProject"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: aa27cf06307d3b0927ba050ba0f569a92e281742
@@ -88,18 +92,16 @@ SPEC CHECKSUMS:
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MDCommonKit: 33726d67979897597f4e596524c4647165adf7f3
   MDEasyCache: 13bc3c2bee1574e898633c210f140f8dfa83aa4d
+  MDHomeProject: 93d34680f2d2fdf7c18cdfda0f1c73a4ba49486d
   MDStatePageKit: 8e41f88c7706ce0e02be362e3af8f3bbb5b3018c
   PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SSZipArchive: 843d6f795bf7a1d0534e97b8003d85ae7f72e855
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
-  XYCategory: f3244d8431e00bb451c80f24d85c384dcb72e4d8
-  XYCommonAPIManager: a9ebbea2b8eddbb059016e7e81427d9d8413d846
-  XYModuleManager: 03b2b246a21274346fe1104302bbae48fb75fbe6
   XYPageMaster: 7e2c81f5bd02394a8517a0c45d7e52bcf1fd46e4
   XYReactDataBoard: fd9c70b6ce05efd79fe2b08af1936a032c473b03
 
-PODFILE CHECKSUM: d3f653ed2753063ed386103f1f868f1835690850
+PODFILE CHECKSUM: 75252092955e2a76a7f0ce201da123b97a999c5a
 
 COCOAPODS: 1.7.2
