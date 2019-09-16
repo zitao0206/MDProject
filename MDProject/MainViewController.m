@@ -337,15 +337,18 @@
 {
     if (indexPath.row == 0)
     {
-//        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
+        BOOL isPhone = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]];
+        NSLog(@"----->isPhone:%@",@(isPhone));
+        
+        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
 //            XYNaviTransition *naviTransiton = [XYNaviTransition new];
 //            naviTransiton.animation = XYNaviAnimationTransition;
 //            naviTransiton.transition.type = kCATransitionMoveIn;
 //            naviTransiton.transition.subtype = kCATransitionFromTop;
 //            naviTransiton.transition.duration = 0.3;
 //            action.naviTransition = naviTransiton;
-//        }];
-        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"xiaoying://url=www.baidu.com"]];
+        }];
+//        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"xiaoying://url=www.baidu.com"]];
     } else {
         XYUrlAction *action = [self.actionArr objectAtIndex:indexPath.row];
         if (action == nil) return;

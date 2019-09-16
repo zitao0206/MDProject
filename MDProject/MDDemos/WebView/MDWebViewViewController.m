@@ -26,23 +26,67 @@
     NSLog(@"-------------------释放了....%@",self);
 }
 
+- (BOOL)isSingleton
+{
+    return NO;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     
-//    self.url = [NSURL URLWithString:@"https://www.baidu.com/"];
-//    [self initWebView];
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(60, 60, 100, 45)];
-    view1.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view1];
+    //
+    self.url = [NSURL URLWithString:@"https://www.baidu.com"];
+    [self initWebView];
     
-    view1.userInteractionEnabled = YES;
-    UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
+   
     
-    [view1 addGestureRecognizer:labelTapGestureRecognizer];
     
-    [[XYReactWhiteBoard shareBoard] setValue:self forKey:@"whiteKey"];
+//    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(60, 60, 100, 45)];
+//    view1.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:view1];
+//    
+//    view1.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
+//    
+//    [view1 addGestureRecognizer:labelTapGestureRecognizer];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[XYReactWhiteBoard shareBoard] setValue:@"hello world" forKey:@"duplicate_signal_test"];
+//    });
+//    
+//    
+//    [[[[XYReactWhiteBoard shareBoard] signalForKey:@"duplicate_signal_test"] distinctUntilChanged] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"1执行了。。。。");
+//    }];
+//    [[[XYReactWhiteBoard shareBoard] signalForKey:@"duplicate_signal_test"] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"2执行了。。。。");
+//    }];
+//    
+//    [[[XYReactWhiteBoard shareBoard] signalForKeyPath:XY_KEYPATH(@"duplicate_signal_test")] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"2执行了。。。。");
+//    }];
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        
+////        [[XYPageMaster master] openUrl:@"mydemo://window" action:nil];
+//        
+//    });
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)labelTouchUpInside:(UITapGestureRecognizer *)recognizer
@@ -61,7 +105,7 @@
     self.webView = [[UIWebView alloc] init];
     self.webView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
     self.webView.delegate = self;
-    self.webView.scrollView.backgroundColor = [UIColor whiteColor];
+    self.webView.backgroundColor = [UIColor greenColor];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:3];
     [self.webView loadRequest:request];
@@ -116,11 +160,12 @@
     //注入JS代码
     [context evaluateScript:jsFunctStr1];
     
-  
-    
+}
 
-    
-    
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    _webView.scrollView.contentInset = UIEdgeInsetsZero;
 }
 
 

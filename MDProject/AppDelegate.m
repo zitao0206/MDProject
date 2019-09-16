@@ -9,9 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "MDNavigationManager.h"
-#import "MDCrashShieldManager.h"
+
 #import <XYPageMaster/XYPageMaster.h>
-#import <XYFelix/XYFelix.h>
+//#import <XYFelix/XYFelix.h>
 
 typedef NS_ENUM(NSInteger, LaunchMode) {
     LaunchModeNormal = 0,
@@ -94,8 +94,8 @@ typedef NS_ENUM(NSInteger, LaunchMode) {
         //hotfix
         NSString *js_path = [[NSBundle mainBundle] pathForResource:@"bugfix" ofType:@"js"];
         NSString *js_string = [NSString stringWithContentsOfFile:js_path encoding:NSASCIIStringEncoding error:nil];
-        [XYFelix fixIt];
-        [XYFelix evalString:js_string];
+//        [XYFelix fixIt];
+//        [XYFelix evalString:js_string];
 //        NSLog(@"hotfix....%@",js_string);
     }
     return YES;

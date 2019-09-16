@@ -1,6 +1,20 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - GTMBase64 (1.0.1)
   - JSPatch (1.1.3):
     - JSPatch/Core (= 1.1.3)
   - JSPatch/Core (1.1.3)
@@ -15,35 +29,18 @@ PODS:
   - SDWebImage/Core (4.4.2)
   - SSZipArchive (0.4.0)
   - TMCache (2.1.0)
-  - XYCommonKit (4.0.7):
-    - GTMBase64 (~> 1.0.0)
-    - SSZipArchive
-    - XYCommonKit/Core (= 4.0.7)
-    - XYCommonKit/Security (= 4.0.7)
-    - XYCommonKit/XML (= 4.0.7)
-    - XYOpenUDID (~> 1.0.0)
-  - XYCommonKit/Core (4.0.7):
-    - GTMBase64 (~> 1.0.0)
-    - SSZipArchive
-    - XYCommonKit/Security
-    - XYOpenUDID (~> 1.0.0)
-  - XYCommonKit/Security (4.0.7):
-    - GTMBase64 (~> 1.0.0)
-    - SSZipArchive
-    - XYOpenUDID (~> 1.0.0)
-  - XYCommonKit/XML (4.0.7):
-    - GTMBase64 (~> 1.0.0)
-    - SSZipArchive
-    - XYOpenUDID (~> 1.0.0)
-  - XYEasyCache (1.0.7)
-  - XYFelix (1.0.5):
-    - Aspects
-    - SSZipArchive
-    - XYCommonKit
-    - XYEasyCache
-  - XYOpenUDID (1.0.1)
-  - XYPageMaster (2.0.15)
-  - XYReactDataBoard (2.0.3):
+  - XYCategory (1.0.9)
+  - XYCommonAPIManager/Core (1.1.1):
+    - AFNetworking
+    - XYCategory
+  - XYCommonAPIManager/DomainRouter (1.1.1):
+    - AFNetworking
+    - XYCategory
+    - XYCommonAPIManager/Core
+    - XYModuleManager (= 1.0.9)
+  - XYModuleManager (1.0.9)
+  - XYPageMaster (2.0.16)
+  - XYReactDataBoard (2.0.6):
     - ReactiveObjC (= 3.1.0)
 
 DEPENDENCIES:
@@ -58,20 +55,21 @@ DEPENDENCIES:
   - SDWebImage (= 4.4.2)
   - SSZipArchive (= 0.4.0)
   - TMCache (= 2.1.0)
-  - XYFelix (~> 1.0.0)
-  - XYPageMaster (= 2.0.15)
-  - XYReactDataBoard (~> 2.0.0)
+  - XYCommonAPIManager/Core (= 1.1.1)
+  - XYCommonAPIManager/DomainRouter (= 1.1.1)
+  - XYPageMaster (= 2.0.16)
+  - XYReactDataBoard (= 2.0.6)
 
 SPEC REPOS:
   http://192.168.1.33:9090/Pods/Specs.git:
-    - XYCommonKit
-    - XYEasyCache
-    - XYFelix
-    - XYOpenUDID
+    - Aspects
+    - SSZipArchive
+    - XYCategory
+    - XYCommonAPIManager
+    - XYModuleManager
     - XYReactDataBoard
   https://github.com/cocoapods/specs.git:
-    - Aspects
-    - GTMBase64
+    - AFNetworking
     - JSPatch
     - Masonry
     - MDCommonKit
@@ -80,13 +78,12 @@ SPEC REPOS:
     - PINCache
     - ReactiveObjC
     - SDWebImage
-    - SSZipArchive
     - TMCache
     - XYPageMaster
 
 SPEC CHECKSUMS:
-  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: aa27cf06307d3b0927ba050ba0f569a92e281742
   JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MDCommonKit: 33726d67979897597f4e596524c4647165adf7f3
@@ -95,15 +92,14 @@ SPEC CHECKSUMS:
   PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SSZipArchive: d3d66fc0e3fb6ac0f723d95481aae71aae916cc3
+  SSZipArchive: 843d6f795bf7a1d0534e97b8003d85ae7f72e855
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
-  XYCommonKit: 297d174bebc22fd4489a2df99d40eeef5b798244
-  XYEasyCache: 1028e088bf5e0f9f319e0f80020c3e8c02ec514b
-  XYFelix: e51a2fe269c91bc17f8b383ef72c964f48f41a88
-  XYOpenUDID: c1ed844329bc00cc50104f6f6d1de51a2bcd74bd
-  XYPageMaster: 49bef8c9b70c6e973dbdb2a986e2d694b1f72296
-  XYReactDataBoard: 5fa0866bbd53f27f0303e9e47cf4c7fd692db77c
+  XYCategory: f3244d8431e00bb451c80f24d85c384dcb72e4d8
+  XYCommonAPIManager: a9ebbea2b8eddbb059016e7e81427d9d8413d846
+  XYModuleManager: 03b2b246a21274346fe1104302bbae48fb75fbe6
+  XYPageMaster: 7e2c81f5bd02394a8517a0c45d7e52bcf1fd46e4
+  XYReactDataBoard: fd9c70b6ce05efd79fe2b08af1936a032c473b03
 
-PODFILE CHECKSUM: f88b4f0567040a21a53241f1b4002170d91c6169
+PODFILE CHECKSUM: d3f653ed2753063ed386103f1f868f1835690850
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.2

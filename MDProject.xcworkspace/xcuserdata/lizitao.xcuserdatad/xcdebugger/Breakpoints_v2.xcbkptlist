@@ -97,38 +97,6 @@
             endingLineNumber = "284"
             landmarkName = "-coldSignalTest1"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[MDRACViewController coldSignalTest1]_block_invoke"
-                  moduleName = "MDProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "575449276.951984"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "285"
-                  endingLineNumber = "285"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.202"
-                  moduleName = "MDProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/MDProject/MDDemos/RACDemo/MDRACViewController.m"
-                  timestampString = "575449276.955874"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "285"
-                  endingLineNumber = "285"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -593,6 +561,53 @@
             endingLineNumber = "830"
             landmarkName = "JPForwardInvocation"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPForwardInvocation"
+                  moduleName = "MDProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/Pods/JSPatch/JSPatch/JPEngine.m"
+                  timestampString = "590144453.813688"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "849"
+                  endingLineNumber = "849"
+                  offsetFromSymbolStart = "10172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPForwardInvocation"
+                  moduleName = "MDProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/Pods/JSPatch/JSPatch/JPEngine.m"
+                  timestampString = "590144453.816292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "849"
+                  endingLineNumber = "849"
+                  offsetFromSymbolStart = "26084">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPForwardInvocation"
+                  moduleName = "MDProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/Pods/JSPatch/JSPatch/JPEngine.m"
+                  timestampString = "590144453.818292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "849"
+                  endingLineNumber = "849"
+                  offsetFromSymbolStart = "26140">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -665,13 +680,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/XYReactDataBoard/XYReactDataBoard/Classes/XYReactWhiteBoard.m"
-            timestampString = "574595983.035808"
+            filePath = "MDProject/MDDemos/UIWindow/MDWindowViewController.m"
+            timestampString = "577099817.813391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-setValue:forKey:"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -681,13 +696,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/XYReactDataBoard/XYReactDataBoard/Classes/XYReactWhiteBoard.m"
-            timestampString = "574595983.037097"
+            filePath = "MDProject/MDDemos/UIWindow/MDWindowViewController.m"
+            timestampString = "577099817.813458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-subjectForKey:"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/XYReactDataBoard/XYReactDataBoard/Classes/XYReactDataBoardSubject.m"
+            timestampString = "579600518.666877"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-sendNext:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MDProject/MainViewController.m"
+            timestampString = "585215417.308713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
