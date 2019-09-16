@@ -1,5 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'http://192.168.1.33:9090/Pods/Specs.git'
+#cdn
+#source 'https://cdn.jsdelivr.net/cocoa/'
 
 platform :ios, '9.0'
 
@@ -16,9 +18,9 @@ target 'MDProject' do
     pod 'MDStatePageKit', '~> 1.0.0'
    
     pod 'XYPageMaster', '2.0.16'
-    pod 'XYReactDataBoard', '2.0.6'
+    pod 'XYReactDataBoard', '2.0.8'
     
-    pod 'MDCommonKit', '1.0.6'
+    pod 'MDCommonKit', '~> 1.0.0'
     
     #第三方
     pod 'ReactiveObjC', '3.1.0'
