@@ -17,12 +17,9 @@ target 'MDProject' do
     #  pod 'XYFelix', '~> 1.0.0'
     pod 'MDEasyCache', '~> 1.0.0'
     pod 'MDStatePageKit', '~> 1.0.0'
-   
-    pod 'XYPageMaster', '5.0.1'
     pod 'MDReactDataBoard', '~> 3.0.0'
-    
     pod 'MDCommonKit', '~> 1.0.0'
-    
+    pod 'XYPageMaster', '5.0.1'
     #第三方
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'
