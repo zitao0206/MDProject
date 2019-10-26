@@ -611,7 +611,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "10228">
+                  offsetFromSymbolStart = "12548">
                </Location>
                <Location
                   uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - 1cbe4f82da223d7a"
@@ -626,7 +626,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "26464">
+                  offsetFromSymbolStart = "12904">
                </Location>
                <Location
                   uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - 1cbe4f82da223d7a"
@@ -641,7 +641,22 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "26520">
+                  offsetFromSymbolStart = "28993">
+               </Location>
+               <Location
+                  uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - 1cbe4f82da223d7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPForwardInvocation"
+                  moduleName = "MDProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lizitao/Desktop/MDProjects/MDProject/Pods/JSPatch/JSPatch/JPEngine.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "849"
+                  endingLineNumber = "849"
+                  offsetFromSymbolStart = "29049">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -779,6 +794,22 @@
             startingLineNumber = "342"
             endingLineNumber = "342"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D263EC2-6E41-43A5-B10C-C75F9E212430"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
+            landmarkName = "-requestBySerializingRequest:withParameters:error:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

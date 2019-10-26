@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-source 'http://192.168.1.33:9090/Pods/Specs.git'
+#source 'http://192.168.1.33:9090/Pods/Specs.git'
 source 'https://github.com/Leon0206/MDSpecs.git'
 #cdn
 #source 'https://cdn.jsdelivr.net/cocoa/'
@@ -16,10 +16,18 @@ target 'MDProject' do
     #业务组件、解决方案
     #  pod 'XYFelix', '~> 1.0.0'
     pod 'MDEasyCache', '~> 1.0.0'
+    
+    pod 'MDPageMaster', '2.0.16'
+     
     pod 'MDStatePageKit', '~> 1.0.0'
-    pod 'MDReactDataBoard', '~> 3.0.0'
+    
+    pod 'ReactiveDataBoard', '~> 4.0.0'
+    
+    pod 'MDReactPageKit', '~> 1.0.0'
+    
+    pod 'EasyLayout', '1.0.2'
+    
     pod 'MDCommonKit', '~> 1.0.0'
-    pod 'XYPageMaster', '5.0.1'
     #第三方
     pod 'ReactiveObjC', '3.1.0'
     pod 'TMCache', '2.1.0'

@@ -15,13 +15,14 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - EasyLayout (1.0.1)
   - JSPatch (1.1.3):
     - JSPatch/Core (= 1.1.3)
   - JSPatch/Core (1.1.3)
   - Masonry (0.6.1)
   - MDCommonKit (1.0.8)
   - MDEasyCache (1.0.13)
-  - MDHomeProject (0.0.32):
+  - MDHomeProject (0.0.33):
     - AFNetworking
     - Aspects
     - Masonry
@@ -33,72 +34,94 @@ PODS:
     - SDWebImage
     - SSZipArchive
     - XYPageMaster
+  - MDPageMaster (2.0.17)
   - MDReactDataBoard (3.0.8):
     - ReactiveObjC (= 3.1.0)
+  - MDReactPageKit (1.0.2):
+    - MDCommonKit
+    - ReactiveObjC
   - MDStatePageKit (1.0.8)
   - PINCache (2.0)
+  - ReactiveDataBoard (4.0.3)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - SSZipArchive (0.4.0)
   - TMCache (2.1.0)
-  - XYPageMaster (5.0.1)
+  - XYPageMaster (2.0.16)
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
   - Aspects (= 1.4.1)
+  - EasyLayout (from `/Users/lizitao/Desktop/MDProjects/EasyLayout`)
   - JSPatch
   - Masonry (= 0.6.1)
-  - MDCommonKit (~> 1.0.0)
+  - MDCommonKit (from `/Users/lizitao/Desktop/MDProjects/MDCommonKit`)
   - MDEasyCache (~> 1.0.0)
-  - MDHomeProject (~> 0.0.1)
-  - MDReactDataBoard (~> 3.0.0)
+  - MDHomeProject (from `/Users/lizitao/Desktop/MDProjects/MDHomeProject`)
+  - MDPageMaster (from `/Users/lizitao/Desktop/MDProjects/MDPageMaster`)
+  - MDReactPageKit (from `/Users/lizitao/Desktop/MDProjects/MDReactPageKit`)
   - MDStatePageKit (~> 1.0.0)
   - PINCache (= 2.0)
+  - ReactiveDataBoard (from `/Users/lizitao/Desktop/MDProjects/ReactiveDataBoard`)
   - ReactiveObjC (= 3.1.0)
   - SDWebImage (= 4.4.2)
   - SSZipArchive (= 0.4.0)
   - TMCache (= 2.1.0)
-  - XYPageMaster (= 5.0.1)
 
 SPEC REPOS:
-  http://192.168.1.33:9090/Pods/Specs.git:
-    - Aspects
-    - ReactiveObjC
-    - SSZipArchive
-    - XYPageMaster
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Aspects
     - JSPatch
     - Masonry
     - PINCache
+    - ReactiveObjC
     - SDWebImage
+    - SSZipArchive
     - TMCache
+    - XYPageMaster
   https://github.com/Leon0206/MDSpecs.git:
-    - MDCommonKit
     - MDEasyCache
-    - MDHomeProject
     - MDReactDataBoard
     - MDStatePageKit
 
+EXTERNAL SOURCES:
+  EasyLayout:
+    :path: "/Users/lizitao/Desktop/MDProjects/EasyLayout"
+  MDCommonKit:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDCommonKit"
+  MDHomeProject:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDHomeProject"
+  MDPageMaster:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDPageMaster"
+  MDReactPageKit:
+    :path: "/Users/lizitao/Desktop/MDProjects/MDReactPageKit"
+  ReactiveDataBoard:
+    :path: "/Users/lizitao/Desktop/MDProjects/ReactiveDataBoard"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Aspects: aa27cf06307d3b0927ba050ba0f569a92e281742
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  EasyLayout: 6bab671728c1fc1755813c2bd688d053df48e282
   JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
-  MDCommonKit: 6b1b26533716d30529828b91ac6cdbb16a0bda19
+  MDCommonKit: 7d07c22b3830508cb74f22cbc60f82bb2bda2ab3
   MDEasyCache: 41d33d45ff815afe89ca2cdfd5ac29e340262a31
-  MDHomeProject: 1ff4cf5ad97e4ed14969cff1c9d9bd6da3bbaf1f
+  MDHomeProject: cd70596951595bd980f8e75ba5e8861fc66bd36b
+  MDPageMaster: 092b02694ef7dc59063e8bdabda1a51232d89a39
   MDReactDataBoard: 66c07cb855f5efe8600470a8bfdd4e29eb07a0f9
+  MDReactPageKit: b52b1c3a1967442540f9f3220155730022166c46
   MDStatePageKit: 52114938c5ae29ae8e4852ce381a450c4e04d00e
   PINCache: ca953ba93ce1edde056fdd99121ee65b295a08c9
-  ReactiveObjC: 38556867b86e806ec5f106c8695c66e8669c253f
+  ReactiveDataBoard: 9738c284f6ad2d5cfc83d4530cf9fff082a5a15c
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SSZipArchive: 843d6f795bf7a1d0534e97b8003d85ae7f72e855
+  SSZipArchive: d3d66fc0e3fb6ac0f723d95481aae71aae916cc3
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
-  XYPageMaster: a9fc7ee914f1084d5720d1373093780a9bd132e7
+  XYPageMaster: 7e2c81f5bd02394a8517a0c45d7e52bcf1fd46e4
 
-PODFILE CHECKSUM: de972f8e79dbfa1aa9e6dd88a3b5b2f66baff99b
+PODFILE CHECKSUM: 3c6d7abe6664ee6bd1412f23a8a71c0bb64d6180
 
 COCOAPODS: 1.7.5
