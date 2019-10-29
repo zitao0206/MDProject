@@ -15,17 +15,18 @@ target 'MDProject' do
     
     #业务组件、解决方案
     #  pod 'XYFelix', '~> 1.0.0'
-    pod 'MDEasyCache', '~> 1.0.0'
     
-    pod 'MDPageMaster', '2.0.16'
+    pod 'MDPageMaster', '2.0.18'
      
     pod 'MDStatePageKit', '~> 1.0.0'
     
     pod 'ReactiveDataBoard', '~> 4.0.0'
     
     pod 'MDReactPageKit', '~> 1.0.0'
+
+    pod 'MDEasyCache', '~> 1.0.0'
     
-    pod 'EasyLayout', '1.0.2'
+    pod 'EasyLayout', '1.0.3'
     
     pod 'MDCommonKit', '~> 1.0.0'
     #第三方
