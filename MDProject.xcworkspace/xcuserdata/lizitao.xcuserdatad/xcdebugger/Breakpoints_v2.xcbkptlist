@@ -611,7 +611,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "10228">
+                  offsetFromSymbolStart = "12548">
                </Location>
                <Location
                   uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - fc376c44b8ed0c41"
@@ -626,7 +626,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "26464">
+                  offsetFromSymbolStart = "12904">
                </Location>
                <Location
                   uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - fc376c44b8ed0c41"
@@ -641,7 +641,22 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "849"
                   endingLineNumber = "849"
-                  offsetFromSymbolStart = "26520">
+                  offsetFromSymbolStart = "28993">
+               </Location>
+               <Location
+                  uuid = "31EEA2F1-792A-46B3-968E-050B2DBCCCA5 - fc376c44b8ed0c41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPForwardInvocation"
+                  moduleName = "MDProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lizitao/Desktop/MDMainProject/MDProject/Pods/JSPatch/JSPatch/JPEngine.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "849"
+                  endingLineNumber = "849"
+                  offsetFromSymbolStart = "29049">
                </Location>
             </Locations>
          </BreakpointContent>

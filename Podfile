@@ -1,8 +1,10 @@
-#source 'https://github.com/CocoaPods/Specs.git'
+
+require 'cocoapods'
+source 'https://github.com/CocoaPods/Specs.git'
 #source 'http://192.168.1.33:9090/Pods/Specs.git'
 source 'https://github.com/Leon0206/MDSpecs.git'
 #cdn
-#source 'https://cdn.jsdelivr.net/cocoa/'
+#source 'https://cdn.cocoapods.org/'
 
 platform :ios, '9.0'
 
@@ -12,8 +14,9 @@ use_modular_headers!
 eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 def shared_pods
-  
-  ENV['use_source'] = '0'
+  ENV['use_binary'] = '1'
+  ENV['MDCommonKit_use_binary'] = '1'
+  ENV['EasyLayout_use_binary'] = '0'
   #业务代码库
   pod 'MDHomeProject', '~> 0.0.1'
   
@@ -34,15 +37,15 @@ def shared_pods
   
   pod 'MDCommonKit', '~> 1.0.0'
   #第三方
-#  pod 'ReactiveObjC', '3.1.0'
-#  pod 'TMCache', '2.1.0'
-#  pod 'PINCache', '2.0'
-#  pod 'SDWebImage', '4.4.2'
-#  pod 'Masonry', '0.6.1'
-#  pod 'JSPatch'
-#  pod 'Aspects', '1.4.1'
-#  pod 'SSZipArchive', '0.4.0'
-#  pod 'AFNetworking','3.2.1'
+  pod 'ReactiveObjC', '3.1.0'
+  pod 'TMCache', '2.1.0'
+  pod 'PINCache', '2.0'
+  pod 'SDWebImage', '4.4.2'
+  pod 'Masonry', '0.6.1'
+  pod 'JSPatch'
+  pod 'Aspects', '1.4.1'
+  pod 'SSZipArchive', '0.4.0'
+  pod 'AFNetworking','3.2.1'
 
 end
 
