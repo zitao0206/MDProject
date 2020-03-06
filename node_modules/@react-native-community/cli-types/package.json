@@ -1,0 +1,11 @@
+{
+  "name": "@react-native-community/cli-types",
+  "version": "3.0.0-alpha.7",
+  "main": "build",
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "gitHead": "2fa7e1f9ce40dfd9f5a5c780487c9ee467811fa7"
+}
