@@ -15,8 +15,8 @@ eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 def shared_pods
   ENV['use_binary'] = '1'
-  ENV['MDCommonKit_use_binary'] = '1'
-  ENV['EasyLayout_use_binary'] = '1'
+  ENV['MDCommonKit_use_binary'] = '0'
+  ENV['EasyLayout_use_binary'] = '0'
   #业务代码库
   pod 'MDHomeProject', '~> 0.0.1'
   

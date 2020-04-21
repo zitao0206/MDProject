@@ -25,3 +25,4 @@ hotfix           : MDHotfixViewController
 webview          : MDWebViewViewController
 afn              : MDAFNetworkingViewController
 rn               : MDRNViewController
+hover            : MDHoverViewController
