@@ -26,3 +26,4 @@ webview          : MDWebViewViewController
 afn              : MDAFNetworkingViewController
 rn               : MDRNViewController
 hover            : MDHoverViewController
+multirole        : MDMultiRoleViewController
