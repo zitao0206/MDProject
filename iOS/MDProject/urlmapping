@@ -26,4 +26,5 @@ webview          : MDWebViewViewController
 afn              : MDAFNetworkingViewController
 rn               : MDRNViewController
 hover            : MDHoverViewController
-MultiRole        : MDMultiRoleViewController
+multirole        : MDMultiRoleViewController
+weakinstance     : MDWeakInstanceViewController
