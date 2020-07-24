@@ -18,7 +18,7 @@ def shared_pods
   ENV['MDCommonKit_use_binary'] = '0'
   ENV['EasyLayout_use_binary'] = '0'
   #业务代码库
-  pod 'MDHomeProject', '~> 0.0.1'
+ # pod 'MDHomeProject', '~> 0.0.1'
   
   #业务组件、解决方案
   #  pod 'XYFelix', '~> 1.0.0'
