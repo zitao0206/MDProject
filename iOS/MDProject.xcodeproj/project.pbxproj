@@ -20,6 +20,11 @@
 		D85F25FC20E3BB1400F3AEEF /* bugfix_banksy.js in Resources */ = {isa = PBXBuildFile; fileRef = D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
+		D86DCD3624D00C7F00617852 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3124D00C7F00617852 /* 01.jpg */; };
+		D86DCD3724D00C7F00617852 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3224D00C7F00617852 /* 03.jpg */; };
+		D86DCD3824D00C7F00617852 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3324D00C7F00617852 /* 02.jpg */; };
+		D86DCD3924D00C7F00617852 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3424D00C7F00617852 /* 05.jpg */; };
+		D86DCD3A24D00C7F00617852 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3524D00C7F00617852 /* 04.jpg */; };
 		D89333401F29D6E600748499 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = D893333F1F29D6E600748499 /* desktop.png */; };
 		D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */ = {isa = PBXBuildFile; fileRef = D8E4800D21D0775B00FCA0ED /* bugfix.js */; };
 /* End PBXBuildFile section */
@@ -63,6 +68,11 @@
 		D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix_banksy.js; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
+		D86DCD3124D00C7F00617852 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		D86DCD3224D00C7F00617852 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		D86DCD3324D00C7F00617852 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		D86DCD3424D00C7F00617852 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		D86DCD3524D00C7F00617852 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		D893333F1F29D6E600748499 /* desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktop.png; sourceTree = "<group>"; };
 		D8E4800D21D0775B00FCA0ED /* bugfix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +123,7 @@
 		D81D68821E8A64D400C1489F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D86DCD3024D00C7F00617852 /* Image */,
 				D893333F1F29D6E600748499 /* desktop.png */,
 				D868149A1F175B1600E4E7BF /* ugcup.png */,
 				D86814981F1759E400E4E7BF /* sanjiang.jpeg */,
@@ -184,6 +195,18 @@
 				D858C8BB1E756B160042D9F3 /* Info.plist */,
 			);
 			path = MDProjectUITests;
+			sourceTree = "<group>";
+		};
+		D86DCD3024D00C7F00617852 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				D86DCD3124D00C7F00617852 /* 01.jpg */,
+				D86DCD3224D00C7F00617852 /* 03.jpg */,
+				D86DCD3324D00C7F00617852 /* 02.jpg */,
+				D86DCD3424D00C7F00617852 /* 05.jpg */,
+				D86DCD3524D00C7F00617852 /* 04.jpg */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +321,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86DCD3724D00C7F00617852 /* 03.jpg in Resources */,
 				D89333401F29D6E600748499 /* desktop.png in Resources */,
 				D85F25FC20E3BB1400F3AEEF /* bugfix_banksy.js in Resources */,
+				D86DCD3824D00C7F00617852 /* 02.jpg in Resources */,
+				D86DCD3624D00C7F00617852 /* 01.jpg in Resources */,
 				D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */,
 				D868149B1F175B1600E4E7BF /* ugcup.png in Resources */,
 				D825675C20DCD45300129B0B /* bugfix_jspatch.js in Resources */,
 				D81D68841E8A64D400C1489F /* launch.jpg in Resources */,
+				D86DCD3A24D00C7F00617852 /* 04.jpg in Resources */,
 				D825676420E0CE1900129B0B /* MDEasyHotFixTool.js in Resources */,
+				D86DCD3924D00C7F00617852 /* 05.jpg in Resources */,
 				D858C8A41E756B150042D9F3 /* LaunchScreen.storyboard in Resources */,
 				D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */,
 				D858C9851E75A4200042D9F3 /* urlmapping in Resources */,
