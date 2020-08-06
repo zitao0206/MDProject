@@ -23,6 +23,7 @@ transition       : MDFromViewController
 trandetail       : MDToViewController
 hotfix           : MDHotfixViewController
 webview          : MDWebViewViewController
+wkwebview        : MDWKWebViewViewController
 afn              : MDAFNetworkingViewController
 rn               : MDRNViewController
 hover            : MDHoverViewController
