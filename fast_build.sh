@@ -12,7 +12,7 @@ project=Podfile
 
 fast_mode=1 bundle install
 
-fast_mode=1 bundle exec pod install --no-repo-update
+fast_mode=1 bundle exec pod update --no-repo-update
 
 #echo "正在设置编译优化选项: "
 
