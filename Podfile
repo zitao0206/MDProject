@@ -1,19 +1,26 @@
 
 require 'cocoapods'
 source 'https://github.com/CocoaPods/Specs.git'
-#source 'http://192.168.1.33:9090/Pods/Specs.git'
 source 'https://github.com/Leon0206/MDSpecs.git'
-#cdn
-#source 'https://cdn.cocoapods.org/'
 
 platform :ios, '9.0'
 
 inhibit_all_warnings!
 use_modular_headers!
 
+fast_mode = ENV['fast_mode']
+if fast_mode
+
+plugin 'cocoapods-project-hmap'
+
+else
+
+end
+
 eval(File.open('PodDevExtension.rb').read) if File.exist? 'PodDevExtension.rb'
 
 def shared_pods
+  
   ENV['use_binary'] = '1'
   ENV['MDCommonKit_use_binary'] = '0'
   ENV['EasyLayout_use_binary'] = '0'
@@ -21,9 +28,8 @@ def shared_pods
 #  pod 'MDHomeProject', '~> 0.0.1'
   pod 'MDHomeProject', :path => '/Users/lizitao/Desktop/MDProject/MDHomeProject'
   
-  #业务组件、解决方案
-  #  pod 'XYFelix', '~> 1.0.0'
-  
+  #组件库
+
   pod 'MDPageMaster', '2.0.18'
    
   pod 'MDStatePageKit', '~> 1.0.0'

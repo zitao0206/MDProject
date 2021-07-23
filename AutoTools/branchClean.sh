@@ -312,6 +312,8 @@ branchCleanExit()
     fi
 }
 
+cd ..
+
 if [ ! $1 ]; then
     echo "\033[31m请使用命令'sh branch_clear.sh --help'查看相关参数设置\033[0m"
     exit 0
