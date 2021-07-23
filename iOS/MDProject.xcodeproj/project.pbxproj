@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		62E8CFEADB161F21A6F02463 /* libPods-MDProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B62A2BE896284D6BE3ED280 /* libPods-MDProject.a */; };
 		D81D68841E8A64D400C1489F /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D81D68831E8A64D400C1489F /* launch.jpg */; };
-		D825675C20DCD45300129B0B /* bugfix_jspatch.js in Resources */ = {isa = PBXBuildFile; fileRef = D825675B20DCD45300129B0B /* bugfix_jspatch.js */; };
-		D825676420E0CE1900129B0B /* MDEasyHotFixTool.js in Resources */ = {isa = PBXBuildFile; fileRef = D825676320E0CE1900129B0B /* MDEasyHotFixTool.js */; };
 		D858C8961E756B150042D9F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8951E756B150042D9F3 /* main.m */; };
 		D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A01E756B150042D9F3 /* Assets.xcassets */; };
 		D858C8A41E756B150042D9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D858C8A21E756B150042D9F3 /* LaunchScreen.storyboard */; };
 		D858C8AF1E756B160042D9F3 /* MDProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8AE1E756B160042D9F3 /* MDProjectTests.m */; };
 		D858C8BA1E756B160042D9F3 /* MDProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D858C8B91E756B160042D9F3 /* MDProjectUITests.m */; };
 		D858C9851E75A4200042D9F3 /* urlmapping in Resources */ = {isa = PBXBuildFile; fileRef = D858C9841E75A4200042D9F3 /* urlmapping */; };
-		D85F25FC20E3BB1400F3AEEF /* bugfix_banksy.js in Resources */ = {isa = PBXBuildFile; fileRef = D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */; };
 		D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D86814981F1759E400E4E7BF /* sanjiang.jpeg */; };
 		D868149B1F175B1600E4E7BF /* ugcup.png in Resources */ = {isa = PBXBuildFile; fileRef = D868149A1F175B1600E4E7BF /* ugcup.png */; };
 		D86DCD3624D00C7F00617852 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3124D00C7F00617852 /* 01.jpg */; };
@@ -26,7 +23,6 @@
 		D86DCD3924D00C7F00617852 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3424D00C7F00617852 /* 05.jpg */; };
 		D86DCD3A24D00C7F00617852 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86DCD3524D00C7F00617852 /* 04.jpg */; };
 		D89333401F29D6E600748499 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = D893333F1F29D6E600748499 /* desktop.png */; };
-		D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */ = {isa = PBXBuildFile; fileRef = D8E4800D21D0775B00FCA0ED /* bugfix.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +47,6 @@
 		7B62A2BE896284D6BE3ED280 /* libPods-MDProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MDProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9115291D681CA11A0D197644 /* Pods-MDProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDProject/Pods-MDProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D81D68831E8A64D400C1489F /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
-		D825675B20DCD45300129B0B /* bugfix_jspatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix_jspatch.js; sourceTree = "<group>"; };
-		D825676320E0CE1900129B0B /* MDEasyHotFixTool.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MDEasyHotFixTool.js; sourceTree = "<group>"; };
 		D858C8911E756B150042D9F3 /* MDProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858C8951E756B150042D9F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D858C8A01E756B150042D9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +59,6 @@
 		D858C8B91E756B160042D9F3 /* MDProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDProjectUITests.m; sourceTree = "<group>"; };
 		D858C8BB1E756B160042D9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D858C9841E75A4200042D9F3 /* urlmapping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = urlmapping; sourceTree = "<group>"; };
-		D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix_banksy.js; sourceTree = "<group>"; };
 		D86814981F1759E400E4E7BF /* sanjiang.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sanjiang.jpeg; sourceTree = "<group>"; };
 		D868149A1F175B1600E4E7BF /* ugcup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ugcup.png; sourceTree = "<group>"; };
 		D86DCD3124D00C7F00617852 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
@@ -74,7 +67,6 @@
 		D86DCD3424D00C7F00617852 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
 		D86DCD3524D00C7F00617852 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		D893333F1F29D6E600748499 /* desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktop.png; sourceTree = "<group>"; };
-		D8E4800D21D0775B00FCA0ED /* bugfix.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bugfix.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +149,6 @@
 		D858C8931E756B150042D9F3 /* MDProject */ = {
 			isa = PBXGroup;
 			children = (
-				D8E4800D21D0775B00FCA0ED /* bugfix.js */,
-				D85F25FB20E3BB1300F3AEEF /* bugfix_banksy.js */,
-				D825675B20DCD45300129B0B /* bugfix_jspatch.js */,
-				D825676320E0CE1900129B0B /* MDEasyHotFixTool.js */,
 				D858C9841E75A4200042D9F3 /* urlmapping */,
 				D81D68821E8A64D400C1489F /* Resource */,
 				D858C8A01E756B150042D9F3 /* Assets.xcassets */,
@@ -220,6 +208,7 @@
 				D858C88D1E756B150042D9F3 /* Sources */,
 				D858C88E1E756B150042D9F3 /* Frameworks */,
 				D858C88F1E756B150042D9F3 /* Resources */,
+				C559372FF92CC89DAB56F990 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,20 +311,16 @@
 			files = (
 				D86DCD3724D00C7F00617852 /* 03.jpg in Resources */,
 				D89333401F29D6E600748499 /* desktop.png in Resources */,
-				D85F25FC20E3BB1400F3AEEF /* bugfix_banksy.js in Resources */,
 				D86DCD3824D00C7F00617852 /* 02.jpg in Resources */,
 				D86DCD3624D00C7F00617852 /* 01.jpg in Resources */,
 				D86814991F1759E400E4E7BF /* sanjiang.jpeg in Resources */,
 				D868149B1F175B1600E4E7BF /* ugcup.png in Resources */,
-				D825675C20DCD45300129B0B /* bugfix_jspatch.js in Resources */,
 				D81D68841E8A64D400C1489F /* launch.jpg in Resources */,
 				D86DCD3A24D00C7F00617852 /* 04.jpg in Resources */,
-				D825676420E0CE1900129B0B /* MDEasyHotFixTool.js in Resources */,
 				D86DCD3924D00C7F00617852 /* 05.jpg in Resources */,
 				D858C8A41E756B150042D9F3 /* LaunchScreen.storyboard in Resources */,
 				D858C8A11E756B150042D9F3 /* Assets.xcassets in Resources */,
 				D858C9851E75A4200042D9F3 /* urlmapping in Resources */,
-				D8E4800E21D0775B00FCA0ED /* bugfix.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +341,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C559372FF92CC89DAB56F990 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MDProject/Pods-MDProject-resources.sh",
+				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MDHomeProject/MDHomeProject.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MDHomeProject.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MDProject/Pods-MDProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E6BC0F07E11F24DC728865AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

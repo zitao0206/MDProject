@@ -18,7 +18,8 @@ def shared_pods
   ENV['MDCommonKit_use_binary'] = '0'
   ENV['EasyLayout_use_binary'] = '0'
   #业务代码库
- # pod 'MDHomeProject', '~> 0.0.1'
+#  pod 'MDHomeProject', '~> 0.0.1'
+  pod 'MDHomeProject', :path => '/Users/lizitao/Desktop/MDProject/MDHomeProject'
   
   #业务组件、解决方案
   #  pod 'XYFelix', '~> 1.0.0'
@@ -42,6 +43,7 @@ def shared_pods
   pod 'PINCache', '2.0'
   pod 'SDWebImage', '4.4.2'
   pod 'Masonry', '0.6.1'
+  pod 'JSPatch'
   pod 'Aspects', '1.4.1'
   pod 'SSZipArchive', '0.4.0'
   pod 'AFNetworking','3.2.1'
