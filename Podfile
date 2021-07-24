@@ -48,7 +48,8 @@ target 'MDProject' do
   pod 'MDReactPageKit', '~> 1.0.0'
   pod 'MDEasyCache', '~> 1.0.0'
   pod 'EasyLayout', '~> 1.0.0'
-  pod 'MDCommonKit', '~> 1.0.0'
+#  pod 'MDCommonKit', '~> 1.0.0'
+  pod 'MDCommonKit', :path => '/Users/lizitao/Desktop/MDProject/MDCommonKit'
   
   #第三方组件库
   pod 'ReactiveObjC', '3.1.0'

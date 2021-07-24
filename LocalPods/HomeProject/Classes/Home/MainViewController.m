@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <MDPageMaster/MDPageMaster.h>
 #import <EasyLayout/EasyLayout.h>
+#import <MDCommonKit/MDCommonKit.h>
 #import "MDDemoModuleViewcomtroller.h"
 #import "MDBaseModuleModel.h"
 #import "MDZipArchiveViewController.h"
@@ -16,12 +17,10 @@
 #import "MDHopeStateMachingViewController.h"
 #import "View+MASAdditions.h"
 #import <ReactiveDataBoard/ReactiveDataBoard.h>
+#import "MainCollectionViewCell.h"
 
-@interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIView *cView;
-@property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UILabel *label2;
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong, nonatomic) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray <NSString *> *titleArr;
 @property (nonatomic, strong) NSMutableArray <MDUrlAction *> *actionArr;
 
@@ -39,11 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.collectionView];
     [self loadTitleArray];
     [self loadActionArray];
     
@@ -60,9 +55,9 @@
         @"WebView",                          //22
         @"MDFelix",                          //21
         @"CATransition",                     //20
-        @"window",                           //19
+        @"Window",                           //19
         @"SDWebImage",                       //18
-        @"stateMaching",                     //17
+        @"StateMaching",                     //17
         @"ZipTest",                          //16
         @"JSPatch",                          //15
         @"EasyCache",                        //14
@@ -220,62 +215,88 @@
     }
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.titleArr.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *contentCell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    
-    if (!contentCell) {
-        contentCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-    }
-    contentCell.backgroundColor = [UIColor lightGrayColor];
-    contentCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    contentCell.textLabel.text = [self.titleArr objectAtIndex:indexPath.row];
+    return CGSizeMake((kScreenWidth - 10 * 3) / 2.0, 50);
+}
+
+//footer的size
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    return CGSizeMake(0, 0);
+}
+
+//header的size
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(0, 0);
+}
+
+//每个section的UIEdgeInsets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+//每个item水平间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+//每个item垂直间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 5;
+}
+
+//cell显示的内容
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MainCollectionViewCell *contentCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MainCollectionViewCell" forIndexPath:indexPath];
+    [contentCell refreshData:[self.titleArr objectAtIndex:indexPath.row]];
     return contentCell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        return 100.0;
-    }
-    return 50.0;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //    if (indexPath.row == 0)
-    //    {
-    //        BOOL isPhone = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]];
-    //        NSLog(@"----->isPhone:%@",@(isPhone));
-    
-    //        [[XYPageMaster master] openUrl:@"mydemo://webview" action:^(XYUrlAction * _Nullable action) {
-    //            XYNaviTransition *naviTransiton = [XYNaviTransition new];
-    //            naviTransiton.animation = XYNaviAnimationTransition;
-    //            naviTransiton.transition.type = kCATransitionMoveIn;
-    //            naviTransiton.transition.subtype = kCATransitionFromTop;
-    //            naviTransiton.transition.duration = 0.3;
-    //            action.naviTransition = naviTransiton;
-    //        }];
-    //        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"xiaoying://url=www.baidu.com"]];
-    //    } else {
     MDUrlAction *action = [self.actionArr objectAtIndex:indexPath.row];
     if (action == nil) return;
     [[MDPageMaster master] openURLAction:action];
-    //    }
-    
 }
-
 
 - (void)viewDidLayoutSubviews
 {
-    [self.label sizeToFit];
-    self.label.top = 0;
-    self.label.left = 15;
+    [super viewDidLayoutSubviews];
+    self.collectionView.frame = self.view.bounds;
+}
+
+- (UICollectionView *)collectionView
+{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0);
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) collectionViewLayout:layout];
+        _collectionView.backgroundColor = [[UIColor brownColor]colorWithAlphaComponent:0.2];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [_collectionView registerClass:[MainCollectionViewCell class] forCellWithReuseIdentifier:@"MainCollectionViewCell"];
+        _collectionView.showsVerticalScrollIndicator = YES;
+        _collectionView.showsHorizontalScrollIndicator = YES;
+    }
+    return _collectionView;
 }
 
 @end
