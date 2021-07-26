@@ -30,3 +30,4 @@ hover            : MDHoverViewController
 multirole        : MDMultiRoleViewController
 weakinstance     : MDWeakInstanceViewController
 loopPage         : MDLoopPageViewController
+hallModule       : MDSubHallModuleViewController

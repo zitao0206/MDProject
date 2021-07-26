@@ -48,6 +48,7 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+        @"模块化框架进阶",  //27
         @"WeakInstance",                  //26
         @"MultiRoleView",                  //25
         @"HoverView",                     //24
@@ -82,8 +83,12 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//27
+        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hallModule"]];
+        [self.actionArr addObject:action];
+    }
     {//26
-        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://WeakInstance"]];
+        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://weakInstance"]];
         [self.actionArr addObject:action];
     }
     {//25
