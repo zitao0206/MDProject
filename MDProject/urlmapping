@@ -31,3 +31,4 @@ multirole        : MDMultiRoleViewController
 weakinstance     : MDWeakInstanceViewController
 loopPage         : MDLoopPageViewController
 hallModule       : MDSubHallModuleViewController
+hallViewModule   : MDDemoHallViewModuleViewController

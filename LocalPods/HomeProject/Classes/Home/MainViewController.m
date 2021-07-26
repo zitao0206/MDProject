@@ -48,7 +48,8 @@
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
-        @"模块化框架进阶",  //27
+        @"模块化框架进阶2",  //28
+        @"模块化框架进阶1",  //27
         @"WeakInstance",                  //26
         @"MultiRoleView",                  //25
         @"HoverView",                     //24
@@ -83,6 +84,10 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//28
+        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hallViewModule"]];
+        [self.actionArr addObject:action];
+    }
     {//27
         MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hallModule"]];
         [self.actionArr addObject:action];
