@@ -351,12 +351,14 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/DemoProject/DemoProject.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HomeProject/HomeProject.bundle",
 				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MDBaseHallCollectionModule/MDBaseHallCollectionModule.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DemoProject.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HomeProject.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MDBaseHallCollectionModule.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

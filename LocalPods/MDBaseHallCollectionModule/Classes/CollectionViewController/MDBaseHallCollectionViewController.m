@@ -1,0 +1,82 @@
+//
+//  MDBaseHallCollectionViewController.m
+//  MDProject
+//
+//  Created by lizitao on 2018/4/15.
+//
+
+#import "MDBaseHallCollectionViewController.h"
+#import "MDBaseHallContentCollectionView.h"
+#import "MDBaseCollectionModuleDelegate.h"
+
+@interface MDBaseHallCollectionViewController()<MDBaseCollectionModuleDelegate>
+
+@property (nonatomic, strong) MDBaseHallContentCollectionView *hallContentView;
+
+@end
+
+@implementation MDBaseHallCollectionViewController
+
+#pragma mark - System Methods
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.view addSubview:self.hallContentView];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)setModel:(id)model
+{
+    _model = model;
+    if (_model != nil) {
+    
+    }
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.hallContentView.frame = self.view.bounds;
+}
+
+#pragma mark - MDBaseCollectionModuleDelegate Methods
+
+/***须子类重写***/
+- (NSArray *)cellModules
+{
+    return @[];
+}
+
+/***需子类重写***/
+- (UIEdgeInsets)contentViewEdgeInsets
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+/***需子类重写***/
+- (CGFloat)minimumInteritemSpacing
+{
+    return 0.0;
+}
+
+/***需子类重写***/
+- (CGFloat)minimumLineSpacing
+{
+    return 0.0;
+}
+
+#pragma mark - Setters and Getters
+
+- (MDBaseHallContentCollectionView *)hallContentView
+{
+    if (!_hallContentView) {
+        _hallContentView = [[MDBaseHallContentCollectionView alloc]initWithFrame:self.view.bounds];
+        _hallContentView.delegate = self;
+    }
+    return _hallContentView;
+}
+
+@end

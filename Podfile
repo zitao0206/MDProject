@@ -40,6 +40,7 @@ target 'MDProject' do
   #业务代码库
   pod 'HomeProject', :path => './LocalPods/HomeProject', :inhibit_warnings => false
   pod 'DemoProject', :path => './LocalPods/DemoProject', :inhibit_warnings => false
+  pod 'MDBaseHallCollectionModule', :path => './LocalPods/MDBaseHallCollectionModule', :inhibit_warnings => false
   
   #组件库
   pod 'MDPageMaster', '2.0.18'
