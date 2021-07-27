@@ -1,5 +1,5 @@
 //
-//  MDBaseHallContentCollectionView.h
+//  MDBaseHallCollectionShellView.h
 //  MDProject
 //
 //  Created by lizitao on 2018/4/15.
@@ -8,7 +8,9 @@
 #import "MDBaseCollectionCellModuleLayout.h"
 #import "MDBaseCollectionModuleDelegate.h"
 
-@interface MDBaseHallContentCollectionView : UIView
+@interface MDBaseHallCollectionShellView : UIView
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, weak) id delegate;
  

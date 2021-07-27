@@ -6,17 +6,12 @@
 //
 
 #import "MDBaseCollectionCellModuleLayout.h"
+#import "MDBaseCollectionModuleDelegate.h"
 
-@interface MDBaseHallCollectionView : UIView
+@interface MDBaseHallCollectionView : UIView <MDBaseCollectionModuleDelegate>
 
 @property (nonatomic, strong) ReactiveBlackBoard *blackBoard;
 
 @property (nonatomic, strong) id model;
-
-- (UIEdgeInsets)contentViewEdgeInsets;
-
-- (CGFloat)minimumLineSpacing;
-
-- (CGFloat)minimumInteritemSpacing;
 
 @end

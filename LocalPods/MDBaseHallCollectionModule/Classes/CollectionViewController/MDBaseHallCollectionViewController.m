@@ -6,12 +6,13 @@
 //
 
 #import "MDBaseHallCollectionViewController.h"
-#import "MDBaseHallContentCollectionView.h"
-#import "MDBaseCollectionModuleDelegate.h"
+#import "MDBaseHallCollectionDetailView.h"
+#import "MDBaseHallCollectionListView.h"
+#import "MDBaseHallCollectionShellView.h"
 
-@interface MDBaseHallCollectionViewController()<MDBaseCollectionModuleDelegate>
+@interface MDBaseHallCollectionViewController()
 
-@property (nonatomic, strong) MDBaseHallContentCollectionView *hallContentView;
+@property (nonatomic, strong) MDBaseHallCollectionShellView *hallContentView;
 
 @end
 
@@ -23,6 +24,11 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    if (MDBaseCollectionTypeList == [self collectionType]) {
+        self.hallContentView = [self loadListContentView];
+    } else {
+        self.hallContentView = [self loadDetailContentView];
+    }
     [self.view addSubview:self.hallContentView];
 }
 
@@ -41,6 +47,11 @@
 }
 
 #pragma mark - MDBaseCollectionModuleDelegate Methods
+
+- (MDBaseCollectionType)collectionType
+{
+    return MDBaseCollectionTypeDetail;
+}
 
 /***须子类重写***/
 - (NSArray *)cellModules
@@ -66,12 +77,31 @@
     return 0.0;
 }
 
-#pragma mark - Setters and Getters
+- (UICollectionView *)loadCollectionView
+{
+    return self.hallContentView.collectionView;
+}
 
-- (MDBaseHallContentCollectionView *)hallContentView
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark - Load Content View
+
+- (MDBaseHallCollectionShellView *)loadDetailContentView
 {
     if (!_hallContentView) {
-        _hallContentView = [[MDBaseHallContentCollectionView alloc]initWithFrame:self.view.bounds];
+        _hallContentView = [[MDBaseHallCollectionDetailView alloc]initWithFrame:self.view.bounds];
+        _hallContentView.delegate = self;
+    }
+    return _hallContentView;
+}
+
+- (MDBaseHallCollectionShellView *)loadListContentView
+{
+    if (!_hallContentView) {
+        _hallContentView = [[MDBaseHallCollectionListView alloc]initWithFrame:self.view.bounds];
         _hallContentView.delegate = self;
     }
     return _hallContentView;

@@ -6,10 +6,8 @@
 //  Copyright © 2021 netease. All rights reserved.
 //
 
-#import <MDBaseHallCollectionModule/MDBaseSpaceCellModule.h>
+#import <MDBaseHallCollectionModule/MDBaseCollectionCellModuleLayout.h>
 #import <MDBaseHallCollectionModule/MDBaseHallCollectionView.h>
 #import <MDBaseHallCollectionModule/MDBaseCollectionCellModule.h>
-#import <MDBaseHallCollectionModule/MDBaseCollectionCellModuleLayout.h>
-#import <MDBaseHallCollectionModule/MDBaseHallContentCollectionView.h>
-#import <MDBaseHallCollectionModule/MDBaseCollectionModuleDelegate.h>
+#import <MDBaseHallCollectionModule/MDBaseSpaceCellModule.h>
 #import <MDBaseHallCollectionModule/MDBaseHallCollectionViewController.h>

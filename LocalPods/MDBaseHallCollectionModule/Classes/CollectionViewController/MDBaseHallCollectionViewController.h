@@ -7,17 +7,12 @@
 
 #import <MDPageMaster/MDPageMaster.h>
 #import "MDBaseCollectionCellModuleLayout.h"
+#import "MDBaseCollectionModuleDelegate.h"
 
-@interface MDBaseHallCollectionViewController : MDPageMasterViewController
+@interface MDBaseHallCollectionViewController : MDPageMasterViewController<MDBaseCollectionModuleDelegate>
 
 @property (nonatomic, strong) ReactiveBlackBoard *blackBoard;
 
 @property (nonatomic, strong) id model;
-
-- (UIEdgeInsets)contentViewEdgeInsets;
-
-- (CGFloat)minimumLineSpacing;
-
-- (CGFloat)minimumInteritemSpacing;
 
 @end
