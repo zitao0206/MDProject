@@ -22,17 +22,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.hallContentView];
-    
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.hallContentView];
 }
 
 - (void)setModel:(id)model
 {
     _model = model;
     if (_model != nil) {
-    
+        self.hallContentView.model = model;
     }
 }
 

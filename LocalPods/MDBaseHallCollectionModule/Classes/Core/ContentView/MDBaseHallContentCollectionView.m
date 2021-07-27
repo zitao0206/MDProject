@@ -30,7 +30,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.collectionView];
     }
     return self;
 }
@@ -39,6 +38,14 @@
 {
     _delegate = delegate;
     [self registerCellModules];
+}
+
+- (void)setModel:(id)model
+{
+    _model = model;
+    if (model) {
+        [self addSubview:self.collectionView];
+    }
 }
 
 - (void)layoutSubviews
@@ -220,7 +227,6 @@
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
-        
     }
     return _collectionView;
 }

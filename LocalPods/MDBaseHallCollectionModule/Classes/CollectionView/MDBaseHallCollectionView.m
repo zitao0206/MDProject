@@ -32,6 +32,7 @@
 {
     _model = model;
     if (_model != nil) {
+        self.hallContentView.model = model;
     }
 }
 
