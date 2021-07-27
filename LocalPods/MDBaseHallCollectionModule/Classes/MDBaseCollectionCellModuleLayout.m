@@ -9,23 +9,40 @@
 
 @implementation MDBaseCollectionCellModuleLayout
 
-+ (MDBaseCollectionCellModuleLayout *)layoutWithWidth:(CGFloat)w height:(CGFloat)h
+- (instancetype)init
 {
-    MDBaseCollectionCellModuleLayout *moduleSize = [[MDBaseCollectionCellModuleLayout alloc]init];
-    
-    moduleSize.width = w;
-    moduleSize.height = h;
-    return moduleSize;
+    if (self = [super init]) {
+        _x = 0.0;
+        _y = 0.0;
+        _width = 0.0;
+        _height = 0.0;
+    }
+    return self;
 }
 
-+ (MDBaseCollectionCellModuleLayout *)layoutWithX:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h
++ (MDBaseCollectionCellModuleLayout *)layoutWithH:(CGFloat)h
 {
-    MDBaseCollectionCellModuleLayout *moduleSize = [[MDBaseCollectionCellModuleLayout alloc]init];
-    moduleSize.x = x;
-    moduleSize.y = y;
-    moduleSize.width = w;
-    moduleSize.height = h;
-    return moduleSize;
+    MDBaseCollectionCellModuleLayout *layout = [[MDBaseCollectionCellModuleLayout alloc]init];
+    layout.height = h;
+    return layout;
+}
+
++ (MDBaseCollectionCellModuleLayout *)layoutWithW:(CGFloat)w H:(CGFloat)h
+{
+    MDBaseCollectionCellModuleLayout *layout = [[MDBaseCollectionCellModuleLayout alloc]init];
+    layout.width = w;
+    layout.height = h;
+    return layout;
+}
+
++ (MDBaseCollectionCellModuleLayout *)layoutWithX:(CGFloat)x Y:(CGFloat)y W:(CGFloat)w H:(CGFloat)h
+{
+    MDBaseCollectionCellModuleLayout *layout = [[MDBaseCollectionCellModuleLayout alloc]init];
+    layout.x = x;
+    layout.y = y;
+    layout.width = w;
+    layout.height = h;
+    return layout;
 }
 
 @end

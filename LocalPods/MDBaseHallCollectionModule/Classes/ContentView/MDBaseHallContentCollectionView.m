@@ -135,6 +135,12 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MDBaseCollectionCellModuleLayout *layout = [self.moduleLayouts objectAtIndex:indexPath.row];
+    if (layout.width <= 0.0) {
+        layout.width = self.width - [self.delegate contentViewEdgeInsets].left - [self.delegate contentViewEdgeInsets].right;
+    }
+    if (layout.height <= 0.0) {
+        layout.height = self.height - [self.delegate contentViewEdgeInsets].top - [self.delegate contentViewEdgeInsets].bottom;
+    }
     return CGSizeMake(layout.width, layout.height);
 }
 

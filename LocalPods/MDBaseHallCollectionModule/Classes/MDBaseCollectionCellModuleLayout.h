@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ModuleLayout(w, h)  [MDBaseCollectionCellModuleLayout layoutWithWidth:w height:h]
+#define ModuleHeight(h)  [MDBaseCollectionCellModuleLayout layoutWithH:h]
+#define ModuleSize(w, h)  [MDBaseCollectionCellModuleLayout layoutWithW:w H:h]
+#define ModuleLayout(x, y, w, h)  [MDBaseCollectionCellModuleLayout layoutWithX:x Y:y W:w H:h]
 
 @interface MDBaseCollectionCellModuleLayout : NSObject
 @property(nonatomic, assign) CGFloat x;
@@ -17,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) CGFloat width;
 @property(nonatomic, assign) CGFloat height;
 
-+ (MDBaseCollectionCellModuleLayout *)layoutWithX:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h;
-+ (MDBaseCollectionCellModuleLayout *)layoutWithWidth:(CGFloat)w height:(CGFloat)h;
++ (MDBaseCollectionCellModuleLayout *)layoutWithH:(CGFloat)h;
+
++ (MDBaseCollectionCellModuleLayout *)layoutWithW:(CGFloat)w H:(CGFloat)h;
+
++ (MDBaseCollectionCellModuleLayout *)layoutWithX:(CGFloat)x Y:(CGFloat)y W:(CGFloat)w H:(CGFloat)h;
 
 @end
 
