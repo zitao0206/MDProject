@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'HomeProject'
+  s.name             = 'SwiftDemoProject'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HomeProject.'
+  s.summary          = 'A short description of MDProject.'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -21,28 +21,14 @@ TODO: Add long description of the pod here.
   }
   
   s.source_files = [
-    'HomeProject.swift',
+    'SwiftDemoProject.swift',
     'Classes/**/*'
-   ]
-  
+  ]
    s.resource_bundles = {
-     'HomeProject' => ['HomeProject/Assets/*.*']
-    }
-
+     'SwiftDemoProject' => ['SwiftDemoProject/Assets/*.*']
+   }
+  # s.prefix_header_file = 'DemoProject.pch'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  
-   s.dependency 'MDPageMaster'
-   s.dependency 'SSZipArchive'
-   s.dependency 'MDCommonKit'
-   s.dependency 'MDEasyCache'
-   s.dependency 'MDStatePageKit'
-   s.dependency 'ReactiveObjC'
-   s.dependency 'SDWebImage'
-#   s.dependency 'Masonry'
-   s.dependency 'Aspects'
-   s.dependency 'AFNetworking'
-   s.dependency 'SSZipArchive'
-   s.dependency 'DemoProject'
 
 end

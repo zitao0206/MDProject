@@ -13,8 +13,13 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Leon0206' => '634376133@qq.com' }
   s.source           = { :git => 'https://github.com/Leon0206/MDProject.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '9.0'
-
+  s.ios.deployment_target = '10.0'
+  s.pod_target_xcconfig = {
+    'MARTIN_PACKAGE_VERSION' => '1.0',
+    'GCC_PRECOMPILE_PREFIX_HEADER' => true,
+    'CLANG_ENABLE_MODULES' => 'YES',
+  }
+  
   s.source_files = 'Classes/**/*'
   
    s.resource_bundles = {

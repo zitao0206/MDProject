@@ -9,7 +9,6 @@
 #ifndef DemoProject_pch
 #define DemoProject_pch
 
-#import <Masonry/Masonry.h>
 #import <MDCommonKit/MDCommonKit.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <EasyLayout/EasyLayout.h>

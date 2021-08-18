@@ -2,7 +2,7 @@
 //  MDBaseHallCollectionView.m
 //  MDProject
 //
-//  Created by lizitao on 2018/4/15.
+//  Created by Leon0206 on 2018/4/15.
 //
 
 #import "MDBaseHallCollectionView.h"

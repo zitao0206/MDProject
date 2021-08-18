@@ -2,22 +2,16 @@
 //  MainViewController.m
 //  MDProject
 //
-//  Created by lizitao on 17/3/12.
-//  Copyright © 2017年 lizitao. All rights reserved.
+//  Created by Leon0206 on 17/3/12.
+//  Copyright © 2017年 Leon0206. All rights reserved.
 //
 
 #import "MainViewController.h"
 #import <MDPageMaster/MDPageMaster.h>
-#import <EasyLayout/EasyLayout.h>
 #import <MDCommonKit/MDCommonKit.h>
-#import "MDDemoModuleViewcomtroller.h"
-#import "MDBaseModuleModel.h"
-#import "MDZipArchiveViewController.h"
 #import "AppDelegate.h"
-#import "MDHopeStateMachingViewController.h"
-#import "View+MASAdditions.h"
-#import <ReactiveDataBoard/ReactiveDataBoard.h>
 #import "MainCollectionViewCell.h"
+#import <SwiftDemoProject/SwiftDemoProject-Swift.h>
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) UICollectionView *collectionView;
@@ -41,13 +35,14 @@
     [self.view addSubview:self.collectionView];
     [self loadTitleArray];
     [self loadActionArray];
-    
+
 }
 
 - (void)loadTitleArray
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+        @"Swift实例",  //29
         @"模块化框架进阶2",  //28
         @"模块化框架进阶1",  //27
         @"WeakInstance",                  //26
@@ -84,6 +79,10 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//29
+        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://swiftdemo"]];
+        [self.actionArr addObject:action];
+    }
     {//28
         MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://hallViewModule"]];
         [self.actionArr addObject:action];

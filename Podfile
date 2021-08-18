@@ -1,12 +1,13 @@
 
-require 'cocoapods'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/Leon0206/MDSpecs.git'
 
-platform :ios, '9.0'
 
+platform :ios, '10.0'
 inhibit_all_warnings!
 use_modular_headers!
+use_frameworks! :linkage => :static
+
 
 workspace 'MDProject.xcworkspace'
 project 'MDProject'
@@ -40,7 +41,18 @@ target 'MDProject' do
   #业务代码库
   pod 'HomeProject', :path => './LocalPods/HomeProject', :inhibit_warnings => false
   pod 'DemoProject', :path => './LocalPods/DemoProject', :inhibit_warnings => false
+  pod 'SwiftDemoProject', :path => './LocalPods/SwiftDemoProject', :inhibit_warnings => false
   pod 'MDBaseHallCollectionModule', :path => './LocalPods/MDBaseHallCollectionModule', :inhibit_warnings => false
+  
+#  pod 'MDMultiSourceDemo', '~> 0.0.1'
+  
+  pod 'MDMultiSourceDemo_A', '~> 0.0.1'
+  pod 'MDMultiSourceDemo_B', '~> 0.0.1'
+  pod 'MDMultiSourceDemo_C', '~> 0.0.1'
+  
+#  pod 'MDMultiSourceDemo', :path => '/Users/Leon0206/Desktop/MDProject/MDMultiSourceDemo', :inhibit_warnings => false
+  
+#  pod 'MDMultiSourceDemo_B', :path => '/Users/Leon0206/Desktop/MDProject/MDMultiSourceDemo', :inhibit_warnings => false
   
   #组件库
   pod 'MDPageMaster', '2.0.18'
@@ -57,11 +69,12 @@ target 'MDProject' do
   pod 'TMCache', '2.1.0'
   pod 'PINCache', '2.0'
   pod 'SDWebImage', '4.4.2'
-  pod 'Masonry', '0.6.1'
+#  pod 'Masonry', '0.6.1'
   pod 'JSPatch'
   pod 'Aspects', '1.4.1'
   pod 'SSZipArchive', '0.4.0'
   pod 'AFNetworking','3.2.1'
+  
 end
 
 post_install do |installer|
