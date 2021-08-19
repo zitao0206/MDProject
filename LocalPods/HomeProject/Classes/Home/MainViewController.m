@@ -13,6 +13,7 @@
 #import "MainCollectionViewCell.h"
 #import <SwiftDemoProject/SwiftDemoProject-Swift.h>
 
+
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray <NSString *> *titleArr;
@@ -35,7 +36,7 @@
     [self.view addSubview:self.collectionView];
     [self loadTitleArray];
     [self loadActionArray];
-
+    [MDSwiftDemoViewController new];
 }
 
 - (void)loadTitleArray

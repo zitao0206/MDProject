@@ -7,11 +7,11 @@
 //
 
 import Foundation
-@objc(MDDSwiftDemoViewController)
+//@objc(MDOCSwiftDemoViewController)
 @objcMembers
-class MDSwiftDemoViewController : UIViewController {
+public class MDSwiftDemoViewController : UIViewController {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white

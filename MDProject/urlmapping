@@ -32,4 +32,4 @@ weakinstance     : MDWeakInstanceViewController
 loopPage         : MDLoopPageViewController
 hallModule       : MDSubHallModuleViewController
 hallViewModule   : MDDemoHallViewModuleViewController
-swiftdemo        : MDDSwiftDemoViewController
+swiftdemo        : MDOCSwiftDemoViewController

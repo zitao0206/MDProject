@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
    s.dependency 'MDPageMaster'
    s.dependency 'SSZipArchive'
    s.dependency 'MDCommonKit'
-   s.dependency 'ReactiveObjC'
+#   s.dependency 'ReactiveObjC'
    s.dependency 'EasyLayout'
    s.dependency 'ReactiveDataBoard'
 

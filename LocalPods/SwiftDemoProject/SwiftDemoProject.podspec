@@ -24,9 +24,11 @@ TODO: Add long description of the pod here.
     'SwiftDemoProject.swift',
     'Classes/**/*'
   ]
-   s.resource_bundles = {
-     'SwiftDemoProject' => ['SwiftDemoProject/Assets/*.*']
-   }
+  
+  s.resource_bundles = {
+    'SwiftDemoProject' => ['SwiftDemoProject/Assets/*.*']
+  }
+  
   # s.prefix_header_file = 'DemoProject.pch'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
