@@ -24,5 +24,6 @@ fast_mode=1 bundle exec pod update --no-repo-update
 #echo "设置编译优化选项完毕."
 
 echo "正在准备帮你打开工程: \c"
+
 sleep 1
 open MDProject.xcworkspace
