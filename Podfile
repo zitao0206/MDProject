@@ -65,6 +65,8 @@ target 'MDProject' do
   pod 'MDCommonKit', :path => '/Users/lizitao/Desktop/MDProject/MDCommonKit'
   
   #第三方组件库
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
   pod 'ReactiveObjC', '3.1.0'
   pod 'TMCache', '2.1.0'
   pod 'PINCache', '2.0'

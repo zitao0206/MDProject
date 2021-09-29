@@ -7,9 +7,9 @@
 //
 
 import Foundation
-@objc(MDOCSwiftDemoViewController)
+@objc(MDOCRxSwiftDemoViewController)
 @objcMembers
-public class MDSwiftDemoViewController : UIViewController {
+public class MDRxSwiftDemoViewController : UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()

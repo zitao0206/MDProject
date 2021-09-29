@@ -33,3 +33,4 @@ loopPage         : MDLoopPageViewController
 hallModule       : MDSubHallModuleViewController
 hallViewModule   : MDDemoHallViewModuleViewController
 swiftdemo        : MDOCSwiftDemoViewController
+rxswiftdemo      : MDOCRxSwiftDemoViewController

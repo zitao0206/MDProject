@@ -36,13 +36,13 @@
     [self.view addSubview:self.collectionView];
     [self loadTitleArray];
     [self loadActionArray];
-    [MDSwiftDemoViewController new];
 }
 
 - (void)loadTitleArray
 {
     self.titleArr = [NSMutableArray new];
     NSArray *array = @[
+        @"RxSwift实例",  //30
         @"Swift实例",  //29
         @"模块化框架进阶2",  //28
         @"模块化框架进阶1",  //27
@@ -80,6 +80,10 @@
 - (void)loadActionArray
 {
     self.actionArr = [NSMutableArray new];
+    {//30
+        MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://rxswiftdemo"]];
+        [self.actionArr addObject:action];
+    }
     {//29
         MDUrlAction *action = [MDUrlAction actionWithURL:[NSURL URLWithString:@"mydemo://swiftdemo"]];
         [self.actionArr addObject:action];
