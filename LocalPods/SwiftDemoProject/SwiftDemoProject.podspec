@@ -29,8 +29,7 @@ TODO: Add long description of the pod here.
     'SwiftDemoProject' => ['SwiftDemoProject/Assets/*.*']
   }
   
-  # s.prefix_header_file = 'DemoProject.pch'
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
 
 end
