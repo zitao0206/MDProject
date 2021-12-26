@@ -100,10 +100,26 @@ public class MDRxSwiftDemoViewController : UIViewController {
 //        example29()
 //        example30()
 //        example31()
-        example32()
+//        example32()
+//        example33()
+        example34()
         view.backgroundColor = UIColor.white
     }
-                        
+    
+    func example34() {
+        Observable.of(10, 100, 1000)
+        .reduce(1, accumulator: +)
+        .subscribe(onNext: { print($0) })
+        .disposed(by: disposeBag)
+    }
+          
+    func example33() {
+        Observable.range(start: 1, count: 10)
+        .toArray()
+        .subscribe { print($0) }
+        .disposed(by: disposeBag)
+    }
+    
     func example32() {
         let sourceSequence = PublishSubject<String>()
         let referenceSequence = PublishSubject<String>()
@@ -123,7 +139,6 @@ public class MDRxSwiftDemoViewController : UIViewController {
         sourceSequence.onNext("6")
         sourceSequence.onNext("7")
     }
-                    
                         
     func example31() {
         Observable.of(1, 2, 3, 4, 5, 6)
