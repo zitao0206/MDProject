@@ -34,3 +34,4 @@ hallModule       : MDSubHallModuleViewController
 hallViewModule   : MDDemoHallViewModuleViewController
 swiftdemo        : MDOCSwiftDemoViewController
 rxswiftdemo      : MDOCRxSwiftDemoViewController
+associatedemo    : MDAssociateDemoViewController
