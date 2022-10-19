@@ -1,7 +1,6 @@
 #!/bin/bash
 git status
-sleep 2
-
+sleep 3
 echo "-------Begin-------"
 if [ ! $1 ]; then
     read -r -p "Please input your Video commit message: " input
