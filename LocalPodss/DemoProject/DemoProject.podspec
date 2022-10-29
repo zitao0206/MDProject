@@ -1,8 +1,7 @@
-
 Pod::Spec.new do |s|
-  s.name             = 'HomeProject'
+  s.name             = 'DemoProject'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HomeProject.'
+  s.summary          = 'A short description of MDProject.'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -14,6 +13,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'Leon0206' => '634376133@qq.com' }
   s.source           = { :git => 'https://github.com/Leon0206/MDProject.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
+  
   s.pod_target_xcconfig = {
     'MARTIN_PACKAGE_VERSION' => '1.0',
     'GCC_PRECOMPILE_PREFIX_HEADER' => true,
@@ -21,28 +21,28 @@ TODO: Add long description of the pod here.
   }
   
   s.source_files = [
-    'HomeProject.swift',
+    'DemoProject.swift',
     'Classes/**/*'
-   ]
+  ]
   
    s.resource_bundles = {
-     'HomeProject' => ['HomeProject/Assets/*.*']
-    }
-
+     'DemoProject' => ['DemoProject/Assets/*.*']
+   }
+   s.prefix_header_file = 'DemoProject.pch'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  
+
+   s.dependency 'MDBaseHallCollectionModule'
    s.dependency 'MDPageMaster'
    s.dependency 'SSZipArchive'
    s.dependency 'MDCommonKit'
    s.dependency 'MDEasyCache'
    s.dependency 'MDStatePageKit'
-   s.dependency 'ReactiveObjC'
+#   s.dependency 'ReactiveObjC'
    s.dependency 'SDWebImage'
+   s.dependency 'MDReactPageKit'
    s.dependency 'Aspects'
    s.dependency 'AFNetworking'
    s.dependency 'SSZipArchive'
-   s.dependency 'DemoProject'
-   s.dependency 'SwiftDemoProject'
-
+   s.dependency 'EasyLayout'
 end
