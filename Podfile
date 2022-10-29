@@ -39,10 +39,10 @@ target 'MDProject' do
 #  ENV['EasyLayout_use_binary'] = '0'
   
   #业务代码库
-  pod 'HomeProject', :path => './LocalPodss/HomeProject', :inhibit_warnings => false
-  pod 'DemoProject', :path => './LocalPodss/DemoProject', :inhibit_warnings => false
-  pod 'SwiftDemoProject', :path => './LocalPodss/SwiftDemoProject', :inhibit_warnings => false
-  pod 'MDBaseHallCollectionModule', :path => './LocalPodss/MDBaseHallCollectionModule', :inhibit_warnings => false
+  pod 'HomeProject', :path => './LocalPods/HomeProject', :inhibit_warnings => false
+  pod 'DemoProject', :path => './LocalPods/DemoProject', :inhibit_warnings => false
+  pod 'SwiftDemoProject', :path => './LocalPods/SwiftDemoProject', :inhibit_warnings => false
+  pod 'MDBaseHallCollectionModule', :path => './LocalPods/MDBaseHallCollectionModule', :inhibit_warnings => false
  
  #多源pod测试
 #  pod 'MDMultiSourceDemo', '~> 0.0.1'
