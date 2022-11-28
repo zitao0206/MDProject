@@ -8,7 +8,7 @@
 
 #import "MDWeakInstanceViewController.h"
 #import "MDBaseWeakInstanceManager.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import <EasyLayout/EasyLayout.h>
 #import "MDInstanceManager.h"
 #import "MDWeakInstanceManager.h"

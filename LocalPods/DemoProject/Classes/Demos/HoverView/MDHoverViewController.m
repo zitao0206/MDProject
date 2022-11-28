@@ -9,9 +9,9 @@
 #import "MDHoverViewController.h"
 #import <MDPageMaster/MDPageMaster.h>
 #import <EasyLayout/EasyLayout.h>
-#import <MDCommonKit/UIColor+Ext.h>
+#import <AKOCommonToolsKit/UIColor+Ext.h>
 #import "MDDemoModuleViewcomtroller.h"
-#import "MDBaseModuleModel.h"
+#import <StateMachinePageKit/StateMachinePageKit.h>
 #import "MDZipArchiveViewController.h"
 #import "MDHopeStateMachingViewController.h"
 #import <ReactiveDataBoard/ReactiveDataBoard.h>
@@ -173,9 +173,9 @@
         _sliderView.backgroundColor = [UIColor whiteColor];
         _sliderView.itemsWidth = SCREEN_WIDTH / itemArr.count;
         _sliderView.itemsTitle = itemArr;
-        _sliderView.itemColor = [UIColor md_colorWithHexString:@"272829"];
-        _sliderView.itemSelectedColor = [UIColor md_colorWithHexString:@"f2441c"];
-        _sliderView.sliderColor = [UIColor md_colorWithHexString:@"f2441c"];
+        _sliderView.itemColor = [UIColor ako_colorWithHexString:@"272829"];
+        _sliderView.itemSelectedColor = [UIColor ako_colorWithHexString:@"f2441c"];
+        _sliderView.sliderColor = [UIColor ako_colorWithHexString:@"f2441c"];
         [_sliderView slideBarItemSelectedCallback:^(NSUInteger idx) {
             [UIView animateWithDuration:0.5 animations:^{
                 self.containerCell.isSelectIndex = YES;

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Leon0206. All rights reserved.
 //
 
-#import <MDReactPageKit/MDReactBasePageViewController.h>
-#import "MDBaseModuleModel.h"
+#import <ReactivePageKit/ReactiveBasePageViewController.h>
+#import <ReactivePageKit/ReactiveBaseModuleModel.h>
 
-@interface MDDemoModuleViewcomtroller : MDReactBasePageViewController
-@property(nonatomic, strong) MDBaseModuleModel *model;
+@interface MDDemoModuleViewcomtroller : ReactiveBasePageViewController
+@property(nonatomic, strong) ReactiveBaseModuleModel *model;
 @end

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Leon0206. All rights reserved.
 //
 
-#import <MDStatePageKit/MDBaseStateViewController.h>
+#import <StateMachinePageKit/StateMachinePageKit.h>
 
-@interface MDSDWebImageViewController : MDBaseStateViewController
+@interface MDSDWebImageViewController : BaseStateViewController
 
 @end

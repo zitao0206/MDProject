@@ -19,7 +19,7 @@
     
 }
 
-- (void)didEnterWithPreviousState:(__kindof MDBaseViewState *)preState
+- (void)didEnterWithPreviousState:(__kindof BaseViewState *)preState
 {
     [super didEnterWithPreviousState:preState];
     self.contentView.frame = CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 150);

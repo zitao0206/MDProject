@@ -10,7 +10,7 @@
 #import "MDJsonViewModel.h"
 #import "MDJsonLabelModel.h"
 #import "MDJsonLabel.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import <EasyLayout/EasyLayout.h>
 #import "MDJsonImageView.h"
 

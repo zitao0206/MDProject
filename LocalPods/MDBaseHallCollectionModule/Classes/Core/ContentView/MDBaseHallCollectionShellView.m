@@ -6,7 +6,7 @@
 //
 
 #import "MDBaseHallCollectionShellView.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import "MDBaseCollectionCellModuleLayout.h"
 #import "MDBaseCollectionCellModule.h"
 

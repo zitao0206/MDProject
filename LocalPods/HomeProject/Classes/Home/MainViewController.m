@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import <MDPageMaster/MDPageMaster.h>
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import "AppDelegate.h"
 #import "MainCollectionViewCell.h"
 #import <SwiftDemoProject/SwiftDemoProject-Swift.h>

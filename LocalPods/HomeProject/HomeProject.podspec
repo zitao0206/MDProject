@@ -30,10 +30,13 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   
    s.dependency 'MDPageMaster'
-   s.dependency 'SSZipArchive'
-   s.dependency 'MDCommonKit'
+  
    s.dependency 'MDEasyCache'
-   s.dependency 'MDStatePageKit'
+   
+   s.dependency 'StateMachinePageKit'
+   s.dependency 'AKOCommonToolsKit'
+   
+   s.dependency 'SSZipArchive'
    s.dependency 'ReactiveObjC'
    s.dependency 'SDWebImage'
    s.dependency 'Aspects'

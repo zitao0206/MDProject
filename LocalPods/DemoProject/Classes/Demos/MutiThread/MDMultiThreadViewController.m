@@ -7,7 +7,7 @@
 //
 
 #import "MDMultiThreadViewController.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 
 @interface MDMultiThreadViewController ()
 @property (nonatomic, strong) UIImageView *imageView;
@@ -57,8 +57,8 @@
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(15, 100, 200, 200)];
     
-    view.backgroundColor = [UIColor md_colorWithHexString:@"ffffff"];
-    view.layer.shadowColor = [UIColor md_colorWithHexString:@"33000000"].CGColor;
+    view.backgroundColor = [UIColor ako_colorWithHexString:@"ffffff"];
+    view.layer.shadowColor = [UIColor ako_colorWithHexString:@"33000000"].CGColor;
     view.layer.shadowOpacity = 0.8;
     view.layer.shadowOffset = CGSizeMake(0, 3);
     view.layer.shadowRadius = 6;
@@ -70,7 +70,7 @@
     self.imageView.image = [UIImage imageNamed:@"ugcup.png"];
 
     [view addSubview:self.imageView];
-    self.view.backgroundColor = [UIColor md_colorWithHexString:@"f0f0f0"];
+    self.view.backgroundColor = [UIColor ako_colorWithHexString:@"f0f0f0"];
     [self.view addSubview:view];
 
     dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_SERIAL);

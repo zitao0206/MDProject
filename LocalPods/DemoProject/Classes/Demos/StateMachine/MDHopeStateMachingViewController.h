@@ -5,7 +5,7 @@
 //  Created by Leon0206 on 2018/4/15.
 //
 
-#import "MDBaseStateViewController.h"
+#import <StateMachinePageKit/StateMachinePageKit.h>
 
-@interface MDHopeStateMachingViewController : MDBaseStateViewController
+@interface MDHopeStateMachingViewController : BaseStateViewController
 @end

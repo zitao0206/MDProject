@@ -8,7 +8,7 @@
 
 #import "MDJsonBaseModel.h"
 #import "MDJsonModel.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import "MDJsonViewModel.h"
 #import "MDJsonMappers.h"
 #import "MDJsonLabelModel.h"
@@ -42,7 +42,7 @@
     self.type = [dictionaryValue objectForKey:@"type"];
     NSString *backgroundColorHex = [dictionaryValue objectForKey:@"backgroundColor"];
     if (backgroundColorHex.length) {
-        self.backgroundColor = [UIColor md_colorWithHexString:backgroundColorHex];
+        self.backgroundColor = [UIColor ako_colorWithHexString:backgroundColorHex];
     }
     self.y = [[dictionaryValue objectForKey:@"y"] doubleValue];
     self.x = [[dictionaryValue objectForKey:@"x"] doubleValue];
@@ -104,7 +104,7 @@
 {
     NSString *textColor = [dictionaryValue objectForKey:@"textColor"];
     if (textColor.length) {
-        self.textColor = [UIColor md_colorWithHexString:textColor];
+        self.textColor = [UIColor ako_colorWithHexString:textColor];
     }
     self.textSize = [[dictionaryValue objectForKey:@"textSize"] doubleValue];
     self.text = [dictionaryValue objectForKey:@"text"];

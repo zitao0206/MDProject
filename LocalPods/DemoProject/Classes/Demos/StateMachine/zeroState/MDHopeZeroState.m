@@ -7,7 +7,7 @@
 //
 
 #import "MDHopeZeroState.h"
-@class MDBaseViewState;
+@class BaseViewState;
 @interface MDHopeZeroState ()
 @property (nonatomic, strong) UIView *firstLabelBgView;
 @property (nonatomic, strong) UILabel *firstLabel;

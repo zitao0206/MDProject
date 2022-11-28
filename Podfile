@@ -1,5 +1,6 @@
 
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 source 'https://github.com/Leon0206/MDSpecs.git'
 
 
@@ -53,17 +54,20 @@ target 'MDProject' do
 #  pod 'MDMultiSourceDemo_B', :path => '/Users/Leon0206/Desktop/MDProject/MDMultiSourceDemo', :inhibit_warnings => false
 
   #组件库
-  pod 'MDStatePageKit', '~> 1.0.0'
-  pod 'MDReactPageKit', '~> 1.0.0'
+  # level 1
+
   pod 'MDEasyCache', '~> 1.0.0'
-  pod 'ReactiveDataBoard', '4.0.7'
-#  pod 'ReactiveDataBoard', :path => '/Users/lizitao/Desktop/MainProject/ReactiveDataBoard/'
   pod 'MDPageMaster', '2.0.19'
-#  pod 'MDPageMaster', :path => '/Users/lizitao/Desktop/MainProject/MDPageMaster/'
-  pod 'EasyLayout', '~> 1.0.0'
-  pod 'MDCommonKit', '1.0.29'
-#  pod 'MDCommonKit', :path => '/Users/lizitao/Desktop/MainProject/MDCommonKit'
   
+  # level 1
+  pod 'StateMachinePageKit', '~> 1.0.11'
+  pod 'ReactivePageKit', '~> 1.0.15'
+  pod 'ReactiveDataBoard', '4.0.7'
+  
+  # level 0
+  pod 'EasyLayout', '~> 1.0.0'
+  pod 'AKOCommonToolsKit', '0.0.9'
+ 
   #第三方组件库
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'

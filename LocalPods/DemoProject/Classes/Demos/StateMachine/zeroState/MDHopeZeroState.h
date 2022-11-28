@@ -6,8 +6,7 @@
 //  Copyright © 2018年 Leon0206. All rights reserved.
 //
 
-#import <MDStatePageKit/MDBaseZeroViewState.h>
-#import <MDStatePageKit/MDBaseViewState.h>
+#import <StateMachinePageKit/StateMachinePageKit.h>
 
-@interface MDHopeZeroState : MDBaseViewState
+@interface MDHopeZeroState : BaseViewState
 @end

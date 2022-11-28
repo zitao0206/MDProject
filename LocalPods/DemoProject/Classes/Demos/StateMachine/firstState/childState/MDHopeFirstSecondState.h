@@ -5,8 +5,8 @@
 //  Created by Leon0206 on 2018/5/13.
 //
 
-#import <MDStatePageKit/MDBaseViewState.h>
+#import <StateMachinePageKit/StateMachinePageKit.h>
 
-@interface MDHopeFirstSecondState : MDBaseViewState
+@interface MDHopeFirstSecondState : BaseViewState
 
 @end

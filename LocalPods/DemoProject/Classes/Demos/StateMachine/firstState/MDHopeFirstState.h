@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import <GameplayKit/GameplayKit.h>
-#import <MDStatePageKit/MDBaseViewState.h>
+#import <StateMachinePageKit/StateMachinePageKit.h>
 
-@interface MDHopeFirstState : MDBaseViewState
+@interface MDHopeFirstState : BaseViewState
  
 
 @end

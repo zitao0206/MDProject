@@ -6,7 +6,7 @@
 //
 
 #import "MDSubHallModuleViewController.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 
 @interface MDSubHallModuleViewController()
 

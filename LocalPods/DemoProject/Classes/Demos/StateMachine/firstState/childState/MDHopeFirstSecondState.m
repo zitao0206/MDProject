@@ -13,7 +13,7 @@
 
 @implementation MDHopeFirstSecondState
 
-- (void)didEnterWithPreviousState:(__kindof MDBaseViewState *)preState
+- (void)didEnterWithPreviousState:(__kindof BaseViewState *)preState
 {
     [super didEnterWithPreviousState:preState];
     self.contentView.frame = CGRectMake(150, 60, 60, 30);

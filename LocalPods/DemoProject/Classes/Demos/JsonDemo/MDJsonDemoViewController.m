@@ -8,7 +8,7 @@
 
 #import "MDJsonDemoViewController.h"
 #import "MDJsonLabelModel.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import "MDJsonLabel.h"
 #import "MDJsonView.h"
 #import "MDJsonViewModel.h"

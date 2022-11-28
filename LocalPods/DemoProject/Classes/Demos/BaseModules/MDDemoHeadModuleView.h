@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Leon0206. All rights reserved.
 //
 
-#import "MDBaseModuleView.h"
+#import "ReactiveBaseModuleView.h"
 
-@interface MDDemoHeadModuleView : MDBaseModuleView
+@interface MDDemoHeadModuleView : ReactiveBaseModuleView
 @property (nonatomic, strong) UILabel *indexLabel;
 @end

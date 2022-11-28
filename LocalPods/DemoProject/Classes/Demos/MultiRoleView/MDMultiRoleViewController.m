@@ -7,7 +7,7 @@
 //
 
 #import "MDMultiRoleViewController.h"
-#import <MDCommonKit/MDCommonKit.h>
+#import <AKOCommonToolsKit/AKOCommonToolsKit.h>
 #import <EasyLayout/EasyLayout.h>
 #import "NMLKMultiRoleView.h"
 
