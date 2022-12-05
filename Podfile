@@ -54,21 +54,22 @@ target 'MDProject' do
 #  pod 'MDMultiSourceDemo_B', :path => '/Users/Leon0206/Desktop/MDProject/MDMultiSourceDemo', :inhibit_warnings => false
 
   #组件库
-  # level 1
+  # level 3
 
   pod 'MDEasyCache', '~> 1.0.0'
   pod 'MDPageMaster', '2.0.19'
   
-  # level 1
+  # level 2
   pod 'StateMachinePageKit', '~> 1.0.11'
   pod 'ReactivePageKit', '~> 1.0.15'
   pod 'ReactiveDataBoard', '4.0.7'
   
-  # level 0
-  pod 'EasyLayout', '~> 1.0.0'
+  # level 1
   pod 'AKOCommonToolsKit', '0.0.9'
+  pod 'EasyLayout', '~> 1.0.0'
  
-  #第三方组件库
+  # level 0
+  pod 'CommonCrypto'
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   pod 'ReactiveObjC', '3.1.0'
